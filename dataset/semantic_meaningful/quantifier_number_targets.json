@@ -1,0 +1,4450 @@
+{
+  "meta": {
+    "script": "create_quantifier_number_targets.py",
+    "timestamp_utc": "2026-06-20T06:49:50.621370+00:00",
+    "source_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/wordnet_lexname_targets_500x500.json",
+    "source_meta": {
+      "script": "create_target_sets.py",
+      "timestamp_utc": "2026-04-22T16:07:18.680150+00:00",
+      "source": "WordNet via nltk.corpus.wordnet",
+      "strict_policy": "all_senses_must_qualify",
+      "fallback_policy": "fail_fast",
+      "target_counts": {
+        "animate": 500,
+        "inanimate": 500
+      },
+      "tokenizer": {
+        "model_name": "gpt2",
+        "one_token_check": "len(tokenizer.encode(' ' + word)) == 1"
+      },
+      "normalization": {
+        "lowercase": true,
+        "single_word_alpha_only": true,
+        "singularization": "inflect.engine().singular_noun"
+      },
+      "lexname_constraints": {
+        "animate_allowed": [
+          "noun.person"
+        ],
+        "inanimate_allowed": [
+          "noun.artifact",
+          "noun.event",
+          "noun.object",
+          "noun.phenomenon",
+          "noun.state",
+          "noun.substance"
+        ]
+      },
+      "semantic_guards": {
+        "animate_requires_person_path": "person.n.01",
+        "exclude_group_ancestor": "group.n.01",
+        "person_synset_reference": "person.n.01",
+        "group_synset_reference": "group.n.01"
+      },
+      "selection_policy": "must_include_priority_then_ranked_top_up",
+      "semantic_priority_source": "C:\\Users\\samue\\OneDrive\\Documenti\\Studio\\Università\\Ricerca\\MechInt\\grammatical-circuits\\animacy-circuit\\dataset\\semantic_meaningful\\semantic_groups.json",
+      "deterministic_sort": "score_desc_then_word_asc"
+    },
+    "task": {
+      "singular_prefix_suffix": "by a",
+      "plural_prefix_suffix": "by many",
+      "singular_target_context": "' ' + singular after by a",
+      "plural_target_context": "' ' + plural after by many"
+    },
+    "constraints": {
+      "allow_irregular_plurals": true,
+      "reject_singular_equals_plural": true,
+      "roundtrip_plural_to_singular": true,
+      "lowercase_single_alpha_token": true,
+      "collision_free_across_classes_and_number": true
+    }
+  },
+  "targets": {
+    "animate": [
+      {
+        "singular": "officer",
+        "plural": "officers"
+      },
+      {
+        "singular": "manager",
+        "plural": "managers"
+      },
+      {
+        "singular": "captain",
+        "plural": "captains"
+      },
+      {
+        "singular": "author",
+        "plural": "authors"
+      },
+      {
+        "singular": "farmer",
+        "plural": "farmers"
+      },
+      {
+        "singular": "lawyer",
+        "plural": "lawyers"
+      },
+      {
+        "singular": "engineer",
+        "plural": "engineers"
+      },
+      {
+        "singular": "trooper",
+        "plural": "troopers"
+      },
+      {
+        "singular": "analyst",
+        "plural": "analysts"
+      },
+      {
+        "singular": "architect",
+        "plural": "architects"
+      },
+      {
+        "singular": "banker",
+        "plural": "bankers"
+      },
+      {
+        "singular": "clerk",
+        "plural": "clerks"
+      },
+      {
+        "singular": "judge",
+        "plural": "judges"
+      },
+      {
+        "singular": "administrator",
+        "plural": "administrators"
+      },
+      {
+        "singular": "attorney",
+        "plural": "attorneys"
+      },
+      {
+        "singular": "critic",
+        "plural": "critics"
+      },
+      {
+        "singular": "merchant",
+        "plural": "merchants"
+      },
+      {
+        "singular": "scholar",
+        "plural": "scholars"
+      },
+      {
+        "singular": "cook",
+        "plural": "cooks"
+      },
+      {
+        "singular": "scientist",
+        "plural": "scientists"
+      },
+      {
+        "singular": "economist",
+        "plural": "economists"
+      },
+      {
+        "singular": "guardian",
+        "plural": "guardians"
+      },
+      {
+        "singular": "inspector",
+        "plural": "inspectors"
+      },
+      {
+        "singular": "volunteer",
+        "plural": "volunteers"
+      },
+      {
+        "singular": "waiter",
+        "plural": "waiters"
+      },
+      {
+        "singular": "designer",
+        "plural": "designers"
+      },
+      {
+        "singular": "investor",
+        "plural": "investors"
+      },
+      {
+        "singular": "researcher",
+        "plural": "researchers"
+      },
+      {
+        "singular": "technician",
+        "plural": "technicians"
+      },
+      {
+        "singular": "treasurer",
+        "plural": "treasurers"
+      },
+      {
+        "singular": "mechanic",
+        "plural": "mechanics"
+      },
+      {
+        "singular": "vendor",
+        "plural": "vendors"
+      },
+      {
+        "singular": "accountant",
+        "plural": "accountants"
+      },
+      {
+        "singular": "advisor",
+        "plural": "advisors"
+      },
+      {
+        "singular": "broker",
+        "plural": "brokers"
+      },
+      {
+        "singular": "magistrate",
+        "plural": "magistrates"
+      },
+      {
+        "singular": "reviewer",
+        "plural": "reviewers"
+      },
+      {
+        "singular": "auditor",
+        "plural": "auditors"
+      },
+      {
+        "singular": "baker",
+        "plural": "bakers"
+      },
+      {
+        "singular": "chef",
+        "plural": "cheves"
+      },
+      {
+        "singular": "curator",
+        "plural": "curators"
+      },
+      {
+        "singular": "firefighter",
+        "plural": "firefighters"
+      },
+      {
+        "singular": "loader",
+        "plural": "loaders"
+      },
+      {
+        "singular": "tailor",
+        "plural": "tailors"
+      },
+      {
+        "singular": "child",
+        "plural": "children"
+      },
+      {
+        "singular": "boy",
+        "plural": "boys"
+      },
+      {
+        "singular": "friend",
+        "plural": "friends"
+      },
+      {
+        "singular": "girl",
+        "plural": "girls"
+      },
+      {
+        "singular": "student",
+        "plural": "students"
+      },
+      {
+        "singular": "father",
+        "plural": "fathers"
+      },
+      {
+        "singular": "husband",
+        "plural": "husbands"
+      },
+      {
+        "singular": "employee",
+        "plural": "employees"
+      },
+      {
+        "singular": "comrade",
+        "plural": "comrades"
+      },
+      {
+        "singular": "jew",
+        "plural": "jews"
+      },
+      {
+        "singular": "son",
+        "plural": "sons"
+      },
+      {
+        "singular": "lieutenant",
+        "plural": "lieutenants"
+      },
+      {
+        "singular": "artist",
+        "plural": "artists"
+      },
+      {
+        "singular": "brother",
+        "plural": "brothers"
+      },
+      {
+        "singular": "writer",
+        "plural": "writers"
+      },
+      {
+        "singular": "fool",
+        "plural": "fools"
+      },
+      {
+        "singular": "companion",
+        "plural": "companions"
+      },
+      {
+        "singular": "colonel",
+        "plural": "colonels"
+      },
+      {
+        "singular": "director",
+        "plural": "directors"
+      },
+      {
+        "singular": "lady",
+        "plural": "ladies"
+      },
+      {
+        "singular": "petitioner",
+        "plural": "petitioners"
+      },
+      {
+        "singular": "citizen",
+        "plural": "citizens"
+      },
+      {
+        "singular": "liberal",
+        "plural": "liberals"
+      },
+      {
+        "singular": "official",
+        "plural": "officials"
+      },
+      {
+        "singular": "candidate",
+        "plural": "candidates"
+      },
+      {
+        "singular": "customer",
+        "plural": "customers"
+      },
+      {
+        "singular": "composer",
+        "plural": "composers"
+      },
+      {
+        "singular": "owner",
+        "plural": "owners"
+      },
+      {
+        "singular": "player",
+        "plural": "players"
+      },
+      {
+        "singular": "daughter",
+        "plural": "daughters"
+      },
+      {
+        "singular": "negro",
+        "plural": "negros"
+      },
+      {
+        "singular": "christ",
+        "plural": "christs"
+      },
+      {
+        "singular": "cop",
+        "plural": "cops"
+      },
+      {
+        "singular": "expert",
+        "plural": "experts"
+      },
+      {
+        "singular": "historian",
+        "plural": "historians"
+      },
+      {
+        "singular": "observer",
+        "plural": "observers"
+      },
+      {
+        "singular": "salesman",
+        "plural": "salesmen"
+      },
+      {
+        "singular": "sister",
+        "plural": "sisters"
+      },
+      {
+        "singular": "specialist",
+        "plural": "specialists"
+      },
+      {
+        "singular": "professor",
+        "plural": "professors"
+      },
+      {
+        "singular": "sir",
+        "plural": "sirs"
+      },
+      {
+        "singular": "musician",
+        "plural": "musicians"
+      },
+      {
+        "singular": "veteran",
+        "plural": "veterans"
+      },
+      {
+        "singular": "philosopher",
+        "plural": "philosophers"
+      },
+      {
+        "singular": "psychologist",
+        "plural": "psychologists"
+      },
+      {
+        "singular": "champion",
+        "plural": "champions"
+      },
+      {
+        "singular": "partner",
+        "plural": "partners"
+      },
+      {
+        "singular": "priest",
+        "plural": "priests"
+      },
+      {
+        "singular": "stranger",
+        "plural": "strangers"
+      },
+      {
+        "singular": "actor",
+        "plural": "actors"
+      },
+      {
+        "singular": "employer",
+        "plural": "employers"
+      },
+      {
+        "singular": "foe",
+        "plural": "foes"
+      },
+      {
+        "singular": "lord",
+        "plural": "lords"
+      },
+      {
+        "singular": "poet",
+        "plural": "poets"
+      },
+      {
+        "singular": "rebel",
+        "plural": "rebels"
+      },
+      {
+        "singular": "applicant",
+        "plural": "applicants"
+      },
+      {
+        "singular": "commander",
+        "plural": "commanders"
+      },
+      {
+        "singular": "maid",
+        "plural": "maids"
+      },
+      {
+        "singular": "politician",
+        "plural": "politicians"
+      },
+      {
+        "singular": "criminal",
+        "plural": "criminals"
+      },
+      {
+        "singular": "murderer",
+        "plural": "murderers"
+      },
+      {
+        "singular": "prisoner",
+        "plural": "prisoners"
+      },
+      {
+        "singular": "private",
+        "plural": "privates"
+      },
+      {
+        "singular": "teenager",
+        "plural": "teenagers"
+      },
+      {
+        "singular": "victim",
+        "plural": "victims"
+      },
+      {
+        "singular": "amateur",
+        "plural": "amateurs"
+      },
+      {
+        "singular": "communist",
+        "plural": "communists"
+      },
+      {
+        "singular": "policeman",
+        "plural": "policemen"
+      },
+      {
+        "singular": "apprentice",
+        "plural": "apprentices"
+      },
+      {
+        "singular": "businessman",
+        "plural": "businessmen"
+      },
+      {
+        "singular": "consumer",
+        "plural": "consumers"
+      },
+      {
+        "singular": "deputy",
+        "plural": "deputies"
+      },
+      {
+        "singular": "investigator",
+        "plural": "investigators"
+      },
+      {
+        "singular": "reporter",
+        "plural": "reporters"
+      },
+      {
+        "singular": "taxpayer",
+        "plural": "taxpayers"
+      },
+      {
+        "singular": "thief",
+        "plural": "thieves"
+      },
+      {
+        "singular": "cowboy",
+        "plural": "cowboys"
+      },
+      {
+        "singular": "educator",
+        "plural": "educators"
+      },
+      {
+        "singular": "gentleman",
+        "plural": "gentlemen"
+      },
+      {
+        "singular": "listener",
+        "plural": "listeners"
+      },
+      {
+        "singular": "lover",
+        "plural": "lovers"
+      },
+      {
+        "singular": "mayor",
+        "plural": "mayors"
+      },
+      {
+        "singular": "reb",
+        "plural": "rebs"
+      },
+      {
+        "singular": "sergeant",
+        "plural": "sergeants"
+      },
+      {
+        "singular": "surgeon",
+        "plural": "surgeons"
+      },
+      {
+        "singular": "therapist",
+        "plural": "therapists"
+      },
+      {
+        "singular": "chairman",
+        "plural": "chairmen"
+      },
+      {
+        "singular": "claimant",
+        "plural": "claimants"
+      },
+      {
+        "singular": "colleague",
+        "plural": "colleagues"
+      },
+      {
+        "singular": "cyclist",
+        "plural": "cyclists"
+      },
+      {
+        "singular": "dancer",
+        "plural": "dancers"
+      },
+      {
+        "singular": "grandmother",
+        "plural": "grandmothers"
+      },
+      {
+        "singular": "legislator",
+        "plural": "legislators"
+      },
+      {
+        "singular": "martyr",
+        "plural": "martyrs"
+      },
+      {
+        "singular": "nephew",
+        "plural": "nephews"
+      },
+      {
+        "singular": "performer",
+        "plural": "performers"
+      },
+      {
+        "singular": "preacher",
+        "plural": "preachers"
+      },
+      {
+        "singular": "visitor",
+        "plural": "visitors"
+      },
+      {
+        "singular": "ambassador",
+        "plural": "ambassadors"
+      },
+      {
+        "singular": "assistant",
+        "plural": "assistants"
+      },
+      {
+        "singular": "athlete",
+        "plural": "athletes"
+      },
+      {
+        "singular": "buddy",
+        "plural": "buddies"
+      },
+      {
+        "singular": "competitor",
+        "plural": "competitors"
+      },
+      {
+        "singular": "donor",
+        "plural": "donors"
+      },
+      {
+        "singular": "follower",
+        "plural": "followers"
+      },
+      {
+        "singular": "foreigner",
+        "plural": "foreigners"
+      },
+      {
+        "singular": "messenger",
+        "plural": "messengers"
+      },
+      {
+        "singular": "peasant",
+        "plural": "peasants"
+      },
+      {
+        "singular": "physician",
+        "plural": "physicians"
+      },
+      {
+        "singular": "sheriff",
+        "plural": "sherifves"
+      },
+      {
+        "singular": "trustee",
+        "plural": "trustees"
+      },
+      {
+        "singular": "uncle",
+        "plural": "uncles"
+      },
+      {
+        "singular": "voter",
+        "plural": "voters"
+      },
+      {
+        "singular": "assassin",
+        "plural": "assassins"
+      },
+      {
+        "singular": "babe",
+        "plural": "babes"
+      },
+      {
+        "singular": "chief",
+        "plural": "chieves"
+      },
+      {
+        "singular": "entrepreneur",
+        "plural": "entrepreneurs"
+      },
+      {
+        "singular": "fisherman",
+        "plural": "fishermen"
+      },
+      {
+        "singular": "junior",
+        "plural": "juniors"
+      },
+      {
+        "singular": "novelist",
+        "plural": "novelists"
+      },
+      {
+        "singular": "occupant",
+        "plural": "occupants"
+      },
+      {
+        "singular": "pope",
+        "plural": "popes"
+      },
+      {
+        "singular": "resident",
+        "plural": "residents"
+      },
+      {
+        "singular": "saint",
+        "plural": "saints"
+      },
+      {
+        "singular": "senator",
+        "plural": "senators"
+      },
+      {
+        "singular": "chemist",
+        "plural": "chemists"
+      },
+      {
+        "singular": "commissioner",
+        "plural": "commissioners"
+      },
+      {
+        "singular": "coroner",
+        "plural": "coroners"
+      },
+      {
+        "singular": "correspondent",
+        "plural": "correspondents"
+      },
+      {
+        "singular": "cousin",
+        "plural": "cousins"
+      },
+      {
+        "singular": "democrat",
+        "plural": "democrats"
+      },
+      {
+        "singular": "grocer",
+        "plural": "grocers"
+      },
+      {
+        "singular": "immigrant",
+        "plural": "immigrants"
+      },
+      {
+        "singular": "instructor",
+        "plural": "instructors"
+      },
+      {
+        "singular": "lad",
+        "plural": "lads"
+      },
+      {
+        "singular": "magician",
+        "plural": "magicians"
+      },
+      {
+        "singular": "monk",
+        "plural": "monks"
+      },
+      {
+        "singular": "professional",
+        "plural": "professionals"
+      },
+      {
+        "singular": "reactionary",
+        "plural": "reactionaries"
+      },
+      {
+        "singular": "refugee",
+        "plural": "refugees"
+      },
+      {
+        "singular": "retailer",
+        "plural": "retailers"
+      },
+      {
+        "singular": "robber",
+        "plural": "robbers"
+      },
+      {
+        "singular": "sovereign",
+        "plural": "sovereigns"
+      },
+      {
+        "singular": "trader",
+        "plural": "traders"
+      },
+      {
+        "singular": "witch",
+        "plural": "witches"
+      },
+      {
+        "singular": "aide",
+        "plural": "aides"
+      },
+      {
+        "singular": "aunt",
+        "plural": "aunts"
+      },
+      {
+        "singular": "bearer",
+        "plural": "bearers"
+      },
+      {
+        "singular": "comedian",
+        "plural": "comedians"
+      },
+      {
+        "singular": "counselor",
+        "plural": "counselors"
+      },
+      {
+        "singular": "coward",
+        "plural": "cowards"
+      },
+      {
+        "singular": "creator",
+        "plural": "creators"
+      },
+      {
+        "singular": "dear",
+        "plural": "dears"
+      },
+      {
+        "singular": "defendant",
+        "plural": "defendants"
+      },
+      {
+        "singular": "demon",
+        "plural": "demons"
+      },
+      {
+        "singular": "diplomat",
+        "plural": "diplomats"
+      },
+      {
+        "singular": "drunk",
+        "plural": "drunks"
+      },
+      {
+        "singular": "freak",
+        "plural": "freaks"
+      },
+      {
+        "singular": "grandfather",
+        "plural": "grandfathers"
+      },
+      {
+        "singular": "idiot",
+        "plural": "idiots"
+      },
+      {
+        "singular": "inmate",
+        "plural": "inmates"
+      },
+      {
+        "singular": "journalist",
+        "plural": "journalists"
+      },
+      {
+        "singular": "maniac",
+        "plural": "maniacs"
+      },
+      {
+        "singular": "opponent",
+        "plural": "opponents"
+      },
+      {
+        "singular": "outfielder",
+        "plural": "outfielders"
+      },
+      {
+        "singular": "passenger",
+        "plural": "passengers"
+      },
+      {
+        "singular": "patron",
+        "plural": "patrons"
+      },
+      {
+        "singular": "peer",
+        "plural": "peers"
+      },
+      {
+        "singular": "prophet",
+        "plural": "prophets"
+      },
+      {
+        "singular": "prosecutor",
+        "plural": "prosecutors"
+      },
+      {
+        "singular": "psychiatrist",
+        "plural": "psychiatrists"
+      },
+      {
+        "singular": "recruit",
+        "plural": "recruits"
+      },
+      {
+        "singular": "sophomore",
+        "plural": "sophomores"
+      },
+      {
+        "singular": "sponsor",
+        "plural": "sponsors"
+      },
+      {
+        "singular": "superintendent",
+        "plural": "superintendents"
+      },
+      {
+        "singular": "tenant",
+        "plural": "tenants"
+      },
+      {
+        "singular": "traitor",
+        "plural": "traitors"
+      },
+      {
+        "singular": "user",
+        "plural": "users"
+      },
+      {
+        "singular": "utopian",
+        "plural": "utopians"
+      },
+      {
+        "singular": "widow",
+        "plural": "widows"
+      },
+      {
+        "singular": "youngster",
+        "plural": "youngsters"
+      },
+      {
+        "singular": "adherent",
+        "plural": "adherents"
+      },
+      {
+        "singular": "attacker",
+        "plural": "attackers"
+      },
+      {
+        "singular": "bride",
+        "plural": "brides"
+      },
+      {
+        "singular": "caller",
+        "plural": "callers"
+      },
+      {
+        "singular": "congressman",
+        "plural": "congressmen"
+      },
+      {
+        "singular": "consultant",
+        "plural": "consultants"
+      },
+      {
+        "singular": "contemporary",
+        "plural": "contemporaries"
+      },
+      {
+        "singular": "convert",
+        "plural": "converts"
+      },
+      {
+        "singular": "dad",
+        "plural": "dads"
+      },
+      {
+        "singular": "defender",
+        "plural": "defenders"
+      },
+      {
+        "singular": "dentist",
+        "plural": "dentists"
+      },
+      {
+        "singular": "eccentric",
+        "plural": "eccentrics"
+      },
+      {
+        "singular": "freshman",
+        "plural": "freshmen"
+      },
+      {
+        "singular": "guerrilla",
+        "plural": "guerrillas"
+      },
+      {
+        "singular": "gunman",
+        "plural": "gunmen"
+      },
+      {
+        "singular": "heir",
+        "plural": "heirs"
+      },
+      {
+        "singular": "infant",
+        "plural": "infants"
+      },
+      {
+        "singular": "intellectual",
+        "plural": "intellectuals"
+      },
+      {
+        "singular": "landlord",
+        "plural": "landlords"
+      },
+      {
+        "singular": "lecturer",
+        "plural": "lecturers"
+      },
+      {
+        "singular": "missionary",
+        "plural": "missionaries"
+      },
+      {
+        "singular": "newcomer",
+        "plural": "newcomers"
+      },
+      {
+        "singular": "physicist",
+        "plural": "physicists"
+      },
+      {
+        "singular": "romantic",
+        "plural": "romantics"
+      },
+      {
+        "singular": "senior",
+        "plural": "seniors"
+      },
+      {
+        "singular": "singer",
+        "plural": "singers"
+      },
+      {
+        "singular": "spy",
+        "plural": "spies"
+      },
+      {
+        "singular": "tourist",
+        "plural": "tourists"
+      },
+      {
+        "singular": "traveler",
+        "plural": "travelers"
+      },
+      {
+        "singular": "villain",
+        "plural": "villains"
+      },
+      {
+        "singular": "warrior",
+        "plural": "warriors"
+      },
+      {
+        "singular": "whore",
+        "plural": "whores"
+      },
+      {
+        "singular": "academic",
+        "plural": "academics"
+      },
+      {
+        "singular": "advocate",
+        "plural": "advocates"
+      },
+      {
+        "singular": "alien",
+        "plural": "aliens"
+      },
+      {
+        "singular": "ancestor",
+        "plural": "ancestors"
+      },
+      {
+        "singular": "auxiliary",
+        "plural": "auxiliaries"
+      },
+      {
+        "singular": "bachelor",
+        "plural": "bachelors"
+      },
+      {
+        "singular": "backer",
+        "plural": "backers"
+      },
+      {
+        "singular": "bartender",
+        "plural": "bartenders"
+      },
+      {
+        "singular": "believer",
+        "plural": "believers"
+      },
+      {
+        "singular": "civilian",
+        "plural": "civilians"
+      },
+      {
+        "singular": "clown",
+        "plural": "clowns"
+      },
+      {
+        "singular": "commentator",
+        "plural": "commentators"
+      },
+      {
+        "singular": "contributor",
+        "plural": "contributors"
+      },
+      {
+        "singular": "daddy",
+        "plural": "daddies"
+      },
+      {
+        "singular": "dependent",
+        "plural": "dependents"
+      },
+      {
+        "singular": "diabetic",
+        "plural": "diabetics"
+      },
+      {
+        "singular": "girlfriend",
+        "plural": "girlfriends"
+      },
+      {
+        "singular": "grandma",
+        "plural": "grandmas"
+      },
+      {
+        "singular": "helper",
+        "plural": "helpers"
+      },
+      {
+        "singular": "heroine",
+        "plural": "heroines"
+      },
+      {
+        "singular": "hitter",
+        "plural": "hitters"
+      },
+      {
+        "singular": "incompetent",
+        "plural": "incompetents"
+      },
+      {
+        "singular": "interviewer",
+        "plural": "interviewers"
+      },
+      {
+        "singular": "liar",
+        "plural": "liars"
+      },
+      {
+        "singular": "loser",
+        "plural": "losers"
+      },
+      {
+        "singular": "mercenary",
+        "plural": "mercenaries"
+      },
+      {
+        "singular": "miner",
+        "plural": "miners"
+      },
+      {
+        "singular": "minor",
+        "plural": "minors"
+      },
+      {
+        "singular": "national",
+        "plural": "nationals"
+      },
+      {
+        "singular": "orderly",
+        "plural": "orderlies"
+      },
+      {
+        "singular": "outsider",
+        "plural": "outsiders"
+      },
+      {
+        "singular": "patriot",
+        "plural": "patriots"
+      },
+      {
+        "singular": "pioneer",
+        "plural": "pioneers"
+      },
+      {
+        "singular": "promoter",
+        "plural": "promoters"
+      },
+      {
+        "singular": "savage",
+        "plural": "savages"
+      },
+      {
+        "singular": "shepherd",
+        "plural": "shepherds"
+      },
+      {
+        "singular": "sniper",
+        "plural": "snipers"
+      },
+      {
+        "singular": "supplier",
+        "plural": "suppliers"
+      },
+      {
+        "singular": "teammate",
+        "plural": "teammates"
+      },
+      {
+        "singular": "winner",
+        "plural": "winners"
+      },
+      {
+        "singular": "wizard",
+        "plural": "wizards"
+      },
+      {
+        "singular": "adolescent",
+        "plural": "adolescents"
+      },
+      {
+        "singular": "adventurer",
+        "plural": "adventurers"
+      },
+      {
+        "singular": "adversary",
+        "plural": "adversaries"
+      },
+      {
+        "singular": "anarchist",
+        "plural": "anarchists"
+      },
+      {
+        "singular": "artisan",
+        "plural": "artisans"
+      },
+      {
+        "singular": "atheist",
+        "plural": "atheists"
+      },
+      {
+        "singular": "beginner",
+        "plural": "beginners"
+      },
+      {
+        "singular": "bidder",
+        "plural": "bidders"
+      },
+      {
+        "singular": "biologist",
+        "plural": "biologists"
+      },
+      {
+        "singular": "borrower",
+        "plural": "borrowers"
+      },
+      {
+        "singular": "bully",
+        "plural": "bullies"
+      },
+      {
+        "singular": "buyer",
+        "plural": "buyers"
+      },
+      {
+        "singular": "capitalist",
+        "plural": "capitalists"
+      },
+      {
+        "singular": "champ",
+        "plural": "champs"
+      },
+      {
+        "singular": "classmate",
+        "plural": "classmates"
+      },
+      {
+        "singular": "cleric",
+        "plural": "clerics"
+      },
+      {
+        "singular": "collaborator",
+        "plural": "collaborators"
+      },
+      {
+        "singular": "colonial",
+        "plural": "colonials"
+      },
+      {
+        "singular": "columnist",
+        "plural": "columnists"
+      },
+      {
+        "singular": "contestant",
+        "plural": "contestants"
+      },
+      {
+        "singular": "convict",
+        "plural": "convicts"
+      },
+      {
+        "singular": "coordinator",
+        "plural": "coordinators"
+      },
+      {
+        "singular": "courier",
+        "plural": "couriers"
+      },
+      {
+        "singular": "culprit",
+        "plural": "culprits"
+      },
+      {
+        "singular": "dean",
+        "plural": "deans"
+      },
+      {
+        "singular": "deceased",
+        "plural": "deceaseds"
+      },
+      {
+        "singular": "delegate",
+        "plural": "delegates"
+      },
+      {
+        "singular": "descendant",
+        "plural": "descendants"
+      },
+      {
+        "singular": "desperate",
+        "plural": "desperates"
+      },
+      {
+        "singular": "disciple",
+        "plural": "disciples"
+      },
+      {
+        "singular": "divine",
+        "plural": "divines"
+      },
+      {
+        "singular": "drummer",
+        "plural": "drummers"
+      },
+      {
+        "singular": "elector",
+        "plural": "electors"
+      },
+      {
+        "singular": "enthusiast",
+        "plural": "enthusiasts"
+      },
+      {
+        "singular": "equal",
+        "plural": "equals"
+      },
+      {
+        "singular": "fairy",
+        "plural": "fairies"
+      },
+      {
+        "singular": "fanatic",
+        "plural": "fanatics"
+      },
+      {
+        "singular": "fielder",
+        "plural": "fielders"
+      },
+      {
+        "singular": "groom",
+        "plural": "grooms"
+      },
+      {
+        "singular": "guru",
+        "plural": "gurus"
+      },
+      {
+        "singular": "hacker",
+        "plural": "hackers"
+      },
+      {
+        "singular": "healer",
+        "plural": "healers"
+      },
+      {
+        "singular": "homosexual",
+        "plural": "homosexuals"
+      },
+      {
+        "singular": "hun",
+        "plural": "huns"
+      },
+      {
+        "singular": "imp",
+        "plural": "imps"
+      },
+      {
+        "singular": "informant",
+        "plural": "informants"
+      },
+      {
+        "singular": "intermediary",
+        "plural": "intermediaries"
+      },
+      {
+        "singular": "intruder",
+        "plural": "intruders"
+      },
+      {
+        "singular": "invalid",
+        "plural": "invalids"
+      },
+      {
+        "singular": "inventor",
+        "plural": "inventors"
+      },
+      {
+        "singular": "lightweight",
+        "plural": "lightweights"
+      },
+      {
+        "singular": "logger",
+        "plural": "loggers"
+      },
+      {
+        "singular": "marine",
+        "plural": "marines"
+      },
+      {
+        "singular": "moderate",
+        "plural": "moderates"
+      },
+      {
+        "singular": "namesake",
+        "plural": "namesakes"
+      },
+      {
+        "singular": "niece",
+        "plural": "nieces"
+      },
+      {
+        "singular": "nobody",
+        "plural": "nobodies"
+      },
+      {
+        "singular": "notable",
+        "plural": "notables"
+      },
+      {
+        "singular": "offender",
+        "plural": "offenders"
+      },
+      {
+        "singular": "outlaw",
+        "plural": "outlaws"
+      },
+      {
+        "singular": "pagan",
+        "plural": "pagans"
+      },
+      {
+        "singular": "participant",
+        "plural": "participants"
+      },
+      {
+        "singular": "phony",
+        "plural": "phonies"
+      },
+      {
+        "singular": "pow",
+        "plural": "pows"
+      },
+      {
+        "singular": "practitioner",
+        "plural": "practitioners"
+      },
+      {
+        "singular": "prince",
+        "plural": "princes"
+      },
+      {
+        "singular": "proponent",
+        "plural": "proponents"
+      },
+      {
+        "singular": "prostitute",
+        "plural": "prostitutes"
+      },
+      {
+        "singular": "protagonist",
+        "plural": "protagonists"
+      },
+      {
+        "singular": "psychopath",
+        "plural": "psychopaths"
+      },
+      {
+        "singular": "pursued",
+        "plural": "pursueds"
+      },
+      {
+        "singular": "racist",
+        "plural": "racists"
+      },
+      {
+        "singular": "rapist",
+        "plural": "rapists"
+      },
+      {
+        "singular": "referee",
+        "plural": "referees"
+      },
+      {
+        "singular": "rival",
+        "plural": "rivals"
+      },
+      {
+        "singular": "rogue",
+        "plural": "rogues"
+      },
+      {
+        "singular": "savior",
+        "plural": "saviors"
+      },
+      {
+        "singular": "scout",
+        "plural": "scouts"
+      },
+      {
+        "singular": "socialist",
+        "plural": "socialists"
+      },
+      {
+        "singular": "spokesman",
+        "plural": "spokesmen"
+      },
+      {
+        "singular": "strategist",
+        "plural": "strategists"
+      },
+      {
+        "singular": "stupid",
+        "plural": "stupids"
+      },
+      {
+        "singular": "suspect",
+        "plural": "suspects"
+      },
+      {
+        "singular": "terrorist",
+        "plural": "terrorists"
+      },
+      {
+        "singular": "theorist",
+        "plural": "theorists"
+      },
+      {
+        "singular": "thinker",
+        "plural": "thinkers"
+      },
+      {
+        "singular": "traveller",
+        "plural": "travellers"
+      },
+      {
+        "singular": "tutor",
+        "plural": "tutors"
+      },
+      {
+        "singular": "tyrant",
+        "plural": "tyrants"
+      },
+      {
+        "singular": "undergraduate",
+        "plural": "undergraduates"
+      },
+      {
+        "singular": "unfortunate",
+        "plural": "unfortunates"
+      },
+      {
+        "singular": "vandal",
+        "plural": "vandals"
+      },
+      {
+        "singular": "vet",
+        "plural": "vets"
+      },
+      {
+        "singular": "wearer",
+        "plural": "wearers"
+      },
+      {
+        "singular": "wrestler",
+        "plural": "wrestlers"
+      },
+      {
+        "singular": "absentee",
+        "plural": "absentees"
+      },
+      {
+        "singular": "abuser",
+        "plural": "abusers"
+      },
+      {
+        "singular": "accused",
+        "plural": "accuseds"
+      },
+      {
+        "singular": "accuser",
+        "plural": "accusers"
+      },
+      {
+        "singular": "activist",
+        "plural": "activists"
+      },
+      {
+        "singular": "addict",
+        "plural": "addicts"
+      },
+      {
+        "singular": "adept",
+        "plural": "adepts"
+      },
+      {
+        "singular": "adviser",
+        "plural": "advisers"
+      },
+      {
+        "singular": "alcoholic",
+        "plural": "alcoholics"
+      },
+      {
+        "singular": "ali",
+        "plural": "alis"
+      },
+      {
+        "singular": "alternate",
+        "plural": "alternates"
+      },
+      {
+        "singular": "ancient",
+        "plural": "ancients"
+      },
+      {
+        "singular": "announcer",
+        "plural": "announcers"
+      },
+      {
+        "singular": "anti",
+        "plural": "antis"
+      },
+      {
+        "singular": "apostle",
+        "plural": "apostles"
+      },
+      {
+        "singular": "appellant",
+        "plural": "appellants"
+      },
+      {
+        "singular": "assailant",
+        "plural": "assailants"
+      },
+      {
+        "singular": "astronaut",
+        "plural": "astronauts"
+      },
+      {
+        "singular": "astronomer",
+        "plural": "astronomers"
+      },
+      {
+        "singular": "authoritarian",
+        "plural": "authoritarians"
+      },
+      {
+        "singular": "avatar",
+        "plural": "avatars"
+      },
+      {
+        "singular": "bankrupt",
+        "plural": "bankrupts"
+      },
+      {
+        "singular": "bart",
+        "plural": "barts"
+      },
+      {
+        "singular": "begin",
+        "plural": "begins"
+      },
+      {
+        "singular": "beloved",
+        "plural": "beloveds"
+      },
+      {
+        "singular": "bigot",
+        "plural": "bigots"
+      },
+      {
+        "singular": "bilingual",
+        "plural": "bilinguals"
+      },
+      {
+        "singular": "billionaire",
+        "plural": "billionaires"
+      },
+      {
+        "singular": "bisexual",
+        "plural": "bisexuals"
+      },
+      {
+        "singular": "blaster",
+        "plural": "blasters"
+      },
+      {
+        "singular": "blogger",
+        "plural": "bloggers"
+      },
+      {
+        "singular": "born",
+        "plural": "borns"
+      },
+      {
+        "singular": "bourgeois",
+        "plural": "bourgeoises"
+      },
+      {
+        "singular": "boyfriend",
+        "plural": "boyfriends"
+      },
+      {
+        "singular": "brewer",
+        "plural": "brewers"
+      },
+      {
+        "singular": "broad",
+        "plural": "broads"
+      },
+      {
+        "singular": "butcher",
+        "plural": "butchers"
+      },
+      {
+        "singular": "campaigner",
+        "plural": "campaigners"
+      },
+      {
+        "singular": "cannibal",
+        "plural": "cannibals"
+      },
+      {
+        "singular": "censor",
+        "plural": "censors"
+      },
+      {
+        "singular": "centrist",
+        "plural": "centrists"
+      },
+      {
+        "singular": "challenger",
+        "plural": "challengers"
+      },
+      {
+        "singular": "chancellor",
+        "plural": "chancellors"
+      },
+      {
+        "singular": "chased",
+        "plural": "chaseds"
+      },
+      {
+        "singular": "closer",
+        "plural": "closers"
+      },
+      {
+        "singular": "colored",
+        "plural": "coloreds"
+      },
+      {
+        "singular": "comic",
+        "plural": "comics"
+      },
+      {
+        "singular": "complainant",
+        "plural": "complainants"
+      },
+      {
+        "singular": "constructor",
+        "plural": "constructors"
+      },
+      {
+        "singular": "contender",
+        "plural": "contenders"
+      },
+      {
+        "singular": "contra",
+        "plural": "contras"
+      },
+      {
+        "singular": "cooper",
+        "plural": "coopers"
+      },
+      {
+        "singular": "cornerback",
+        "plural": "cornerbacks"
+      },
+      {
+        "singular": "councillor",
+        "plural": "councillors"
+      },
+      {
+        "singular": "crazy",
+        "plural": "crazies"
+      },
+      {
+        "singular": "creditor",
+        "plural": "creditors"
+      },
+      {
+        "singular": "da",
+        "plural": "das"
+      },
+      {
+        "singular": "david",
+        "plural": "davids"
+      },
+      {
+        "singular": "deb",
+        "plural": "debs"
+      },
+      {
+        "singular": "debtor",
+        "plural": "debtors"
+      },
+      {
+        "singular": "delinquent",
+        "plural": "delinquents"
+      },
+      {
+        "singular": "departed",
+        "plural": "departeds"
+      },
+      {
+        "singular": "detainee",
+        "plural": "detainees"
+      },
+      {
+        "singular": "dictator",
+        "plural": "dictators"
+      },
+      {
+        "singular": "dispatcher",
+        "plural": "dispatchers"
+      },
+      {
+        "singular": "dj",
+        "plural": "djs"
+      },
+      {
+        "singular": "docker",
+        "plural": "dockers"
+      },
+      {
+        "singular": "domestic",
+        "plural": "domestics"
+      },
+      {
+        "singular": "drew",
+        "plural": "drews"
+      },
+      {
+        "singular": "dry",
+        "plural": "dries"
+      },
+      {
+        "singular": "dude",
+        "plural": "dudes"
+      },
+      {
+        "singular": "eclectic",
+        "plural": "eclectics"
+      },
+      {
+        "singular": "egalitarian",
+        "plural": "egalitarians"
+      },
+      {
+        "singular": "eldest",
+        "plural": "eldests"
+      },
+      {
+        "singular": "emulator",
+        "plural": "emulators"
+      },
+      {
+        "singular": "erotic",
+        "plural": "erotics"
+      },
+      {
+        "singular": "ethnic",
+        "plural": "ethnics"
+      },
+      {
+        "singular": "examiner",
+        "plural": "examiners"
+      },
+      {
+        "singular": "extremist",
+        "plural": "extremists"
+      },
+      {
+        "singular": "familiar",
+        "plural": "familiars"
+      },
+      {
+        "singular": "fascist",
+        "plural": "fascists"
+      },
+      {
+        "singular": "fatty",
+        "plural": "fatties"
+      },
+      {
+        "singular": "federal",
+        "plural": "federals"
+      },
+      {
+        "singular": "feminist",
+        "plural": "feminists"
+      },
+      {
+        "singular": "fiance",
+        "plural": "fiances"
+      },
+      {
+        "singular": "filmmaker",
+        "plural": "filmmakers"
+      },
+      {
+        "singular": "fo",
+        "plural": "fos"
+      },
+      {
+        "singular": "footballer",
+        "plural": "footballers"
+      },
+      {
+        "singular": "foster",
+        "plural": "fosters"
+      },
+      {
+        "singular": "freelance",
+        "plural": "freelances"
+      },
+      {
+        "singular": "fry",
+        "plural": "fries"
+      },
+      {
+        "singular": "fuller",
+        "plural": "fullers"
+      },
+      {
+        "singular": "fundamentalist",
+        "plural": "fundamentalists"
+      },
+      {
+        "singular": "gay",
+        "plural": "gays"
+      },
+      {
+        "singular": "geek",
+        "plural": "geeks"
+      },
+      {
+        "singular": "git",
+        "plural": "gits"
+      },
+      {
+        "singular": "goof",
+        "plural": "gooves"
+      }
+    ],
+    "inanimate": [
+      {
+        "singular": "tsunami",
+        "plural": "tsunamis"
+      },
+      {
+        "singular": "earthquake",
+        "plural": "earthquakes"
+      },
+      {
+        "singular": "hurricane",
+        "plural": "hurricanes"
+      },
+      {
+        "singular": "landslide",
+        "plural": "landslides"
+      },
+      {
+        "singular": "blight",
+        "plural": "blights"
+      },
+      {
+        "singular": "tornado",
+        "plural": "tornados"
+      },
+      {
+        "singular": "glitch",
+        "plural": "glitches"
+      },
+      {
+        "singular": "wildfire",
+        "plural": "wildfires"
+      },
+      {
+        "singular": "rifle",
+        "plural": "rifles"
+      },
+      {
+        "singular": "car",
+        "plural": "cars"
+      },
+      {
+        "singular": "opportunity",
+        "plural": "opportunities"
+      },
+      {
+        "singular": "river",
+        "plural": "rivers"
+      },
+      {
+        "singular": "existence",
+        "plural": "existences"
+      },
+      {
+        "singular": "farm",
+        "plural": "farms"
+      },
+      {
+        "singular": "ship",
+        "plural": "ships"
+      },
+      {
+        "singular": "sky",
+        "plural": "skies"
+      },
+      {
+        "singular": "kitchen",
+        "plural": "kitchens"
+      },
+      {
+        "singular": "lack",
+        "plural": "lacks"
+      },
+      {
+        "singular": "victory",
+        "plural": "victories"
+      },
+      {
+        "singular": "hotel",
+        "plural": "hotels"
+      },
+      {
+        "singular": "apartment",
+        "plural": "apartments"
+      },
+      {
+        "singular": "occurrence",
+        "plural": "occurrences"
+      },
+      {
+        "singular": "drug",
+        "plural": "drugs"
+      },
+      {
+        "singular": "freedom",
+        "plural": "freedoms"
+      },
+      {
+        "singular": "shoe",
+        "plural": "shoes"
+      },
+      {
+        "singular": "valley",
+        "plural": "valleys"
+      },
+      {
+        "singular": "pond",
+        "plural": "ponds"
+      },
+      {
+        "singular": "wagon",
+        "plural": "wagons"
+      },
+      {
+        "singular": "desk",
+        "plural": "desks"
+      },
+      {
+        "singular": "blanket",
+        "plural": "blankets"
+      },
+      {
+        "singular": "protein",
+        "plural": "proteins"
+      },
+      {
+        "singular": "bedroom",
+        "plural": "bedrooms"
+      },
+      {
+        "singular": "camera",
+        "plural": "cameras"
+      },
+      {
+        "singular": "incident",
+        "plural": "incidents"
+      },
+      {
+        "singular": "porch",
+        "plural": "porches"
+      },
+      {
+        "singular": "status",
+        "plural": "statuses"
+      },
+      {
+        "singular": "truck",
+        "plural": "trucks"
+      },
+      {
+        "singular": "atom",
+        "plural": "atoms"
+      },
+      {
+        "singular": "basement",
+        "plural": "basements"
+      },
+      {
+        "singular": "factory",
+        "plural": "factories"
+      },
+      {
+        "singular": "hut",
+        "plural": "huts"
+      },
+      {
+        "singular": "necessity",
+        "plural": "necessities"
+      },
+      {
+        "singular": "outcome",
+        "plural": "outcomes"
+      },
+      {
+        "singular": "shore",
+        "plural": "shores"
+      },
+      {
+        "singular": "tumor",
+        "plural": "tumors"
+      },
+      {
+        "singular": "uniform",
+        "plural": "uniforms"
+      },
+      {
+        "singular": "antibody",
+        "plural": "antibodies"
+      },
+      {
+        "singular": "mine",
+        "plural": "mines"
+      },
+      {
+        "singular": "photograph",
+        "plural": "photographs"
+      },
+      {
+        "singular": "pistol",
+        "plural": "pistols"
+      },
+      {
+        "singular": "tent",
+        "plural": "tents"
+      },
+      {
+        "singular": "cigarette",
+        "plural": "cigarettes"
+      },
+      {
+        "singular": "luck",
+        "plural": "lucks"
+      },
+      {
+        "singular": "sidewalk",
+        "plural": "sidewalks"
+      },
+      {
+        "singular": "automobile",
+        "plural": "automobiles"
+      },
+      {
+        "singular": "clock",
+        "plural": "clocks"
+      },
+      {
+        "singular": "island",
+        "plural": "islands"
+      },
+      {
+        "singular": "shirt",
+        "plural": "shirts"
+      },
+      {
+        "singular": "studio",
+        "plural": "studios"
+      },
+      {
+        "singular": "beach",
+        "plural": "beaches"
+      },
+      {
+        "singular": "boat",
+        "plural": "boats"
+      },
+      {
+        "singular": "lamp",
+        "plural": "lamps"
+      },
+      {
+        "singular": "missile",
+        "plural": "missiles"
+      },
+      {
+        "singular": "cafeteria",
+        "plural": "cafeterias"
+      },
+      {
+        "singular": "accident",
+        "plural": "accidents"
+      },
+      {
+        "singular": "electron",
+        "plural": "electrons"
+      },
+      {
+        "singular": "engine",
+        "plural": "engines"
+      },
+      {
+        "singular": "garage",
+        "plural": "garages"
+      },
+      {
+        "singular": "highway",
+        "plural": "highways"
+      },
+      {
+        "singular": "subsection",
+        "plural": "subsections"
+      },
+      {
+        "singular": "tray",
+        "plural": "trays"
+      },
+      {
+        "singular": "antigen",
+        "plural": "antigens"
+      },
+      {
+        "singular": "doorway",
+        "plural": "doorways"
+      },
+      {
+        "singular": "dwelling",
+        "plural": "dwellings"
+      },
+      {
+        "singular": "emergency",
+        "plural": "emergencies"
+      },
+      {
+        "singular": "radar",
+        "plural": "radars"
+      },
+      {
+        "singular": "roadway",
+        "plural": "roadways"
+      },
+      {
+        "singular": "potential",
+        "plural": "potentials"
+      },
+      {
+        "singular": "shutter",
+        "plural": "shutters"
+      },
+      {
+        "singular": "voltage",
+        "plural": "voltages"
+      },
+      {
+        "singular": "bomb",
+        "plural": "bombs"
+      },
+      {
+        "singular": "cellar",
+        "plural": "cellars"
+      },
+      {
+        "singular": "corridor",
+        "plural": "corridors"
+      },
+      {
+        "singular": "gadget",
+        "plural": "gadgets"
+      },
+      {
+        "singular": "mineral",
+        "plural": "minerals"
+      },
+      {
+        "singular": "molecule",
+        "plural": "molecules"
+      },
+      {
+        "singular": "sword",
+        "plural": "swords"
+      },
+      {
+        "singular": "cabin",
+        "plural": "cabins"
+      },
+      {
+        "singular": "costume",
+        "plural": "costumes"
+      },
+      {
+        "singular": "cure",
+        "plural": "cures"
+      },
+      {
+        "singular": "curtain",
+        "plural": "curtains"
+      },
+      {
+        "singular": "funeral",
+        "plural": "funerals"
+      },
+      {
+        "singular": "ion",
+        "plural": "ions"
+      },
+      {
+        "singular": "miracle",
+        "plural": "miracles"
+      },
+      {
+        "singular": "pillow",
+        "plural": "pillows"
+      },
+      {
+        "singular": "shelf",
+        "plural": "shelves"
+      },
+      {
+        "singular": "tire",
+        "plural": "tires"
+      },
+      {
+        "singular": "cartridge",
+        "plural": "cartridges"
+      },
+      {
+        "singular": "cigar",
+        "plural": "cigars"
+      },
+      {
+        "singular": "crystal",
+        "plural": "crystals"
+      },
+      {
+        "singular": "enzyme",
+        "plural": "enzymes"
+      },
+      {
+        "singular": "freeway",
+        "plural": "freeways"
+      },
+      {
+        "singular": "microscope",
+        "plural": "microscopes"
+      },
+      {
+        "singular": "misfortune",
+        "plural": "misfortunes"
+      },
+      {
+        "singular": "poverty",
+        "plural": "poverties"
+      },
+      {
+        "singular": "resistor",
+        "plural": "resistors"
+      },
+      {
+        "singular": "restaurant",
+        "plural": "restaurants"
+      },
+      {
+        "singular": "sensor",
+        "plural": "sensors"
+      },
+      {
+        "singular": "bathroom",
+        "plural": "bathrooms"
+      },
+      {
+        "singular": "cart",
+        "plural": "carts"
+      },
+      {
+        "singular": "chemical",
+        "plural": "chemicals"
+      },
+      {
+        "singular": "closet",
+        "plural": "closets"
+      },
+      {
+        "singular": "diagram",
+        "plural": "diagrams"
+      },
+      {
+        "singular": "firearm",
+        "plural": "firearms"
+      },
+      {
+        "singular": "meteor",
+        "plural": "meteors"
+      },
+      {
+        "singular": "motor",
+        "plural": "motors"
+      },
+      {
+        "singular": "nightclub",
+        "plural": "nightclubs"
+      },
+      {
+        "singular": "rotor",
+        "plural": "rotors"
+      },
+      {
+        "singular": "tomb",
+        "plural": "tombs"
+      },
+      {
+        "singular": "tournament",
+        "plural": "tournaments"
+      },
+      {
+        "singular": "towel",
+        "plural": "towels"
+      },
+      {
+        "singular": "airplane",
+        "plural": "airplanes"
+      },
+      {
+        "singular": "bicycle",
+        "plural": "bicycles"
+      },
+      {
+        "singular": "canyon",
+        "plural": "canyons"
+      },
+      {
+        "singular": "classroom",
+        "plural": "classrooms"
+      },
+      {
+        "singular": "compartment",
+        "plural": "compartments"
+      },
+      {
+        "singular": "container",
+        "plural": "containers"
+      },
+      {
+        "singular": "couch",
+        "plural": "couches"
+      },
+      {
+        "singular": "disorder",
+        "plural": "disorders"
+      },
+      {
+        "singular": "driveway",
+        "plural": "driveways"
+      },
+      {
+        "singular": "elevator",
+        "plural": "elevators"
+      },
+      {
+        "singular": "epidemic",
+        "plural": "epidemics"
+      },
+      {
+        "singular": "filter",
+        "plural": "filters"
+      },
+      {
+        "singular": "fireplace",
+        "plural": "fireplaces"
+      },
+      {
+        "singular": "grenade",
+        "plural": "grenades"
+      },
+      {
+        "singular": "hallway",
+        "plural": "hallways"
+      },
+      {
+        "singular": "holster",
+        "plural": "holsters"
+      },
+      {
+        "singular": "ladder",
+        "plural": "ladders"
+      },
+      {
+        "singular": "lane",
+        "plural": "lanes"
+      },
+      {
+        "singular": "mortar",
+        "plural": "mortars"
+      },
+      {
+        "singular": "razor",
+        "plural": "razors"
+      },
+      {
+        "singular": "ripple",
+        "plural": "ripples"
+      },
+      {
+        "singular": "rope",
+        "plural": "ropes"
+      },
+      {
+        "singular": "sofa",
+        "plural": "sofas"
+      },
+      {
+        "singular": "statue",
+        "plural": "statues"
+      },
+      {
+        "singular": "stereo",
+        "plural": "stereos"
+      },
+      {
+        "singular": "taxi",
+        "plural": "taxis"
+      },
+      {
+        "singular": "tin",
+        "plural": "tins"
+      },
+      {
+        "singular": "uproar",
+        "plural": "uproars"
+      },
+      {
+        "singular": "airport",
+        "plural": "airports"
+      },
+      {
+        "singular": "aisle",
+        "plural": "aisles"
+      },
+      {
+        "singular": "backyard",
+        "plural": "backyards"
+      },
+      {
+        "singular": "balloon",
+        "plural": "balloons"
+      },
+      {
+        "singular": "cab",
+        "plural": "cabs"
+      },
+      {
+        "singular": "catastrophe",
+        "plural": "catastrophes"
+      },
+      {
+        "singular": "cathedral",
+        "plural": "cathedrals"
+      },
+      {
+        "singular": "cholesterol",
+        "plural": "cholesterols"
+      },
+      {
+        "singular": "commodity",
+        "plural": "commodities"
+      },
+      {
+        "singular": "cottage",
+        "plural": "cottages"
+      },
+      {
+        "singular": "detector",
+        "plural": "detectors"
+      },
+      {
+        "singular": "garment",
+        "plural": "garments"
+      },
+      {
+        "singular": "gym",
+        "plural": "gyms"
+      },
+      {
+        "singular": "handle",
+        "plural": "handles"
+      },
+      {
+        "singular": "hazard",
+        "plural": "hazards"
+      },
+      {
+        "singular": "housing",
+        "plural": "housings"
+      },
+      {
+        "singular": "infield",
+        "plural": "infields"
+      },
+      {
+        "singular": "lantern",
+        "plural": "lanterns"
+      },
+      {
+        "singular": "locker",
+        "plural": "lockers"
+      },
+      {
+        "singular": "mailbox",
+        "plural": "mailboxes"
+      },
+      {
+        "singular": "meet",
+        "plural": "meets"
+      },
+      {
+        "singular": "microphone",
+        "plural": "microphones"
+      },
+      {
+        "singular": "overall",
+        "plural": "overalls"
+      },
+      {
+        "singular": "polarization",
+        "plural": "polarizations"
+      },
+      {
+        "singular": "ranch",
+        "plural": "ranches"
+      },
+      {
+        "singular": "revolver",
+        "plural": "revolvers"
+      },
+      {
+        "singular": "robe",
+        "plural": "robes"
+      },
+      {
+        "singular": "rug",
+        "plural": "rugs"
+      },
+      {
+        "singular": "segment",
+        "plural": "segments"
+      },
+      {
+        "singular": "steroid",
+        "plural": "steroids"
+      },
+      {
+        "singular": "swamp",
+        "plural": "swamps"
+      },
+      {
+        "singular": "throttle",
+        "plural": "throttles"
+      },
+      {
+        "singular": "accelerator",
+        "plural": "accelerators"
+      },
+      {
+        "singular": "ambulance",
+        "plural": "ambulances"
+      },
+      {
+        "singular": "cape",
+        "plural": "capes"
+      },
+      {
+        "singular": "carpet",
+        "plural": "carpets"
+      },
+      {
+        "singular": "cliff",
+        "plural": "clifves"
+      },
+      {
+        "singular": "coffin",
+        "plural": "coffins"
+      },
+      {
+        "singular": "disability",
+        "plural": "disabilities"
+      },
+      {
+        "singular": "dungeon",
+        "plural": "dungeons"
+      },
+      {
+        "singular": "electrode",
+        "plural": "electrodes"
+      },
+      {
+        "singular": "flashlight",
+        "plural": "flashlights"
+      },
+      {
+        "singular": "fort",
+        "plural": "forts"
+      },
+      {
+        "singular": "guitar",
+        "plural": "guitars"
+      },
+      {
+        "singular": "gust",
+        "plural": "gusts"
+      },
+      {
+        "singular": "hinge",
+        "plural": "hinges"
+      },
+      {
+        "singular": "inn",
+        "plural": "inns"
+      },
+      {
+        "singular": "jail",
+        "plural": "jails"
+      },
+      {
+        "singular": "jet",
+        "plural": "jets"
+      },
+      {
+        "singular": "lake",
+        "plural": "lakes"
+      },
+      {
+        "singular": "mainland",
+        "plural": "mainlands"
+      },
+      {
+        "singular": "museum",
+        "plural": "museums"
+      },
+      {
+        "singular": "pane",
+        "plural": "panes"
+      },
+      {
+        "singular": "photo",
+        "plural": "photos"
+      },
+      {
+        "singular": "prison",
+        "plural": "prisons"
+      },
+      {
+        "singular": "quake",
+        "plural": "quakes"
+      },
+      {
+        "singular": "railing",
+        "plural": "railings"
+      },
+      {
+        "singular": "setback",
+        "plural": "setbacks"
+      },
+      {
+        "singular": "slab",
+        "plural": "slabs"
+      },
+      {
+        "singular": "stable",
+        "plural": "stables"
+      },
+      {
+        "singular": "streetcar",
+        "plural": "streetcars"
+      },
+      {
+        "singular": "tractor",
+        "plural": "tractors"
+      },
+      {
+        "singular": "turbine",
+        "plural": "turbines"
+      },
+      {
+        "singular": "violin",
+        "plural": "violins"
+      },
+      {
+        "singular": "vitamin",
+        "plural": "vitamins"
+      },
+      {
+        "singular": "wallpaper",
+        "plural": "wallpapers"
+      },
+      {
+        "singular": "waterfall",
+        "plural": "waterfalls"
+      },
+      {
+        "singular": "windshield",
+        "plural": "windshields"
+      },
+      {
+        "singular": "auto",
+        "plural": "autos"
+      },
+      {
+        "singular": "ax",
+        "plural": "axes"
+      },
+      {
+        "singular": "backstage",
+        "plural": "backstages"
+      },
+      {
+        "singular": "boom",
+        "plural": "booms"
+      },
+      {
+        "singular": "buggy",
+        "plural": "buggies"
+      },
+      {
+        "singular": "capacitor",
+        "plural": "capacitors"
+      },
+      {
+        "singular": "cavern",
+        "plural": "caverns"
+      },
+      {
+        "singular": "cockpit",
+        "plural": "cockpits"
+      },
+      {
+        "singular": "concussion",
+        "plural": "concussions"
+      },
+      {
+        "singular": "courtyard",
+        "plural": "courtyards"
+      },
+      {
+        "singular": "disgrace",
+        "plural": "disgraces"
+      },
+      {
+        "singular": "ditch",
+        "plural": "ditches"
+      },
+      {
+        "singular": "downfall",
+        "plural": "downfalls"
+      },
+      {
+        "singular": "flaw",
+        "plural": "flaws"
+      },
+      {
+        "singular": "fountain",
+        "plural": "fountains"
+      },
+      {
+        "singular": "grill",
+        "plural": "grills"
+      },
+      {
+        "singular": "happening",
+        "plural": "happenings"
+      },
+      {
+        "singular": "hoop",
+        "plural": "hoops"
+      },
+      {
+        "singular": "implement",
+        "plural": "implements"
+      },
+      {
+        "singular": "inception",
+        "plural": "inceptions"
+      },
+      {
+        "singular": "intermediate",
+        "plural": "intermediates"
+      },
+      {
+        "singular": "keyboard",
+        "plural": "keyboards"
+      },
+      {
+        "singular": "lab",
+        "plural": "labs"
+      },
+      {
+        "singular": "local",
+        "plural": "locals"
+      },
+      {
+        "singular": "miniature",
+        "plural": "miniatures"
+      },
+      {
+        "singular": "nursery",
+        "plural": "nurseries"
+      },
+      {
+        "singular": "outfield",
+        "plural": "outfields"
+      },
+      {
+        "singular": "parachute",
+        "plural": "parachutes"
+      },
+      {
+        "singular": "pigment",
+        "plural": "pigments"
+      },
+      {
+        "singular": "projectile",
+        "plural": "projectiles"
+      },
+      {
+        "singular": "refrigerator",
+        "plural": "refrigerators"
+      },
+      {
+        "singular": "relic",
+        "plural": "relics"
+      },
+      {
+        "singular": "repeat",
+        "plural": "repeats"
+      },
+      {
+        "singular": "roadside",
+        "plural": "roadsides"
+      },
+      {
+        "singular": "salon",
+        "plural": "salons"
+      },
+      {
+        "singular": "scarf",
+        "plural": "scarves"
+      },
+      {
+        "singular": "sedan",
+        "plural": "sedans"
+      },
+      {
+        "singular": "shotgun",
+        "plural": "shotguns"
+      },
+      {
+        "singular": "sill",
+        "plural": "sills"
+      },
+      {
+        "singular": "soundtrack",
+        "plural": "soundtracks"
+      },
+      {
+        "singular": "spoke",
+        "plural": "spokes"
+      },
+      {
+        "singular": "stadium",
+        "plural": "stadiums"
+      },
+      {
+        "singular": "storefront",
+        "plural": "storefronts"
+      },
+      {
+        "singular": "strap",
+        "plural": "straps"
+      },
+      {
+        "singular": "synagogue",
+        "plural": "synagogues"
+      },
+      {
+        "singular": "tapping",
+        "plural": "tappings"
+      },
+      {
+        "singular": "tavern",
+        "plural": "taverns"
+      },
+      {
+        "singular": "trench",
+        "plural": "trenches"
+      },
+      {
+        "singular": "vest",
+        "plural": "vests"
+      },
+      {
+        "singular": "wallet",
+        "plural": "wallets"
+      },
+      {
+        "singular": "zoo",
+        "plural": "zoos"
+      },
+      {
+        "singular": "adversity",
+        "plural": "adversities"
+      },
+      {
+        "singular": "alley",
+        "plural": "alleys"
+      },
+      {
+        "singular": "amplifier",
+        "plural": "amplifiers"
+      },
+      {
+        "singular": "amulet",
+        "plural": "amulets"
+      },
+      {
+        "singular": "aperture",
+        "plural": "apertures"
+      },
+      {
+        "singular": "axle",
+        "plural": "axles"
+      },
+      {
+        "singular": "backdrop",
+        "plural": "backdrops"
+      },
+      {
+        "singular": "bash",
+        "plural": "bashes"
+      },
+      {
+        "singular": "bog",
+        "plural": "bogs"
+      },
+      {
+        "singular": "boiler",
+        "plural": "boilers"
+      },
+      {
+        "singular": "bolster",
+        "plural": "bolsters"
+      },
+      {
+        "singular": "boon",
+        "plural": "boons"
+      },
+      {
+        "singular": "brig",
+        "plural": "brigs"
+      },
+      {
+        "singular": "brim",
+        "plural": "brims"
+      },
+      {
+        "singular": "bunker",
+        "plural": "bunkers"
+      },
+      {
+        "singular": "burner",
+        "plural": "burners"
+      },
+      {
+        "singular": "cloak",
+        "plural": "cloaks"
+      },
+      {
+        "singular": "comet",
+        "plural": "comets"
+      },
+      {
+        "singular": "contingency",
+        "plural": "contingencies"
+      },
+      {
+        "singular": "cuff",
+        "plural": "cufves"
+      },
+      {
+        "singular": "cushion",
+        "plural": "cushions"
+      },
+      {
+        "singular": "debacle",
+        "plural": "debacles"
+      },
+      {
+        "singular": "depot",
+        "plural": "depots"
+      },
+      {
+        "singular": "dial",
+        "plural": "dials"
+      },
+      {
+        "singular": "diaper",
+        "plural": "diapers"
+      },
+      {
+        "singular": "dispensary",
+        "plural": "dispensaries"
+      },
+      {
+        "singular": "ell",
+        "plural": "ells"
+      },
+      {
+        "singular": "eruption",
+        "plural": "eruptions"
+      },
+      {
+        "singular": "export",
+        "plural": "exports"
+      },
+      {
+        "singular": "furnace",
+        "plural": "furnaces"
+      },
+      {
+        "singular": "gateway",
+        "plural": "gateways"
+      },
+      {
+        "singular": "gear",
+        "plural": "gears"
+      },
+      {
+        "singular": "glacier",
+        "plural": "glaciers"
+      },
+      {
+        "singular": "grate",
+        "plural": "grates"
+      },
+      {
+        "singular": "grocery",
+        "plural": "groceries"
+      },
+      {
+        "singular": "knit",
+        "plural": "knits"
+      },
+      {
+        "singular": "launcher",
+        "plural": "launchers"
+      },
+      {
+        "singular": "ledge",
+        "plural": "ledges"
+      },
+      {
+        "singular": "lever",
+        "plural": "levers"
+      },
+      {
+        "singular": "marquee",
+        "plural": "marquees"
+      },
+      {
+        "singular": "marvel",
+        "plural": "marvels"
+      },
+      {
+        "singular": "monastery",
+        "plural": "monasteries"
+      },
+      {
+        "singular": "motel",
+        "plural": "motels"
+      },
+      {
+        "singular": "necklace",
+        "plural": "necklaces"
+      },
+      {
+        "singular": "ornament",
+        "plural": "ornaments"
+      },
+      {
+        "singular": "outbreak",
+        "plural": "outbreaks"
+      },
+      {
+        "singular": "oven",
+        "plural": "ovens"
+      },
+      {
+        "singular": "overload",
+        "plural": "overloads"
+      },
+      {
+        "singular": "paperback",
+        "plural": "paperbacks"
+      },
+      {
+        "singular": "peninsula",
+        "plural": "peninsulas"
+      },
+      {
+        "singular": "photon",
+        "plural": "photons"
+      },
+      {
+        "singular": "pier",
+        "plural": "piers"
+      },
+      {
+        "singular": "plain",
+        "plural": "plains"
+      },
+      {
+        "singular": "predicament",
+        "plural": "predicaments"
+      },
+      {
+        "singular": "prop",
+        "plural": "props"
+      },
+      {
+        "singular": "quartz",
+        "plural": "quartzes"
+      },
+      {
+        "singular": "radiator",
+        "plural": "radiators"
+      },
+      {
+        "singular": "rift",
+        "plural": "rifts"
+      },
+      {
+        "singular": "scoreboard",
+        "plural": "scoreboards"
+      },
+      {
+        "singular": "shack",
+        "plural": "shacks"
+      },
+      {
+        "singular": "shed",
+        "plural": "sheds"
+      },
+      {
+        "singular": "shortcut",
+        "plural": "shortcuts"
+      },
+      {
+        "singular": "shrine",
+        "plural": "shrines"
+      },
+      {
+        "singular": "snapshot",
+        "plural": "snapshots"
+      },
+      {
+        "singular": "sore",
+        "plural": "sores"
+      }
+    ]
+  },
+  "rejections": {
+    "animate": [
+      {
+        "word": "detective",
+        "reason": "plural_roundtrip_failed",
+        "singular": "detective",
+        "plural": "detectives"
+      },
+      {
+        "word": "nurse",
+        "reason": "plural_roundtrip_failed",
+        "singular": "nurse",
+        "plural": "nurses"
+      },
+      {
+        "word": "wife",
+        "reason": "plural_roundtrip_failed",
+        "singular": "wife",
+        "plural": "wives"
+      },
+      {
+        "word": "slave",
+        "reason": "plural_roundtrip_failed",
+        "singular": "slave",
+        "plural": "slaves"
+      },
+      {
+        "word": "rookie",
+        "reason": "plural_roundtrip_failed",
+        "singular": "rookie",
+        "plural": "rookies"
+      },
+      {
+        "word": "conservative",
+        "reason": "plural_roundtrip_failed",
+        "singular": "conservative",
+        "plural": "conservatives"
+      },
+      {
+        "word": "spouse",
+        "reason": "plural_roundtrip_failed",
+        "singular": "spouse",
+        "plural": "spouses"
+      },
+      {
+        "word": "captive",
+        "reason": "plural_roundtrip_failed",
+        "singular": "captive",
+        "plural": "captives"
+      },
+      {
+        "word": "fugitive",
+        "reason": "plural_roundtrip_failed",
+        "singular": "fugitive",
+        "plural": "fugitives"
+      },
+      {
+        "word": "depressive",
+        "reason": "plural_roundtrip_failed",
+        "singular": "depressive",
+        "plural": "depressives"
+      }
+    ],
+    "inanimate": [
+      {
+        "word": "dust",
+        "reason": "awkward_after_many",
+        "singular": "dust",
+        "plural": ""
+      },
+      {
+        "word": "sunlight",
+        "reason": "awkward_after_many",
+        "singular": "sunlight",
+        "plural": ""
+      },
+      {
+        "word": "moisture",
+        "reason": "awkward_after_many",
+        "singular": "moisture",
+        "plural": ""
+      },
+      {
+        "word": "debris",
+        "reason": "awkward_after_many",
+        "singular": "debris",
+        "plural": ""
+      },
+      {
+        "word": "grease",
+        "reason": "awkward_after_many",
+        "singular": "grease",
+        "plural": ""
+      },
+      {
+        "word": "humidity",
+        "reason": "awkward_after_many",
+        "singular": "humidity",
+        "plural": ""
+      },
+      {
+        "word": "avalanche",
+        "reason": "plural_roundtrip_failed",
+        "singular": "avalanche",
+        "plural": "avalanches"
+      },
+      {
+        "word": "steam",
+        "reason": "awkward_after_many",
+        "singular": "steam",
+        "plural": ""
+      },
+      {
+        "word": "equipment",
+        "reason": "awkward_after_many",
+        "singular": "equipment",
+        "plural": ""
+      },
+      {
+        "word": "oxygen",
+        "reason": "awkward_after_many",
+        "singular": "oxygen",
+        "plural": ""
+      },
+      {
+        "word": "saline",
+        "reason": "awkward_after_many",
+        "singular": "saline",
+        "plural": ""
+      },
+      {
+        "word": "disease",
+        "reason": "plural_roundtrip_failed",
+        "singular": "disease",
+        "plural": "diseases"
+      },
+      {
+        "word": "fluid",
+        "reason": "awkward_after_many",
+        "singular": "fluid",
+        "plural": ""
+      },
+      {
+        "word": "powder",
+        "reason": "awkward_after_many",
+        "singular": "powder",
+        "plural": ""
+      },
+      {
+        "word": "health",
+        "reason": "awkward_after_many",
+        "singular": "health",
+        "plural": ""
+      },
+      {
+        "word": "metal",
+        "reason": "awkward_after_many",
+        "singular": "metal",
+        "plural": ""
+      },
+      {
+        "word": "steel",
+        "reason": "awkward_after_many",
+        "singular": "steel",
+        "plural": ""
+      },
+      {
+        "word": "weather",
+        "reason": "awkward_after_many",
+        "singular": "weather",
+        "plural": ""
+      },
+      {
+        "word": "sewage",
+        "reason": "awkward_after_many",
+        "singular": "sewage",
+        "plural": ""
+      },
+      {
+        "word": "iron",
+        "reason": "awkward_after_many",
+        "singular": "iron",
+        "plural": ""
+      },
+      {
+        "word": "cloth",
+        "reason": "awkward_after_many",
+        "singular": "cloth",
+        "plural": ""
+      },
+      {
+        "word": "concrete",
+        "reason": "awkward_after_many",
+        "singular": "concrete",
+        "plural": ""
+      },
+      {
+        "word": "die",
+        "reason": "plural_roundtrip_failed",
+        "singular": "die",
+        "plural": "dies"
+      },
+      {
+        "word": "aircraft",
+        "reason": "singular_equals_plural",
+        "singular": "aircraft",
+        "plural": "aircraft"
+      },
+      {
+        "word": "helium",
+        "reason": "awkward_after_many",
+        "singular": "helium",
+        "plural": ""
+      },
+      {
+        "word": "opium",
+        "reason": "awkward_after_many",
+        "singular": "opium",
+        "plural": ""
+      },
+      {
+        "word": "thunder",
+        "reason": "awkward_after_many",
+        "singular": "thunder",
+        "plural": ""
+      },
+      {
+        "word": "furniture",
+        "reason": "awkward_after_many",
+        "singular": "furniture",
+        "plural": ""
+      },
+      {
+        "word": "leather",
+        "reason": "awkward_after_many",
+        "singular": "leather",
+        "plural": ""
+      },
+      {
+        "word": "lightning",
+        "reason": "awkward_after_many",
+        "singular": "lightning",
+        "plural": ""
+      },
+      {
+        "word": "prestige",
+        "reason": "awkward_after_many",
+        "singular": "prestige",
+        "plural": ""
+      },
+      {
+        "word": "suitcase",
+        "reason": "plural_roundtrip_failed",
+        "singular": "suitcase",
+        "plural": "suitcases"
+      },
+      {
+        "word": "fallout",
+        "reason": "awkward_after_many",
+        "singular": "fallout",
+        "plural": ""
+      },
+      {
+        "word": "marble",
+        "reason": "awkward_after_many",
+        "singular": "marble",
+        "plural": ""
+      },
+      {
+        "word": "mist",
+        "reason": "awkward_after_many",
+        "singular": "mist",
+        "plural": ""
+      },
+      {
+        "word": "clothing",
+        "reason": "awkward_after_many",
+        "singular": "clothing",
+        "plural": ""
+      },
+      {
+        "word": "diarrhea",
+        "reason": "awkward_after_many",
+        "singular": "diarrhea",
+        "plural": ""
+      },
+      {
+        "word": "axe",
+        "reason": "plural_roundtrip_failed",
+        "singular": "axe",
+        "plural": "axes"
+      },
+      {
+        "word": "climate",
+        "reason": "awkward_after_many",
+        "singular": "climate",
+        "plural": ""
+      },
+      {
+        "word": "ecstasy",
+        "reason": "awkward_after_many",
+        "singular": "ecstasy",
+        "plural": ""
+      },
+      {
+        "word": "fame",
+        "reason": "awkward_after_many",
+        "singular": "fame",
+        "plural": ""
+      },
+      {
+        "word": "silk",
+        "reason": "awkward_after_many",
+        "singular": "silk",
+        "plural": ""
+      },
+      {
+        "word": "textile",
+        "reason": "awkward_after_many",
+        "singular": "textile",
+        "plural": ""
+      },
+      {
+        "word": "wax",
+        "reason": "awkward_after_many",
+        "singular": "wax",
+        "plural": ""
+      },
+      {
+        "word": "carbon",
+        "reason": "awkward_after_many",
+        "singular": "carbon",
+        "plural": ""
+      },
+      {
+        "word": "dependence",
+        "reason": "awkward_after_many",
+        "singular": "dependence",
+        "plural": ""
+      },
+      {
+        "word": "frenzy",
+        "reason": "awkward_after_many",
+        "singular": "frenzy",
+        "plural": ""
+      },
+      {
+        "word": "glove",
+        "reason": "plural_roundtrip_failed",
+        "singular": "glove",
+        "plural": "gloves"
+      },
+      {
+        "word": "hydrogen",
+        "reason": "awkward_after_many",
+        "singular": "hydrogen",
+        "plural": ""
+      },
+      {
+        "word": "luggage",
+        "reason": "awkward_after_many",
+        "singular": "luggage",
+        "plural": ""
+      },
+      {
+        "word": "lumber",
+        "reason": "awkward_after_many",
+        "singular": "lumber",
+        "plural": ""
+      },
+      {
+        "word": "safe",
+        "reason": "plural_roundtrip_failed",
+        "singular": "safe",
+        "plural": "saves"
+      },
+      {
+        "word": "stove",
+        "reason": "plural_roundtrip_failed",
+        "singular": "stove",
+        "plural": "stoves"
+      },
+      {
+        "word": "zinc",
+        "reason": "awkward_after_many",
+        "singular": "zinc",
+        "plural": ""
+      },
+      {
+        "word": "additive",
+        "reason": "plural_roundtrip_failed",
+        "singular": "additive",
+        "plural": "additives"
+      },
+      {
+        "word": "aluminum",
+        "reason": "awkward_after_many",
+        "singular": "aluminum",
+        "plural": ""
+      },
+      {
+        "word": "cafe",
+        "reason": "plural_roundtrip_failed",
+        "singular": "cafe",
+        "plural": "caves"
+      },
+      {
+        "word": "coal",
+        "reason": "awkward_after_many",
+        "singular": "coal",
+        "plural": ""
+      },
+      {
+        "word": "foam",
+        "reason": "awkward_after_many",
+        "singular": "foam",
+        "plural": ""
+      },
+      {
+        "word": "fuel",
+        "reason": "awkward_after_many",
+        "singular": "fuel",
+        "plural": ""
+      },
+      {
+        "word": "nitrogen",
+        "reason": "awkward_after_many",
+        "singular": "nitrogen",
+        "plural": ""
+      },
+      {
+        "word": "potassium",
+        "reason": "awkward_after_many",
+        "singular": "potassium",
+        "plural": ""
+      },
+      {
+        "word": "sleeve",
+        "reason": "plural_roundtrip_failed",
+        "singular": "sleeve",
+        "plural": "sleeves"
+      },
+      {
+        "word": "warehouse",
+        "reason": "plural_roundtrip_failed",
+        "singular": "warehouse",
+        "plural": "warehouses"
+      },
+      {
+        "word": "acid",
+        "reason": "awkward_after_many",
+        "singular": "acid",
+        "plural": ""
+      },
+      {
+        "word": "cave",
+        "reason": "plural_roundtrip_failed",
+        "singular": "cave",
+        "plural": "caves"
+      },
+      {
+        "word": "complicity",
+        "reason": "awkward_after_many",
+        "singular": "complicity",
+        "plural": ""
+      },
+      {
+        "word": "contraceptive",
+        "reason": "plural_roundtrip_failed",
+        "singular": "contraceptive",
+        "plural": "contraceptives"
+      },
+      {
+        "word": "manure",
+        "reason": "awkward_after_many",
+        "singular": "manure",
+        "plural": ""
+      },
+      {
+        "word": "merchandise",
+        "reason": "awkward_after_many",
+        "singular": "merchandise",
+        "plural": ""
+      },
+      {
+        "word": "pavement",
+        "reason": "awkward_after_many",
+        "singular": "pavement",
+        "plural": ""
+      },
+      {
+        "word": "prosperity",
+        "reason": "awkward_after_many",
+        "singular": "prosperity",
+        "plural": ""
+      },
+      {
+        "word": "rubber",
+        "reason": "awkward_after_many",
+        "singular": "rubber",
+        "plural": ""
+      },
+      {
+        "word": "supremacy",
+        "reason": "awkward_after_many",
+        "singular": "supremacy",
+        "plural": ""
+      },
+      {
+        "word": "tubing",
+        "reason": "awkward_after_many",
+        "singular": "tubing",
+        "plural": ""
+      },
+      {
+        "word": "adhesive",
+        "reason": "awkward_after_many",
+        "singular": "adhesive",
+        "plural": ""
+      },
+      {
+        "word": "ammo",
+        "reason": "awkward_after_many",
+        "singular": "ammo",
+        "plural": ""
+      },
+      {
+        "word": "calcium",
+        "reason": "awkward_after_many",
+        "singular": "calcium",
+        "plural": ""
+      },
+      {
+        "word": "captivity",
+        "reason": "awkward_after_many",
+        "singular": "captivity",
+        "plural": ""
+      },
+      {
+        "word": "cargo",
+        "reason": "awkward_after_many",
+        "singular": "cargo",
+        "plural": ""
+      },
+      {
+        "word": "chrome",
+        "reason": "awkward_after_many",
+        "singular": "chrome",
+        "plural": ""
+      },
+      {
+        "word": "compost",
+        "reason": "awkward_after_many",
+        "singular": "compost",
+        "plural": ""
+      },
+      {
+        "word": "cr",
+        "reason": "awkward_after_many",
+        "singular": "cr",
+        "plural": ""
+      },
+      {
+        "word": "doom",
+        "reason": "awkward_after_many",
+        "singular": "doom",
+        "plural": ""
+      },
+      {
+        "word": "friendship",
+        "reason": "awkward_after_many",
+        "singular": "friendship",
+        "plural": ""
+      },
+      {
+        "word": "gravel",
+        "reason": "awkward_after_many",
+        "singular": "gravel",
+        "plural": ""
+      },
+      {
+        "word": "hardware",
+        "reason": "awkward_after_many",
+        "singular": "hardware",
+        "plural": ""
+      },
+      {
+        "word": "linen",
+        "reason": "awkward_after_many",
+        "singular": "linen",
+        "plural": ""
+      },
+      {
+        "word": "ozone",
+        "reason": "awkward_after_many",
+        "singular": "ozone",
+        "plural": ""
+      },
+      {
+        "word": "plaster",
+        "reason": "awkward_after_many",
+        "singular": "plaster",
+        "plural": ""
+      },
+      {
+        "word": "platinum",
+        "reason": "awkward_after_many",
+        "singular": "platinum",
+        "plural": ""
+      },
+      {
+        "word": "popping",
+        "reason": "awkward_after_many",
+        "singular": "popping",
+        "plural": ""
+      },
+      {
+        "word": "sediment",
+        "reason": "awkward_after_many",
+        "singular": "sediment",
+        "plural": ""
+      },
+      {
+        "word": "staircase",
+        "reason": "plural_roundtrip_failed",
+        "singular": "staircase",
+        "plural": "staircases"
+      },
+      {
+        "word": "ultraviolet",
+        "reason": "awkward_after_many",
+        "singular": "ultraviolet",
+        "plural": ""
+      },
+      {
+        "word": "unemployment",
+        "reason": "awkward_after_many",
+        "singular": "unemployment",
+        "plural": ""
+      },
+      {
+        "word": "anarchy",
+        "reason": "awkward_after_many",
+        "singular": "anarchy",
+        "plural": ""
+      },
+      {
+        "word": "attire",
+        "reason": "awkward_after_many",
+        "singular": "attire",
+        "plural": ""
+      },
+      {
+        "word": "bouncing",
+        "reason": "awkward_after_many",
+        "singular": "bouncing",
+        "plural": ""
+      },
+      {
+        "word": "bronze",
+        "reason": "awkward_after_many",
+        "singular": "bronze",
+        "plural": ""
+      },
+      {
+        "word": "chloride",
+        "reason": "awkward_after_many",
+        "singular": "chloride",
+        "plural": ""
+      },
+      {
+        "word": "clubhouse",
+        "reason": "plural_roundtrip_failed",
+        "singular": "clubhouse",
+        "plural": "clubhouses"
+      },
+      {
+        "word": "congestion",
+        "reason": "awkward_after_many",
+        "singular": "congestion",
+        "plural": ""
+      },
+      {
+        "word": "criminality",
+        "reason": "awkward_after_many",
+        "singular": "criminality",
+        "plural": ""
+      },
+      {
+        "word": "eclipse",
+        "reason": "plural_roundtrip_failed",
+        "singular": "eclipse",
+        "plural": "eclipses"
+      },
+      {
+        "word": "entirety",
+        "reason": "awkward_after_many",
+        "singular": "entirety",
+        "plural": ""
+      },
+      {
+        "word": "flu",
+        "reason": "awkward_after_many",
+        "singular": "flu",
+        "plural": ""
+      },
+      {
+        "word": "fluoride",
+        "reason": "awkward_after_many",
+        "singular": "fluoride",
+        "plural": ""
+      },
+      {
+        "word": "grinding",
+        "reason": "awkward_after_many",
+        "singular": "grinding",
+        "plural": ""
+      },
+      {
+        "word": "jeopardy",
+        "reason": "awkward_after_many",
+        "singular": "jeopardy",
+        "plural": ""
+      },
+      {
+        "word": "lipstick",
+        "reason": "awkward_after_many",
+        "singular": "lipstick",
+        "plural": ""
+      },
+      {
+        "word": "malaria",
+        "reason": "awkward_after_many",
+        "singular": "malaria",
+        "plural": ""
+      },
+      {
+        "word": "microwave",
+        "reason": "plural_roundtrip_failed",
+        "singular": "microwave",
+        "plural": "microwaves"
+      },
+      {
+        "word": "ready",
+        "reason": "awkward_after_many",
+        "singular": "ready",
+        "plural": ""
+      },
+      {
+        "word": "showcase",
+        "reason": "plural_roundtrip_failed",
+        "singular": "showcase",
+        "plural": "showcases"
+      },
+      {
+        "word": "susceptibility",
+        "reason": "awkward_after_many",
+        "singular": "susceptibility",
+        "plural": ""
+      },
+      {
+        "word": "velvet",
+        "reason": "awkward_after_many",
+        "singular": "velvet",
+        "plural": ""
+      },
+      {
+        "word": "wastewater",
+        "reason": "awkward_after_many",
+        "singular": "wastewater",
+        "plural": ""
+      },
+      {
+        "word": "weave",
+        "reason": "plural_roundtrip_failed",
+        "singular": "weave",
+        "plural": "weaves"
+      },
+      {
+        "word": "airflow",
+        "reason": "awkward_after_many",
+        "singular": "airflow",
+        "plural": ""
+      },
+      {
+        "word": "anonymity",
+        "reason": "awkward_after_many",
+        "singular": "anonymity",
+        "plural": ""
+      },
+      {
+        "word": "appalling",
+        "reason": "awkward_after_many",
+        "singular": "appalling",
+        "plural": ""
+      },
+      {
+        "word": "arsenic",
+        "reason": "awkward_after_many",
+        "singular": "arsenic",
+        "plural": ""
+      },
+      {
+        "word": "asphalt",
+        "reason": "awkward_after_many",
+        "singular": "asphalt",
+        "plural": ""
+      },
+      {
+        "word": "aspirin",
+        "reason": "awkward_after_many",
+        "singular": "aspirin",
+        "plural": ""
+      },
+      {
+        "word": "autonomy",
+        "reason": "awkward_after_many",
+        "singular": "autonomy",
+        "plural": ""
+      },
+      {
+        "word": "cardboard",
+        "reason": "awkward_after_many",
+        "singular": "cardboard",
+        "plural": ""
+      },
+      {
+        "word": "circuitry",
+        "reason": "awkward_after_many",
+        "singular": "circuitry",
+        "plural": ""
+      },
+      {
+        "word": "cocaine",
+        "reason": "awkward_after_many",
+        "singular": "cocaine",
+        "plural": ""
+      },
+      {
+        "word": "coping",
+        "reason": "awkward_after_many",
+        "singular": "coping",
+        "plural": ""
+      },
+      {
+        "word": "cove",
+        "reason": "plural_roundtrip_failed",
+        "singular": "cove",
+        "plural": "coves"
+      },
+      {
+        "word": "dairy",
+        "reason": "awkward_after_many",
+        "singular": "dairy",
+        "plural": ""
+      },
+      {
+        "word": "decor",
+        "reason": "awkward_after_many",
+        "singular": "decor",
+        "plural": ""
+      },
+      {
+        "word": "diabetes",
+        "reason": "awkward_after_many",
+        "singular": "diabetes",
+        "plural": ""
+      },
+      {
+        "word": "discredit",
+        "reason": "awkward_after_many",
+        "singular": "discredit",
+        "plural": ""
+      },
+      {
+        "word": "employ",
+        "reason": "awkward_after_many",
+        "singular": "employ",
+        "plural": ""
+      },
+      {
+        "word": "essential",
+        "reason": "awkward_after_many",
+        "singular": "essential",
+        "plural": ""
+      },
+      {
+        "word": "ethanol",
+        "reason": "awkward_after_many",
+        "singular": "ethanol",
+        "plural": ""
+      },
+      {
+        "word": "fertilizer",
+        "reason": "awkward_after_many",
+        "singular": "fertilizer",
+        "plural": ""
+      },
+      {
+        "word": "flashing",
+        "reason": "awkward_after_many",
+        "singular": "flashing",
+        "plural": ""
+      },
+      {
+        "word": "flowing",
+        "reason": "awkward_after_many",
+        "singular": "flowing",
+        "plural": ""
+      },
+      {
+        "word": "fuse",
+        "reason": "plural_roundtrip_failed",
+        "singular": "fuse",
+        "plural": "fuses"
+      },
+      {
+        "word": "gasoline",
+        "reason": "awkward_after_many",
+        "singular": "gasoline",
+        "plural": ""
+      },
+      {
+        "word": "glue",
+        "reason": "awkward_after_many",
+        "singular": "glue",
+        "plural": ""
+      },
+      {
+        "word": "greenhouse",
+        "reason": "plural_roundtrip_failed",
+        "singular": "greenhouse",
+        "plural": "greenhouses"
+      },
+      {
+        "word": "grotesque",
+        "reason": "awkward_after_many",
+        "singular": "grotesque",
+        "plural": ""
+      },
+      {
+        "word": "impunity",
+        "reason": "awkward_after_many",
+        "singular": "impunity",
+        "plural": ""
+      },
+      {
+        "word": "inaction",
+        "reason": "awkward_after_many",
+        "singular": "inaction",
+        "plural": ""
+      },
+      {
+        "word": "inevitable",
+        "reason": "awkward_after_many",
+        "singular": "inevitable",
+        "plural": ""
+      },
+      {
+        "word": "insanity",
+        "reason": "awkward_after_many",
+        "singular": "insanity",
+        "plural": ""
+      },
+      {
+        "word": "junk",
+        "reason": "awkward_after_many",
+        "singular": "junk",
+        "plural": ""
+      },
+      {
+        "word": "knocking",
+        "reason": "awkward_after_many",
+        "singular": "knocking",
+        "plural": ""
+      },
+      {
+        "word": "laundry",
+        "reason": "awkward_after_many",
+        "singular": "laundry",
+        "plural": ""
+      },
+      {
+        "word": "leakage",
+        "reason": "awkward_after_many",
+        "singular": "leakage",
+        "plural": ""
+      },
+      {
+        "word": "mascara",
+        "reason": "awkward_after_many",
+        "singular": "mascara",
+        "plural": ""
+      },
+      {
+        "word": "nicotine",
+        "reason": "awkward_after_many",
+        "singular": "nicotine",
+        "plural": ""
+      },
+      {
+        "word": "nowhere",
+        "reason": "awkward_after_many",
+        "singular": "nowhere",
+        "plural": ""
+      },
+      {
+        "word": "pale",
+        "reason": "awkward_after_many",
+        "singular": "pale",
+        "plural": ""
+      },
+      {
+        "word": "parchment",
+        "reason": "awkward_after_many",
+        "singular": "parchment",
+        "plural": ""
+      },
+      {
+        "word": "pneumonia",
+        "reason": "awkward_after_many",
+        "singular": "pneumonia",
+        "plural": ""
+      },
+      {
+        "word": "polio",
+        "reason": "awkward_after_many",
+        "singular": "polio",
+        "plural": ""
+      },
+      {
+        "word": "rainfall",
+        "reason": "awkward_after_many",
+        "singular": "rainfall",
+        "plural": ""
+      },
+      {
+        "word": "refuse",
+        "reason": "awkward_after_many",
+        "singular": "refuse",
+        "plural": ""
+      },
+      {
+        "word": "rubble",
+        "reason": "awkward_after_many",
+        "singular": "rubble",
+        "plural": ""
+      },
+      {
+        "word": "sanity",
+        "reason": "awkward_after_many",
+        "singular": "sanity",
+        "plural": ""
+      },
+      {
+        "word": "silicone",
+        "reason": "awkward_after_many",
+        "singular": "silicone",
+        "plural": ""
+      },
+      {
+        "word": "sodium",
+        "reason": "awkward_after_many",
+        "singular": "sodium",
+        "plural": ""
+      }
+    ]
+  },
+  "summary": {
+    "animate": {
+      "source_count": 500,
+      "accepted_count": 490,
+      "rejected_count": 10,
+      "rejection_reasons": {
+        "plural_roundtrip_failed": 10
+      },
+      "collision_reasons": {}
+    },
+    "inanimate": {
+      "source_count": 500,
+      "accepted_count": 333,
+      "rejected_count": 167,
+      "rejection_reasons": {
+        "awkward_after_many": 143,
+        "plural_roundtrip_failed": 23,
+        "singular_equals_plural": 1
+      },
+      "collision_reasons": {}
+    }
+  }
+}

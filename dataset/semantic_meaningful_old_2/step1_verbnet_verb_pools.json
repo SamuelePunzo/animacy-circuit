@@ -1,0 +1,3503 @@
+{
+  "meta": {
+    "phase": "Step 1 only",
+    "source": "VerbNet via nltk.corpus.verbnet",
+    "tokenizer_model": "gpt2",
+    "token_length_uses_leading_space": true,
+    "corrupt_primary_rule": "Cause role with -animate restriction",
+    "corrupt_fallback_rule": "VerbNet metadata fallback: physical Patient/Theme with Cause/Instrument/intentional-Agent signature",
+    "strict_corrupt_class_count": 0,
+    "fallback_corrupt_class_count": 53,
+    "overlap_removed_count": 622,
+    "clean_dropped_count": 0,
+    "corrupt_dropped_count": 0
+  },
+  "verbs": {
+    "note": "Step 1 output only: clean/corrupt verb pools in past participle form.",
+    "by_token_length": {
+      "1": {
+        "clean": [
+          "abducted",
+          "abused",
+          "accepted",
+          "acclaimed",
+          "accompanied",
+          "accrued",
+          "accused",
+          "acknowledged",
+          "acquired",
+          "addressed",
+          "admitted",
+          "advanced",
+          "advertised",
+          "alerted",
+          "allocated",
+          "allotted",
+          "allowed",
+          "altered",
+          "analyzed",
+          "annexed",
+          "applauded",
+          "appointed",
+          "appropriated",
+          "approved",
+          "asked",
+          "assassinated",
+          "assaulted",
+          "asserted",
+          "associated",
+          "assumed",
+          "assured",
+          "attacked",
+          "attained",
+          "attempted",
+          "avoided",
+          "banished",
+          "banned",
+          "barred",
+          "bearded",
+          "behaved",
+          "bet",
+          "blamed",
+          "blessed",
+          "boasted",
+          "booked",
+          "bored",
+          "borrowed",
+          "bought",
+          "branded",
+          "briefed",
+          "broadcast",
+          "captured",
+          "carved",
+          "caught",
+          "celebrated",
+          "changed",
+          "chanted",
+          "cheated",
+          "checked",
+          "chosen",
+          "cited",
+          "clothed",
+          "coached",
+          "coined",
+          "commissioned",
+          "committed",
+          "compared",
+          "compelled",
+          "compensated",
+          "compiled",
+          "completed",
+          "composed",
+          "compressed",
+          "computed",
+          "concealed",
+          "conceded",
+          "condemned",
+          "conducted",
+          "confessed",
+          "confiscated",
+          "confused",
+          "congratulated",
+          "constructed",
+          "consulted",
+          "consumed",
+          "contained",
+          "continued",
+          "copied",
+          "correlated",
+          "counted",
+          "created",
+          "cried",
+          "criticized",
+          "cured",
+          "cursed",
+          "curved",
+          "damned",
+          "dared",
+          "dated",
+          "declared",
+          "dedicated",
+          "defended",
+          "defined",
+          "demonstrated",
+          "denounced",
+          "depleted",
+          "deported",
+          "deprecated",
+          "deprived",
+          "derived",
+          "designated",
+          "developed",
+          "devoted",
+          "disclosed",
+          "discontinued",
+          "discouraged",
+          "discovered",
+          "distorted",
+          "dodged",
+          "doubted",
+          "dressed",
+          "drowned",
+          "dug",
+          "elected",
+          "eliminated",
+          "encouraged",
+          "endorsed",
+          "enforced",
+          "erected",
+          "escorted",
+          "evacuated",
+          "evaluated",
+          "evolved",
+          "examined",
+          "exclaimed",
+          "executed",
+          "exercised",
+          "exhibited",
+          "expelled",
+          "explained",
+          "explored",
+          "exposed",
+          "expressed",
+          "extended",
+          "fabricated",
+          "fashioned",
+          "fed",
+          "felt",
+          "filmed",
+          "fined",
+          "fitted",
+          "forbidden",
+          "forced",
+          "forged",
+          "forgiven",
+          "formed",
+          "formulated",
+          "found",
+          "frozen",
+          "grabbed",
+          "granted",
+          "greeted",
+          "grown",
+          "guaranteed",
+          "guided",
+          "halted",
+          "hammered",
+          "hatched",
+          "headed",
+          "held",
+          "hindered",
+          "hired",
+          "honored",
+          "hunted",
+          "illuminated",
+          "illustrated",
+          "imposed",
+          "included",
+          "incorporated",
+          "indicted",
+          "induced",
+          "informed",
+          "inherited",
+          "initiated",
+          "inquired",
+          "insisted",
+          "inspected",
+          "insulted",
+          "insured",
+          "integrated",
+          "intended",
+          "invented",
+          "invested",
+          "investigated",
+          "isolated",
+          "issued",
+          "justified",
+          "kept",
+          "kidnapped",
+          "lauded",
+          "leased",
+          "led",
+          "left",
+          "lent",
+          "liberated",
+          "listened",
+          "looked",
+          "manifested",
+          "manufactured",
+          "marked",
+          "matured",
+          "measured",
+          "melted",
+          "misled",
+          "mocked",
+          "modeled",
+          "molded",
+          "monitored",
+          "motivated",
+          "murdered",
+          "muttered",
+          "named",
+          "narrated",
+          "needed",
+          "nominated",
+          "notified",
+          "obligated",
+          "obliged",
+          "observed",
+          "offered",
+          "ordained",
+          "ordered",
+          "organized",
+          "owed",
+          "paid",
+          "paired",
+          "passed",
+          "peeled",
+          "permitted",
+          "persecuted",
+          "persuaded",
+          "photographed",
+          "picked",
+          "pierced",
+          "pitted",
+          "plotted",
+          "poked",
+          "polled",
+          "posed",
+          "pounded",
+          "presented",
+          "pressed",
+          "pressured",
+          "prevented",
+          "printed",
+          "proclaimed",
+          "produced",
+          "prohibited",
+          "promised",
+          "promoted",
+          "prompted",
+          "prosecuted",
+          "protected",
+          "punished",
+          "purified",
+          "qualified",
+          "raided",
+          "rallied",
+          "reached",
+          "read",
+          "recalled",
+          "received",
+          "reclaimed",
+          "recommended",
+          "recorded",
+          "recovered",
+          "redeemed",
+          "regained",
+          "registered",
+          "relieved",
+          "removed",
+          "rendered",
+          "rented",
+          "repaid",
+          "repeated",
+          "replaced",
+          "replied",
+          "rescued",
+          "reserved",
+          "responded",
+          "restrained",
+          "retrieved",
+          "revealed",
+          "reviewed",
+          "rewarded",
+          "ridden",
+          "ridiculed",
+          "robbed",
+          "rooted",
+          "sailed",
+          "sanctioned",
+          "saved",
+          "scaled",
+          "scanned",
+          "screened",
+          "searched",
+          "seated",
+          "secured",
+          "seized",
+          "served",
+          "severed",
+          "shaped",
+          "sheltered",
+          "shot",
+          "shouted",
+          "sighed",
+          "signaled",
+          "signed",
+          "slain",
+          "slaughtered",
+          "slept",
+          "smiled",
+          "smuggled",
+          "snatched",
+          "sought",
+          "spared",
+          "spent",
+          "spurred",
+          "squeezed",
+          "starved",
+          "steered",
+          "stemmed",
+          "stocked",
+          "stolen",
+          "stopped",
+          "stored",
+          "stripped",
+          "stuck",
+          "studied",
+          "styled",
+          "suggested",
+          "sung",
+          "supported",
+          "suppressed",
+          "surveyed",
+          "suspected",
+          "tallied",
+          "tapped",
+          "tasted",
+          "taxed",
+          "televised",
+          "tempted",
+          "terminated",
+          "tested",
+          "thanked",
+          "tipped",
+          "told",
+          "totaled",
+          "traced",
+          "transformed",
+          "translated",
+          "tried",
+          "trusted",
+          "typed",
+          "understood",
+          "upgraded",
+          "urged",
+          "used",
+          "uttered",
+          "ventured",
+          "victimized",
+          "voiced",
+          "volunteered",
+          "wanted",
+          "watched",
+          "weighed",
+          "welcomed",
+          "whispered",
+          "won",
+          "worked",
+          "worn",
+          "would",
+          "woven",
+          "written",
+          "yielded"
+        ],
+        "corrupt": [
+          "bothered",
+          "colored",
+          "cracked",
+          "crashed",
+          "crushed",
+          "damaged",
+          "demolished",
+          "destroyed",
+          "devastated",
+          "discarded",
+          "flushed",
+          "fractured",
+          "hurt",
+          "knocked",
+          "moved",
+          "ravaged",
+          "ripped",
+          "rotated",
+          "ruined",
+          "shattered",
+          "shoved",
+          "slipped",
+          "smashed",
+          "split",
+          "stirred",
+          "strained",
+          "undone",
+          "wrecked"
+        ],
+        "n_pairs": 10780
+      },
+      "2": {
+        "clean": [
+          "accursed",
+          "alternated",
+          "ascertained",
+          "assailed",
+          "audited",
+          "autographed",
+          "barked",
+          "beamed",
+          "bellowed",
+          "bilked",
+          "blared",
+          "bled",
+          "boned",
+          "boomed",
+          "bopped",
+          "brayed",
+          "bucked",
+          "burled",
+          "bussed",
+          "cabled",
+          "cadged",
+          "camouflaged",
+          "canvassed",
+          "castigated",
+          "ceded",
+          "censured",
+          "chalked",
+          "chartered",
+          "chastened",
+          "chastised",
+          "chattered",
+          "chided",
+          "chronicled",
+          "churned",
+          "circumvented",
+          "cleansed",
+          "commended",
+          "complimented",
+          "concocted",
+          "condoned",
+          "conjoined",
+          "conserved",
+          "contorted",
+          "contrived",
+          "copped",
+          "cored",
+          "crabbed",
+          "crooned",
+          "crucified",
+          "cruised",
+          "culled",
+          "curried",
+          "curtained",
+          "deboned",
+          "debugged",
+          "declawed",
+          "decried",
+          "defamed",
+          "defanged",
+          "defatted",
+          "defogged",
+          "deformed",
+          "degased",
+          "deiced",
+          "deloused",
+          "delved",
+          "denigrated",
+          "denuded",
+          "derided",
+          "desalted",
+          "descaled",
+          "destressed",
+          "deterred",
+          "disarmed",
+          "disparaged",
+          "dissuaded",
+          "divested",
+          "donned",
+          "drawled",
+          "dredged",
+          "ducked",
+          "elucidated",
+          "eluded",
+          "embroidered",
+          "enquired",
+          "enticed",
+          "eschewed",
+          "evaded",
+          "exacted",
+          "excavated",
+          "excused",
+          "explicated",
+          "expounded",
+          "extorted",
+          "extradited",
+          "faulted",
+          "faxed",
+          "filched",
+          "fished",
+          "flaunted",
+          "fumbled",
+          "functioned",
+          "gibbered",
+          "gilded",
+          "glorified",
+          "groomed",
+          "groped",
+          "gulled",
+          "gutted",
+          "heralded",
+          "hissed",
+          "hoarded",
+          "hulled",
+          "hummed",
+          "husked",
+          "imitated",
+          "immolated",
+          "impeached",
+          "impeded",
+          "impelled",
+          "imprecated",
+          "incited",
+          "incriminated",
+          "initialled",
+          "insinuated",
+          "intimated",
+          "jabbed",
+          "lambasted",
+          "leafed",
+          "lettered",
+          "liquidated",
+          "maligned",
+          "massacred",
+          "milked",
+          "muddled",
+          "mumbled",
+          "murmured",
+          "nabbed",
+          "navigated",
+          "nobbled",
+          "nosed",
+          "overcharged",
+          "paged",
+          "pardoned",
+          "patrolled",
+          "peddled",
+          "penalized",
+          "phoned",
+          "pinched",
+          "pinioned",
+          "pipped",
+          "pirated",
+          "pithed",
+          "plagiarized",
+          "plied",
+          "preened",
+          "pricked",
+          "primped",
+          "probed",
+          "procured",
+          "promulgated",
+          "prospected",
+          "pulped",
+          "punted",
+          "quitted",
+          "quizzed",
+          "raked",
+          "rationed",
+          "rebuked",
+          "recited",
+          "recompensed",
+          "recreated",
+          "reelected",
+          "refunded",
+          "relaid",
+          "repressed",
+          "reprimanded",
+          "reproached",
+          "reproved",
+          "repudiated",
+          "reviled",
+          "riffled",
+          "rifled",
+          "rocketed",
+          "roused",
+          "rustled",
+          "saluted",
+          "salvaged",
+          "sapped",
+          "satellited",
+          "scalped",
+          "scavenged",
+          "scoffed",
+          "scolded",
+          "scorned",
+          "scoured",
+          "scouted",
+          "scrawled",
+          "scribbled",
+          "scrutinized",
+          "secluded",
+          "sequestered",
+          "sewn",
+          "shaded",
+          "shamed",
+          "shelled",
+          "shopped",
+          "shucked",
+          "shunned",
+          "sketched",
+          "skinned",
+          "sledged",
+          "smelt",
+          "sniffed",
+          "snorted",
+          "spelt",
+          "spluttered",
+          "squashed",
+          "stalked",
+          "stifled",
+          "stigmatized",
+          "strangled",
+          "stuttered",
+          "succored",
+          "suckled",
+          "suffocated",
+          "synthesized",
+          "thieved",
+          "thumbed",
+          "transcribed",
+          "transmuted",
+          "trilled",
+          "trolled",
+          "trumpeted",
+          "undercharged",
+          "undressed",
+          "vilified",
+          "voided",
+          "wadded",
+          "wagered",
+          "wangled",
+          "warbled",
+          "weaned",
+          "whistled",
+          "whooped",
+          "wrested",
+          "zested"
+        ],
+        "corrupt": [
+          "annihilated",
+          "birched",
+          "blitzed",
+          "bonked",
+          "brained",
+          "buffed",
+          "buffeted",
+          "caned",
+          "chipped",
+          "clubbed",
+          "conked",
+          "coshed",
+          "creased",
+          "cuffed",
+          "decimated",
+          "disfigured",
+          "effaced",
+          "exterminated",
+          "faltered",
+          "glazed",
+          "hewn",
+          "itched",
+          "leached",
+          "mutilated",
+          "obliterated",
+          "pained",
+          "pulsated",
+          "razed",
+          "repainted",
+          "revolved",
+          "roiled",
+          "rumpled",
+          "sawn",
+          "shellacked",
+          "skimmed",
+          "smoothed",
+          "socked",
+          "spanked",
+          "swirled",
+          "thrashed",
+          "tinted",
+          "toted",
+          "tugged",
+          "undulated",
+          "vibrated",
+          "walloped",
+          "whirled",
+          "whisked",
+          "yanked"
+        ],
+        "n_pairs": 12103
+      },
+      "3": {
+        "clean": [
+          "apportioned",
+          "babbled",
+          "bawled",
+          "belittled",
+          "blasphemed",
+          "bottlefeeded",
+          "boycotted",
+          "breastfeeded",
+          "butchered",
+          "cabbaged",
+          "cackled",
+          "calumniated",
+          "carolled",
+          "charcoaled",
+          "charioted",
+          "chiseled",
+          "coughed",
+          "crayoned",
+          "crocheted",
+          "deflowered",
+          "deforested",
+          "defrauded",
+          "defrosted",
+          "deglazed",
+          "degreased",
+          "dehorned",
+          "depopulated",
+          "desexed",
+          "despoiled",
+          "detusked",
+          "deveined",
+          "disencumbered",
+          "dismembered",
+          "dispossessed",
+          "disrobed",
+          "doffed",
+          "electrocuted",
+          "emancipated",
+          "excoriated",
+          "extolled",
+          "felicitated",
+          "ferreted",
+          "fleeced",
+          "frisked",
+          "garrotted",
+          "gurgled",
+          "gyrated",
+          "hollered",
+          "invoiced",
+          "jolted",
+          "kneaded",
+          "lampooned",
+          "masqueraded",
+          "microfilmed",
+          "misappropriated",
+          "misspelt",
+          "mulcted",
+          "netmailed",
+          "pencilled",
+          "photocopied",
+          "pilfered",
+          "plumbed",
+          "podded",
+          "prodded",
+          "proffered",
+          "purloined",
+          "quarantined",
+          "quavered",
+          "ransacked",
+          "rasped",
+          "remunerated",
+          "repossessed",
+          "salaamed",
+          "scrabbled",
+          "semaphored",
+          "shepherded",
+          "shrieked",
+          "sidestepped",
+          "slandered",
+          "snarled",
+          "snubbed",
+          "snuffled",
+          "soothed",
+          "spoonfeeded",
+          "stammered",
+          "stenciled",
+          "stultified",
+          "telecasted",
+          "telephoned",
+          "telexed",
+          "unburdened",
+          "uncoiled",
+          "upbraided",
+          "vociferated",
+          "whittled"
+        ],
+        "corrupt": [
+          "clobbered",
+          "crinkled",
+          "crumpled",
+          "cudgelled",
+          "desecrated",
+          "distempered",
+          "expunged",
+          "furrowed",
+          "hefted",
+          "japaned",
+          "jiggled",
+          "joggled",
+          "lacquered",
+          "maimed",
+          "pummeled",
+          "splintered",
+          "winnowed"
+        ],
+        "n_pairs": 1615
+      },
+      "4": {
+        "clean": [
+          "asphyxiated",
+          "bamboozled",
+          "embezzled",
+          "eulogized",
+          "telegraphed"
+        ],
+        "corrupt": [
+          "bludgeoned",
+          "extirpated"
+        ],
+        "n_pairs": 10
+      }
+    }
+  },
+  "provenance": {
+    "clean_classes_by_verb": {
+      "abducted": [
+        "steal-10.5"
+      ],
+      "abused": [
+        "judgement-33"
+      ],
+      "accepted": [
+        "approve-77",
+        "obtain-13.5.2"
+      ],
+      "acclaimed": [
+        "judgement-33"
+      ],
+      "accompanied": [
+        "accompany-51.7"
+      ],
+      "accrued": [
+        "obtain-13.5.2"
+      ],
+      "accursed": [
+        "judgement-33"
+      ],
+      "accused": [
+        "suspect-81"
+      ],
+      "acknowledged": [
+        "confess-37.10"
+      ],
+      "acquired": [
+        "learn-14"
+      ],
+      "addressed": [
+        "illustrate-25.3"
+      ],
+      "admitted": [
+        "admit-65",
+        "confess-37.10"
+      ],
+      "advanced": [
+        "future_having-13.3"
+      ],
+      "advertised": [
+        "search-35.2"
+      ],
+      "alerted": [
+        "advise-37.9"
+      ],
+      "allocated": [
+        "future_having-13.3"
+      ],
+      "allotted": [
+        "future_having-13.3"
+      ],
+      "allowed": [
+        "admit-65",
+        "allow-64"
+      ],
+      "altered": [
+        "turn-26.6.1"
+      ],
+      "alternated": [
+        "correlate-86"
+      ],
+      "analyzed": [
+        "assessment-34"
+      ],
+      "annexed": [
+        "steal-10.5"
+      ],
+      "applauded": [
+        "judgement-33"
+      ],
+      "appointed": [
+        "appoint-29.1"
+      ],
+      "apportioned": [
+        "future_having-13.3"
+      ],
+      "appropriated": [
+        "obtain-13.5.2"
+      ],
+      "approved": [
+        "judgement-33"
+      ],
+      "ascertained": [
+        "discover-84"
+      ],
+      "asked": [
+        "inquire-37.1.2",
+        "urge-58"
+      ],
+      "asphyxiated": [
+        "poison-42.2",
+        "suffocate-40.7"
+      ],
+      "assailed": [
+        "judgement-33"
+      ],
+      "assassinated": [
+        "murder-42.1"
+      ],
+      "assaulted": [
+        "judgement-33"
+      ],
+      "asserted": [
+        "reflexive_appearance-48.1.2"
+      ],
+      "associated": [
+        "amalgamate-22.2-2"
+      ],
+      "assumed": [
+        "adopt-93"
+      ],
+      "assured": [
+        "advise-37.9"
+      ],
+      "attacked": [
+        "judgement-33"
+      ],
+      "attained": [
+        "get-13.5.1"
+      ],
+      "attempted": [
+        "try-61"
+      ],
+      "audited": [
+        "assessment-34"
+      ],
+      "autographed": [
+        "illustrate-25.3"
+      ],
+      "avoided": [
+        "avoid-52"
+      ],
+      "babbled": [
+        "manner_speaking-37.3"
+      ],
+      "bamboozled": [
+        "force-59"
+      ],
+      "banished": [
+        "banish-10.2"
+      ],
+      "banned": [
+        "forbid-67"
+      ],
+      "barked": [
+        "manner_speaking-37.3",
+        "pit-10.7"
+      ],
+      "barred": [
+        "forbid-67"
+      ],
+      "bawled": [
+        "manner_speaking-37.3"
+      ],
+      "beamed": [
+        "nonverbal_expression-40.2"
+      ],
+      "bearded": [
+        "pit-10.7"
+      ],
+      "behaved": [
+        "masquerade-29.6"
+      ],
+      "belittled": [
+        "judgement-33"
+      ],
+      "bellowed": [
+        "manner_speaking-37.3"
+      ],
+      "bet": [
+        "bill-54.5",
+        "risk-94"
+      ],
+      "bilked": [
+        "cheat-10.6"
+      ],
+      "blamed": [
+        "judgement-33"
+      ],
+      "blared": [
+        "manner_speaking-37.3"
+      ],
+      "blasphemed": [
+        "judgement-33"
+      ],
+      "bled": [
+        "breathe-40.1.2",
+        "cheat-10.6"
+      ],
+      "blessed": [
+        "judgement-33"
+      ],
+      "boasted": [
+        "complain-37.8"
+      ],
+      "boned": [
+        "pit-10.7"
+      ],
+      "booked": [
+        "get-13.5.1"
+      ],
+      "boomed": [
+        "manner_speaking-37.3"
+      ],
+      "bopped": [
+        "waltz-51.5"
+      ],
+      "bored": [
+        "rummage-35.5"
+      ],
+      "borrowed": [
+        "obtain-13.5.2"
+      ],
+      "bottlefeeded": [
+        "feeding-39.7"
+      ],
+      "bought": [
+        "get-13.5.1"
+      ],
+      "boycotted": [
+        "avoid-52"
+      ],
+      "branded": [
+        "illustrate-25.3"
+      ],
+      "brayed": [
+        "manner_speaking-37.3"
+      ],
+      "breastfeeded": [
+        "feeding-39.7"
+      ],
+      "briefed": [
+        "advise-37.9"
+      ],
+      "broadcast": [
+        "instr_communication-37.4"
+      ],
+      "bucked": [
+        "body_internal_motion-49"
+      ],
+      "burled": [
+        "pit-10.7"
+      ],
+      "bussed": [
+        "vehicle-51.4.1"
+      ],
+      "butchered": [
+        "murder-42.1"
+      ],
+      "cabbaged": [
+        "steal-10.5"
+      ],
+      "cabled": [
+        "instr_communication-37.4"
+      ],
+      "cackled": [
+        "manner_speaking-37.3",
+        "nonverbal_expression-40.2"
+      ],
+      "cadged": [
+        "obtain-13.5.2"
+      ],
+      "calumniated": [
+        "judgement-33"
+      ],
+      "camouflaged": [
+        "masquerade-29.6"
+      ],
+      "canvassed": [
+        "investigate-35.4"
+      ],
+      "captured": [
+        "steal-10.5"
+      ],
+      "carolled": [
+        "manner_speaking-37.3"
+      ],
+      "carved": [
+        "scribble-25.2"
+      ],
+      "castigated": [
+        "judgement-33"
+      ],
+      "caught": [
+        "get-13.5.1"
+      ],
+      "ceded": [
+        "future_having-13.3"
+      ],
+      "celebrated": [
+        "judgement-33"
+      ],
+      "censured": [
+        "judgement-33"
+      ],
+      "chalked": [
+        "scribble-25.2"
+      ],
+      "changed": [
+        "dress-41.1.1"
+      ],
+      "chanted": [
+        "manner_speaking-37.3"
+      ],
+      "charcoaled": [
+        "scribble-25.2"
+      ],
+      "charioted": [
+        "vehicle-51.4.1"
+      ],
+      "chartered": [
+        "get-13.5.1"
+      ],
+      "chastened": [
+        "judgement-33"
+      ],
+      "chastised": [
+        "judgement-33"
+      ],
+      "chattered": [
+        "manner_speaking-37.3"
+      ],
+      "cheated": [
+        "cheat-10.6"
+      ],
+      "checked": [
+        "search-35.2"
+      ],
+      "chided": [
+        "judgement-33"
+      ],
+      "chiseled": [
+        "build-26.1"
+      ],
+      "chosen": [
+        "get-13.5.1"
+      ],
+      "chronicled": [
+        "transcribe-25.4"
+      ],
+      "churned": [
+        "build-26.1"
+      ],
+      "circumvented": [
+        "avoid-52"
+      ],
+      "cited": [
+        "transfer_mesg-37.1.1"
+      ],
+      "cleansed": [
+        "cheat-10.6"
+      ],
+      "clothed": [
+        "dress-41.1.1"
+      ],
+      "coached": [
+        "vehicle-51.4.1"
+      ],
+      "coined": [
+        "create-26.4"
+      ],
+      "commended": [
+        "judgement-33"
+      ],
+      "commissioned": [
+        "force-59"
+      ],
+      "committed": [
+        "dedicate-79"
+      ],
+      "compared": [
+        "amalgamate-22.2-2"
+      ],
+      "compelled": [
+        "force-59"
+      ],
+      "compensated": [
+        "judgement-33"
+      ],
+      "compiled": [
+        "build-26.1"
+      ],
+      "completed": [
+        "complete-55.2"
+      ],
+      "complimented": [
+        "judgement-33"
+      ],
+      "composed": [
+        "create-26.4"
+      ],
+      "compressed": [
+        "knead-26.5"
+      ],
+      "computed": [
+        "create-26.4"
+      ],
+      "concealed": [
+        "concealment-16"
+      ],
+      "conceded": [
+        "future_having-13.3"
+      ],
+      "concocted": [
+        "create-26.4"
+      ],
+      "condemned": [
+        "judgement-33",
+        "suspect-81"
+      ],
+      "condoned": [
+        "judgement-33"
+      ],
+      "conducted": [
+        "accompany-51.7"
+      ],
+      "confessed": [
+        "confess-37.10"
+      ],
+      "confiscated": [
+        "steal-10.5"
+      ],
+      "confused": [
+        "amalgamate-22.2-2"
+      ],
+      "congratulated": [
+        "judgement-33"
+      ],
+      "conjoined": [
+        "amalgamate-22.2-2"
+      ],
+      "conserved": [
+        "get-13.5.1"
+      ],
+      "constructed": [
+        "create-26.4"
+      ],
+      "consulted": [
+        "inquire-37.1.2"
+      ],
+      "consumed": [
+        "consume-66"
+      ],
+      "contained": [
+        "fit-54.3"
+      ],
+      "continued": [
+        "continue-55.3"
+      ],
+      "contorted": [
+        "knead-26.5"
+      ],
+      "contrived": [
+        "create-26.4"
+      ],
+      "copied": [
+        "scribble-25.2",
+        "transcribe-25.4"
+      ],
+      "copped": [
+        "steal-10.5"
+      ],
+      "cored": [
+        "pit-10.7"
+      ],
+      "correlated": [
+        "correlate-86"
+      ],
+      "coughed": [
+        "nonverbal_expression-40.2"
+      ],
+      "counted": [
+        "masquerade-29.6"
+      ],
+      "crabbed": [
+        "complain-37.8"
+      ],
+      "crayoned": [
+        "scribble-25.2"
+      ],
+      "created": [
+        "create-26.4"
+      ],
+      "cried": [
+        "manner_speaking-37.3",
+        "nonverbal_expression-40.2"
+      ],
+      "criticized": [
+        "judgement-33"
+      ],
+      "crocheted": [
+        "build-26.1"
+      ],
+      "crooned": [
+        "manner_speaking-37.3"
+      ],
+      "crucified": [
+        "poison-42.2"
+      ],
+      "cruised": [
+        "nonvehicle-51.4.2"
+      ],
+      "culled": [
+        "cheat-10.6"
+      ],
+      "cured": [
+        "cheat-10.6"
+      ],
+      "curried": [
+        "groom-41.1.2"
+      ],
+      "cursed": [
+        "judgement-33"
+      ],
+      "curtained": [
+        "concealment-16"
+      ],
+      "curved": [
+        "knead-26.5"
+      ],
+      "damned": [
+        "judgement-33"
+      ],
+      "dared": [
+        "force-59"
+      ],
+      "dated": [
+        "illustrate-25.3"
+      ],
+      "deboned": [
+        "debone-10.8"
+      ],
+      "debugged": [
+        "debone-10.8"
+      ],
+      "declared": [
+        "reflexive_appearance-48.1.2"
+      ],
+      "declawed": [
+        "debone-10.8"
+      ],
+      "decried": [
+        "judgement-33"
+      ],
+      "dedicated": [
+        "dedicate-79"
+      ],
+      "defamed": [
+        "judgement-33"
+      ],
+      "defanged": [
+        "debone-10.8"
+      ],
+      "defatted": [
+        "debone-10.8"
+      ],
+      "defended": [
+        "defend-85"
+      ],
+      "defined": [
+        "reflexive_appearance-48.1.2"
+      ],
+      "deflowered": [
+        "debone-10.8"
+      ],
+      "defogged": [
+        "debone-10.8"
+      ],
+      "deforested": [
+        "debone-10.8"
+      ],
+      "deformed": [
+        "turn-26.6.1"
+      ],
+      "defrauded": [
+        "cheat-10.6"
+      ],
+      "defrosted": [
+        "debone-10.8"
+      ],
+      "degased": [
+        "debone-10.8"
+      ],
+      "deglazed": [
+        "debone-10.8"
+      ],
+      "degreased": [
+        "debone-10.8"
+      ],
+      "dehorned": [
+        "debone-10.8"
+      ],
+      "deiced": [
+        "debone-10.8"
+      ],
+      "deloused": [
+        "debone-10.8"
+      ],
+      "delved": [
+        "rummage-35.5"
+      ],
+      "demonstrated": [
+        "transfer_mesg-37.1.1"
+      ],
+      "denigrated": [
+        "judgement-33"
+      ],
+      "denounced": [
+        "judgement-33"
+      ],
+      "denuded": [
+        "cheat-10.6"
+      ],
+      "depleted": [
+        "cheat-10.6"
+      ],
+      "depopulated": [
+        "cheat-10.6"
+      ],
+      "deported": [
+        "banish-10.2"
+      ],
+      "deprecated": [
+        "judgement-33"
+      ],
+      "deprived": [
+        "cheat-10.6"
+      ],
+      "derided": [
+        "judgement-33"
+      ],
+      "derived": [
+        "create-26.4"
+      ],
+      "desalted": [
+        "debone-10.8"
+      ],
+      "descaled": [
+        "debone-10.8"
+      ],
+      "desexed": [
+        "debone-10.8"
+      ],
+      "designated": [
+        "appoint-29.1"
+      ],
+      "despoiled": [
+        "cheat-10.6"
+      ],
+      "destressed": [
+        "debone-10.8"
+      ],
+      "deterred": [
+        "forbid-67"
+      ],
+      "detusked": [
+        "debone-10.8"
+      ],
+      "deveined": [
+        "debone-10.8"
+      ],
+      "developed": [
+        "build-26.1",
+        "grow-26.2"
+      ],
+      "devoted": [
+        "dedicate-79"
+      ],
+      "disarmed": [
+        "cheat-10.6"
+      ],
+      "disclosed": [
+        "say-37.7"
+      ],
+      "discontinued": [
+        "complete-55.2"
+      ],
+      "discouraged": [
+        "approve-77",
+        "forbid-67"
+      ],
+      "discovered": [
+        "discover-84"
+      ],
+      "disencumbered": [
+        "cheat-10.6"
+      ],
+      "dismembered": [
+        "separate-23.1"
+      ],
+      "disparaged": [
+        "judgement-33"
+      ],
+      "dispossessed": [
+        "cheat-10.6"
+      ],
+      "disrobed": [
+        "dress-41.1.1"
+      ],
+      "dissuaded": [
+        "forbid-67"
+      ],
+      "distorted": [
+        "knead-26.5"
+      ],
+      "divested": [
+        "cheat-10.6"
+      ],
+      "dodged": [
+        "avoid-52"
+      ],
+      "doffed": [
+        "simple_dressing-41.3.1"
+      ],
+      "donned": [
+        "simple_dressing-41.3.1"
+      ],
+      "doubted": [
+        "judgement-33"
+      ],
+      "drawled": [
+        "manner_speaking-37.3"
+      ],
+      "dredged": [
+        "search-35.2"
+      ],
+      "dressed": [
+        "dress-41.1.1"
+      ],
+      "drowned": [
+        "poison-42.2",
+        "suffocate-40.7"
+      ],
+      "ducked": [
+        "avoid-52"
+      ],
+      "dug": [
+        "hunt-35.1",
+        "poke-19"
+      ],
+      "elected": [
+        "appoint-29.1"
+      ],
+      "electrocuted": [
+        "poison-42.2"
+      ],
+      "eliminated": [
+        "murder-42.1"
+      ],
+      "elucidated": [
+        "transfer_mesg-37.1.1"
+      ],
+      "eluded": [
+        "avoid-52"
+      ],
+      "emancipated": [
+        "steal-10.5"
+      ],
+      "embezzled": [
+        "steal-10.5"
+      ],
+      "embroidered": [
+        "build-26.1"
+      ],
+      "encouraged": [
+        "advise-37.9",
+        "approve-77",
+        "force-59"
+      ],
+      "endorsed": [
+        "illustrate-25.3"
+      ],
+      "enforced": [
+        "enforce-63"
+      ],
+      "enquired": [
+        "inquire-37.1.2"
+      ],
+      "enticed": [
+        "advise-37.9",
+        "force-59"
+      ],
+      "erected": [
+        "build-26.1"
+      ],
+      "eschewed": [
+        "avoid-52"
+      ],
+      "escorted": [
+        "accompany-51.7"
+      ],
+      "eulogized": [
+        "judgement-33"
+      ],
+      "evacuated": [
+        "banish-10.2"
+      ],
+      "evaded": [
+        "avoid-52"
+      ],
+      "evaluated": [
+        "assessment-34"
+      ],
+      "evolved": [
+        "grow-26.2"
+      ],
+      "exacted": [
+        "obtain-13.5.2"
+      ],
+      "examined": [
+        "investigate-35.4"
+      ],
+      "excavated": [
+        "search-35.2"
+      ],
+      "exclaimed": [
+        "say-37.7"
+      ],
+      "excoriated": [
+        "judgement-33"
+      ],
+      "excused": [
+        "judgement-33"
+      ],
+      "executed": [
+        "murder-42.1"
+      ],
+      "exercised": [
+        "dress-41.1.1"
+      ],
+      "exhibited": [
+        "reflexive_appearance-48.1.2"
+      ],
+      "expelled": [
+        "banish-10.2"
+      ],
+      "explained": [
+        "transfer_mesg-37.1.1"
+      ],
+      "explicated": [
+        "transfer_mesg-37.1.1"
+      ],
+      "explored": [
+        "investigate-35.4"
+      ],
+      "exposed": [
+        "reflexive_appearance-48.1.2"
+      ],
+      "expounded": [
+        "transfer_mesg-37.1.1"
+      ],
+      "expressed": [
+        "reflexive_appearance-48.1.2"
+      ],
+      "extended": [
+        "future_having-13.3"
+      ],
+      "extolled": [
+        "judgement-33"
+      ],
+      "extorted": [
+        "steal-10.5"
+      ],
+      "extradited": [
+        "banish-10.2"
+      ],
+      "fabricated": [
+        "create-26.4"
+      ],
+      "fashioned": [
+        "build-26.1"
+      ],
+      "faulted": [
+        "judgement-33"
+      ],
+      "faxed": [
+        "instr_communication-37.4"
+      ],
+      "fed": [
+        "feeding-39.7",
+        "fit-54.3"
+      ],
+      "felicitated": [
+        "judgement-33"
+      ],
+      "felt": [
+        "hunt-35.1"
+      ],
+      "ferreted": [
+        "ferret-35.6"
+      ],
+      "filched": [
+        "steal-10.5"
+      ],
+      "filmed": [
+        "transcribe-25.4"
+      ],
+      "fined": [
+        "bill-54.5",
+        "judgement-33"
+      ],
+      "fished": [
+        "hunt-35.1"
+      ],
+      "fitted": [
+        "fit-54.3"
+      ],
+      "flaunted": [
+        "reflexive_appearance-48.1.2"
+      ],
+      "fleeced": [
+        "cheat-10.6"
+      ],
+      "forbidden": [
+        "forbid-67"
+      ],
+      "forced": [
+        "force-59"
+      ],
+      "forged": [
+        "build-26.1",
+        "scribble-25.2",
+        "transcribe-25.4"
+      ],
+      "forgiven": [
+        "judgement-33"
+      ],
+      "formed": [
+        "create-26.4",
+        "reflexive_appearance-48.1.2"
+      ],
+      "formulated": [
+        "build-26.1"
+      ],
+      "found": [
+        "get-13.5.1"
+      ],
+      "frisked": [
+        "investigate-35.4"
+      ],
+      "frozen": [
+        "knead-26.5"
+      ],
+      "fumbled": [
+        "rummage-35.5"
+      ],
+      "functioned": [
+        "masquerade-29.6"
+      ],
+      "garrotted": [
+        "poison-42.2"
+      ],
+      "gibbered": [
+        "manner_speaking-37.3"
+      ],
+      "gilded": [
+        "illustrate-25.3"
+      ],
+      "glorified": [
+        "judgement-33"
+      ],
+      "grabbed": [
+        "obtain-13.5.2",
+        "steal-10.5"
+      ],
+      "granted": [
+        "future_having-13.3"
+      ],
+      "greeted": [
+        "judgement-33"
+      ],
+      "groomed": [
+        "groom-41.1.2"
+      ],
+      "groped": [
+        "rummage-35.5"
+      ],
+      "grown": [
+        "build-26.1",
+        "grow-26.2"
+      ],
+      "guaranteed": [
+        "future_having-13.3"
+      ],
+      "guided": [
+        "accompany-51.7"
+      ],
+      "gulled": [
+        "cheat-10.6"
+      ],
+      "gurgled": [
+        "manner_speaking-37.3"
+      ],
+      "gutted": [
+        "pit-10.7"
+      ],
+      "gyrated": [
+        "body_internal_motion-49"
+      ],
+      "halted": [
+        "stop-55.4"
+      ],
+      "hammered": [
+        "build-26.1"
+      ],
+      "hatched": [
+        "build-26.1",
+        "grow-26.2"
+      ],
+      "headed": [
+        "pit-10.7"
+      ],
+      "held": [
+        "fit-54.3"
+      ],
+      "heralded": [
+        "judgement-33"
+      ],
+      "hindered": [
+        "forbid-67"
+      ],
+      "hired": [
+        "get-13.5.1"
+      ],
+      "hissed": [
+        "manner_speaking-37.3"
+      ],
+      "hoarded": [
+        "keep-15.2"
+      ],
+      "hollered": [
+        "manner_speaking-37.3"
+      ],
+      "honored": [
+        "judgement-33"
+      ],
+      "hulled": [
+        "pit-10.7"
+      ],
+      "hummed": [
+        "manner_speaking-37.3"
+      ],
+      "hunted": [
+        "hunt-35.1"
+      ],
+      "husked": [
+        "pit-10.7"
+      ],
+      "illuminated": [
+        "illustrate-25.3"
+      ],
+      "illustrated": [
+        "illustrate-25.3"
+      ],
+      "imitated": [
+        "transcribe-25.4"
+      ],
+      "immolated": [
+        "murder-42.1"
+      ],
+      "impeached": [
+        "judgement-33"
+      ],
+      "impeded": [
+        "forbid-67"
+      ],
+      "impelled": [
+        "force-59"
+      ],
+      "imposed": [
+        "enforce-63"
+      ],
+      "imprecated": [
+        "judgement-33"
+      ],
+      "incited": [
+        "force-59"
+      ],
+      "included": [
+        "admit-65"
+      ],
+      "incorporated": [
+        "amalgamate-22.2-2"
+      ],
+      "incriminated": [
+        "judgement-33"
+      ],
+      "indicted": [
+        "judgement-33"
+      ],
+      "induced": [
+        "force-59"
+      ],
+      "informed": [
+        "advise-37.9"
+      ],
+      "inherited": [
+        "obtain-13.5.2"
+      ],
+      "initialled": [
+        "illustrate-25.3"
+      ],
+      "initiated": [
+        "complete-55.2"
+      ],
+      "inquired": [
+        "inquire-37.1.2"
+      ],
+      "insinuated": [
+        "say-37.7"
+      ],
+      "insisted": [
+        "say-37.7"
+      ],
+      "inspected": [
+        "investigate-35.4"
+      ],
+      "insulted": [
+        "judgement-33"
+      ],
+      "insured": [
+        "defend-85"
+      ],
+      "integrated": [
+        "amalgamate-22.2-2"
+      ],
+      "intended": [
+        "try-61"
+      ],
+      "intimated": [
+        "say-37.7"
+      ],
+      "invented": [
+        "create-26.4"
+      ],
+      "invested": [
+        "equip-13.4.2"
+      ],
+      "investigated": [
+        "investigate-35.4"
+      ],
+      "invoiced": [
+        "bill-54.5"
+      ],
+      "isolated": [
+        "concealment-16"
+      ],
+      "issued": [
+        "fulfilling-13.4.1",
+        "future_having-13.3"
+      ],
+      "jabbed": [
+        "poke-19"
+      ],
+      "jolted": [
+        "force-59"
+      ],
+      "justified": [
+        "transfer_mesg-37.1.1"
+      ],
+      "kept": [
+        "keep-15.2"
+      ],
+      "kidnapped": [
+        "steal-10.5"
+      ],
+      "kneaded": [
+        "knead-26.5"
+      ],
+      "lambasted": [
+        "judgement-33"
+      ],
+      "lampooned": [
+        "judgement-33"
+      ],
+      "lauded": [
+        "judgement-33"
+      ],
+      "leafed": [
+        "rummage-35.5"
+      ],
+      "leased": [
+        "get-13.5.1"
+      ],
+      "led": [
+        "accompany-51.7",
+        "force-59"
+      ],
+      "left": [
+        "fulfilling-13.4.1",
+        "future_having-13.3",
+        "keep-15.2"
+      ],
+      "lent": [
+        "give-13.1"
+      ],
+      "lettered": [
+        "illustrate-25.3"
+      ],
+      "liberated": [
+        "steal-10.5"
+      ],
+      "liquidated": [
+        "murder-42.1"
+      ],
+      "listened": [
+        "rummage-35.5"
+      ],
+      "looked": [
+        "rummage-35.5"
+      ],
+      "maligned": [
+        "judgement-33"
+      ],
+      "manifested": [
+        "reflexive_appearance-48.1.2"
+      ],
+      "manufactured": [
+        "create-26.4"
+      ],
+      "marked": [
+        "appoint-29.1"
+      ],
+      "masqueraded": [
+        "masquerade-29.6"
+      ],
+      "massacred": [
+        "murder-42.1"
+      ],
+      "matured": [
+        "grow-26.2"
+      ],
+      "measured": [
+        "register-54.1"
+      ],
+      "melted": [
+        "knead-26.5"
+      ],
+      "microfilmed": [
+        "transcribe-25.4"
+      ],
+      "milked": [
+        "pit-10.7"
+      ],
+      "misappropriated": [
+        "steal-10.5"
+      ],
+      "misled": [
+        "force-59"
+      ],
+      "misspelt": [
+        "scribble-25.2"
+      ],
+      "mocked": [
+        "judgement-33"
+      ],
+      "modeled": [
+        "create-26.4"
+      ],
+      "molded": [
+        "build-26.1"
+      ],
+      "monitored": [
+        "investigate-35.4"
+      ],
+      "motivated": [
+        "force-59"
+      ],
+      "muddled": [
+        "amalgamate-22.2-2"
+      ],
+      "mulcted": [
+        "bill-54.5"
+      ],
+      "mumbled": [
+        "manner_speaking-37.3"
+      ],
+      "murdered": [
+        "murder-42.1"
+      ],
+      "murmured": [
+        "manner_speaking-37.3"
+      ],
+      "muttered": [
+        "manner_speaking-37.3"
+      ],
+      "nabbed": [
+        "steal-10.5"
+      ],
+      "named": [
+        "appoint-29.1"
+      ],
+      "narrated": [
+        "transfer_mesg-37.1.1"
+      ],
+      "navigated": [
+        "nonvehicle-51.4.2"
+      ],
+      "needed": [
+        "order-60"
+      ],
+      "netmailed": [
+        "instr_communication-37.4"
+      ],
+      "nobbled": [
+        "steal-10.5"
+      ],
+      "nominated": [
+        "appoint-29.1"
+      ],
+      "nosed": [
+        "ferret-35.6"
+      ],
+      "notified": [
+        "advise-37.9"
+      ],
+      "obligated": [
+        "force-59"
+      ],
+      "obliged": [
+        "force-59"
+      ],
+      "observed": [
+        "investigate-35.4"
+      ],
+      "offered": [
+        "future_having-13.3",
+        "reflexive_appearance-48.1.2"
+      ],
+      "ordained": [
+        "appoint-29.1"
+      ],
+      "ordered": [
+        "get-13.5.1"
+      ],
+      "organized": [
+        "create-26.4"
+      ],
+      "overcharged": [
+        "bill-54.5"
+      ],
+      "owed": [
+        "future_having-13.3"
+      ],
+      "paged": [
+        "rummage-35.5"
+      ],
+      "paid": [
+        "pay-68"
+      ],
+      "paired": [
+        "amalgamate-22.2-2"
+      ],
+      "pardoned": [
+        "judgement-33"
+      ],
+      "passed": [
+        "consume-66",
+        "give-13.1"
+      ],
+      "patrolled": [
+        "search-35.2"
+      ],
+      "peddled": [
+        "give-13.1"
+      ],
+      "peeled": [
+        "pit-10.7"
+      ],
+      "penalized": [
+        "judgement-33"
+      ],
+      "pencilled": [
+        "scribble-25.2"
+      ],
+      "permitted": [
+        "admit-65",
+        "allow-64",
+        "order-60"
+      ],
+      "persecuted": [
+        "judgement-33"
+      ],
+      "persuaded": [
+        "urge-58"
+      ],
+      "phoned": [
+        "get-13.5.1",
+        "instr_communication-37.4"
+      ],
+      "photocopied": [
+        "transcribe-25.4"
+      ],
+      "photographed": [
+        "transcribe-25.4"
+      ],
+      "picked": [
+        "get-13.5.1"
+      ],
+      "pierced": [
+        "poke-19"
+      ],
+      "pilfered": [
+        "steal-10.5"
+      ],
+      "pinched": [
+        "steal-10.5"
+      ],
+      "pinioned": [
+        "pit-10.7"
+      ],
+      "pipped": [
+        "pit-10.7"
+      ],
+      "pirated": [
+        "steal-10.5"
+      ],
+      "pithed": [
+        "pit-10.7"
+      ],
+      "pitted": [
+        "pit-10.7"
+      ],
+      "plagiarized": [
+        "steal-10.5"
+      ],
+      "plied": [
+        "equip-13.4.2"
+      ],
+      "plotted": [
+        "scribble-25.2"
+      ],
+      "plumbed": [
+        "search-35.2"
+      ],
+      "podded": [
+        "pit-10.7"
+      ],
+      "poked": [
+        "poke-19",
+        "rummage-35.5"
+      ],
+      "polled": [
+        "pit-10.7"
+      ],
+      "posed": [
+        "reflexive_appearance-48.1.2",
+        "transfer_mesg-37.1.1"
+      ],
+      "pounded": [
+        "build-26.1"
+      ],
+      "preened": [
+        "dress-41.1.1"
+      ],
+      "presented": [
+        "fulfilling-13.4.1",
+        "reflexive_appearance-48.1.2"
+      ],
+      "pressed": [
+        "force-59"
+      ],
+      "pressured": [
+        "force-59"
+      ],
+      "prevented": [
+        "forbid-67"
+      ],
+      "pricked": [
+        "poke-19"
+      ],
+      "primped": [
+        "dress-41.1.1"
+      ],
+      "printed": [
+        "scribble-25.2"
+      ],
+      "probed": [
+        "search-35.2"
+      ],
+      "proclaimed": [
+        "appoint-29.1",
+        "confess-37.10"
+      ],
+      "procured": [
+        "get-13.5.1"
+      ],
+      "prodded": [
+        "force-59"
+      ],
+      "produced": [
+        "create-26.4"
+      ],
+      "proffered": [
+        "reflexive_appearance-48.1.2"
+      ],
+      "prohibited": [
+        "forbid-67"
+      ],
+      "promised": [
+        "future_having-13.3"
+      ],
+      "promoted": [
+        "appoint-29.1"
+      ],
+      "prompted": [
+        "force-59"
+      ],
+      "promulgated": [
+        "say-37.7"
+      ],
+      "prosecuted": [
+        "judgement-33"
+      ],
+      "prospected": [
+        "search-35.2"
+      ],
+      "protected": [
+        "defend-85"
+      ],
+      "pulped": [
+        "pit-10.7"
+      ],
+      "punished": [
+        "judgement-33"
+      ],
+      "punted": [
+        "vehicle-51.4.1"
+      ],
+      "purified": [
+        "cheat-10.6"
+      ],
+      "purloined": [
+        "steal-10.5"
+      ],
+      "qualified": [
+        "masquerade-29.6"
+      ],
+      "quarantined": [
+        "concealment-16"
+      ],
+      "quavered": [
+        "manner_speaking-37.3"
+      ],
+      "quitted": [
+        "complete-55.2"
+      ],
+      "quizzed": [
+        "investigate-35.4"
+      ],
+      "raided": [
+        "investigate-35.4"
+      ],
+      "raked": [
+        "search-35.2"
+      ],
+      "rallied": [
+        "nonvehicle-51.4.2"
+      ],
+      "ransacked": [
+        "cheat-10.6",
+        "investigate-35.4"
+      ],
+      "rasped": [
+        "manner_speaking-37.3"
+      ],
+      "rationed": [
+        "future_having-13.3"
+      ],
+      "reached": [
+        "get-13.5.1"
+      ],
+      "read": [
+        "register-54.1",
+        "transfer_mesg-37.1.1"
+      ],
+      "rebuked": [
+        "judgement-33"
+      ],
+      "recalled": [
+        "banish-10.2"
+      ],
+      "received": [
+        "obtain-13.5.2"
+      ],
+      "recited": [
+        "transfer_mesg-37.1.1"
+      ],
+      "reclaimed": [
+        "steal-10.5"
+      ],
+      "recommended": [
+        "judgement-33",
+        "reflexive_appearance-48.1.2"
+      ],
+      "recompensed": [
+        "judgement-33"
+      ],
+      "recorded": [
+        "transcribe-25.4"
+      ],
+      "recovered": [
+        "obtain-13.5.2"
+      ],
+      "recreated": [
+        "create-26.4"
+      ],
+      "redeemed": [
+        "steal-10.5"
+      ],
+      "reelected": [
+        "appoint-29.1"
+      ],
+      "refunded": [
+        "give-13.1"
+      ],
+      "regained": [
+        "obtain-13.5.2"
+      ],
+      "registered": [
+        "register-54.1"
+      ],
+      "relaid": [
+        "instr_communication-37.4",
+        "transfer_mesg-37.1.1"
+      ],
+      "relieved": [
+        "cheat-10.6"
+      ],
+      "removed": [
+        "banish-10.2"
+      ],
+      "remunerated": [
+        "judgement-33"
+      ],
+      "rendered": [
+        "cheat-10.6",
+        "give-13.1"
+      ],
+      "rented": [
+        "get-13.5.1"
+      ],
+      "repaid": [
+        "judgement-33",
+        "pay-68"
+      ],
+      "repeated": [
+        "stop-55.4"
+      ],
+      "replaced": [
+        "exchange-13.6"
+      ],
+      "replied": [
+        "say-37.7"
+      ],
+      "repossessed": [
+        "steal-10.5"
+      ],
+      "repressed": [
+        "concealment-16"
+      ],
+      "reprimanded": [
+        "judgement-33"
+      ],
+      "reproached": [
+        "judgement-33"
+      ],
+      "reproved": [
+        "judgement-33"
+      ],
+      "repudiated": [
+        "judgement-33"
+      ],
+      "rescued": [
+        "steal-10.5"
+      ],
+      "reserved": [
+        "get-13.5.1"
+      ],
+      "responded": [
+        "say-37.7"
+      ],
+      "restrained": [
+        "forbid-67"
+      ],
+      "retrieved": [
+        "obtain-13.5.2"
+      ],
+      "revealed": [
+        "confess-37.10"
+      ],
+      "reviewed": [
+        "assessment-34"
+      ],
+      "reviled": [
+        "judgement-33"
+      ],
+      "rewarded": [
+        "judgement-33"
+      ],
+      "ridden": [
+        "nonvehicle-51.4.2"
+      ],
+      "ridiculed": [
+        "judgement-33"
+      ],
+      "riffled": [
+        "investigate-35.4"
+      ],
+      "rifled": [
+        "cheat-10.6",
+        "rummage-35.5",
+        "search-35.2"
+      ],
+      "robbed": [
+        "cheat-10.6"
+      ],
+      "rocketed": [
+        "vehicle-51.4.1"
+      ],
+      "rooted": [
+        "rummage-35.5"
+      ],
+      "roused": [
+        "force-59"
+      ],
+      "rustled": [
+        "steal-10.5"
+      ],
+      "sailed": [
+        "nonvehicle-51.4.2"
+      ],
+      "salaamed": [
+        "curtsey-40.3.3"
+      ],
+      "saluted": [
+        "curtsey-40.3.3",
+        "judgement-33"
+      ],
+      "salvaged": [
+        "steal-10.5"
+      ],
+      "sanctioned": [
+        "judgement-33"
+      ],
+      "sapped": [
+        "cheat-10.6"
+      ],
+      "satellited": [
+        "instr_communication-37.4"
+      ],
+      "saved": [
+        "bill-54.5"
+      ],
+      "scaled": [
+        "pit-10.7"
+      ],
+      "scalped": [
+        "pit-10.7"
+      ],
+      "scanned": [
+        "investigate-35.4"
+      ],
+      "scavenged": [
+        "search-35.2"
+      ],
+      "scoffed": [
+        "nonverbal_expression-40.2"
+      ],
+      "scolded": [
+        "judgement-33"
+      ],
+      "scorned": [
+        "judgement-33"
+      ],
+      "scoured": [
+        "search-35.2"
+      ],
+      "scouted": [
+        "search-35.2"
+      ],
+      "scrabbled": [
+        "rummage-35.5"
+      ],
+      "scrawled": [
+        "scribble-25.2"
+      ],
+      "screened": [
+        "concealment-16"
+      ],
+      "scribbled": [
+        "scribble-25.2"
+      ],
+      "scrutinized": [
+        "assessment-34",
+        "investigate-35.4"
+      ],
+      "searched": [
+        "search-35.2"
+      ],
+      "seated": [
+        "fit-54.3"
+      ],
+      "secluded": [
+        "concealment-16"
+      ],
+      "secured": [
+        "get-13.5.1"
+      ],
+      "seized": [
+        "obtain-13.5.2",
+        "steal-10.5"
+      ],
+      "semaphored": [
+        "instr_communication-37.4"
+      ],
+      "sequestered": [
+        "concealment-16",
+        "steal-10.5"
+      ],
+      "served": [
+        "fit-54.3",
+        "pay-68"
+      ],
+      "severed": [
+        "separate-23.1"
+      ],
+      "sewn": [
+        "build-26.1"
+      ],
+      "shaded": [
+        "defend-85"
+      ],
+      "shamed": [
+        "judgement-33"
+      ],
+      "shaped": [
+        "reflexive_appearance-48.1.2"
+      ],
+      "shelled": [
+        "pit-10.7"
+      ],
+      "sheltered": [
+        "concealment-16"
+      ],
+      "shepherded": [
+        "accompany-51.7"
+      ],
+      "shopped": [
+        "search-35.2"
+      ],
+      "shot": [
+        "get-13.5.1",
+        "poison-42.2"
+      ],
+      "shouted": [
+        "manner_speaking-37.3"
+      ],
+      "shrieked": [
+        "manner_speaking-37.3"
+      ],
+      "shucked": [
+        "pit-10.7"
+      ],
+      "shunned": [
+        "avoid-52"
+      ],
+      "sidestepped": [
+        "avoid-52"
+      ],
+      "sighed": [
+        "nonverbal_expression-40.2"
+      ],
+      "signaled": [
+        "instr_communication-37.4"
+      ],
+      "signed": [
+        "instr_communication-37.4"
+      ],
+      "sketched": [
+        "scribble-25.2"
+      ],
+      "skinned": [
+        "pit-10.7"
+      ],
+      "slain": [
+        "murder-42.1"
+      ],
+      "slandered": [
+        "judgement-33"
+      ],
+      "slaughtered": [
+        "get-13.5.1",
+        "murder-42.1"
+      ],
+      "sledged": [
+        "vehicle-51.4.1"
+      ],
+      "slept": [
+        "fit-54.3",
+        "snooze-40.4"
+      ],
+      "smelt": [
+        "stalk-35.3"
+      ],
+      "smiled": [
+        "nonverbal_expression-40.2"
+      ],
+      "smuggled": [
+        "steal-10.5"
+      ],
+      "snarled": [
+        "manner_speaking-37.3"
+      ],
+      "snatched": [
+        "obtain-13.5.2",
+        "steal-10.5"
+      ],
+      "sniffed": [
+        "nonverbal_expression-40.2",
+        "transfer_mesg-37.1.1"
+      ],
+      "snorted": [
+        "nonverbal_expression-40.2"
+      ],
+      "snubbed": [
+        "judgement-33"
+      ],
+      "snuffled": [
+        "manner_speaking-37.3"
+      ],
+      "soothed": [
+        "force-59"
+      ],
+      "sought": [
+        "ferret-35.6"
+      ],
+      "spared": [
+        "bill-54.5"
+      ],
+      "spelt": [
+        "scribble-25.2"
+      ],
+      "spent": [
+        "pay-68"
+      ],
+      "spluttered": [
+        "manner_speaking-37.3"
+      ],
+      "spoonfeeded": [
+        "feeding-39.7"
+      ],
+      "spurred": [
+        "force-59"
+      ],
+      "squashed": [
+        "knead-26.5"
+      ],
+      "squeezed": [
+        "knead-26.5"
+      ],
+      "stalked": [
+        "pit-10.7",
+        "stalk-35.3"
+      ],
+      "stammered": [
+        "manner_speaking-37.3"
+      ],
+      "starved": [
+        "suffocate-40.7"
+      ],
+      "steered": [
+        "accompany-51.7"
+      ],
+      "stemmed": [
+        "pit-10.7"
+      ],
+      "stenciled": [
+        "scribble-25.2"
+      ],
+      "stifled": [
+        "suffocate-40.7"
+      ],
+      "stigmatized": [
+        "judgement-33"
+      ],
+      "stocked": [
+        "keep-15.2"
+      ],
+      "stolen": [
+        "steal-10.5"
+      ],
+      "stopped": [
+        "forbid-67"
+      ],
+      "stored": [
+        "fit-54.3",
+        "keep-15.2"
+      ],
+      "strangled": [
+        "poison-42.2"
+      ],
+      "stripped": [
+        "cheat-10.6",
+        "dress-41.1.1"
+      ],
+      "stuck": [
+        "poke-19"
+      ],
+      "studied": [
+        "assessment-34"
+      ],
+      "stultified": [
+        "judgement-33"
+      ],
+      "stuttered": [
+        "manner_speaking-37.3"
+      ],
+      "styled": [
+        "create-26.4"
+      ],
+      "succored": [
+        "help-72"
+      ],
+      "suckled": [
+        "feeding-39.7"
+      ],
+      "suffocated": [
+        "poison-42.2",
+        "suffocate-40.7"
+      ],
+      "suggested": [
+        "reflexive_appearance-48.1.2"
+      ],
+      "sung": [
+        "manner_speaking-37.3"
+      ],
+      "supported": [
+        "help-72"
+      ],
+      "suppressed": [
+        "concealment-16"
+      ],
+      "surveyed": [
+        "investigate-35.4"
+      ],
+      "suspected": [
+        "suspect-81"
+      ],
+      "synthesized": [
+        "create-26.4"
+      ],
+      "tallied": [
+        "transcribe-25.4"
+      ],
+      "tapped": [
+        "investigate-35.4"
+      ],
+      "tasted": [
+        "stalk-35.3"
+      ],
+      "taxed": [
+        "bill-54.5"
+      ],
+      "telecasted": [
+        "instr_communication-37.4"
+      ],
+      "telegraphed": [
+        "instr_communication-37.4"
+      ],
+      "telephoned": [
+        "instr_communication-37.4"
+      ],
+      "televised": [
+        "transcribe-25.4"
+      ],
+      "telexed": [
+        "instr_communication-37.4"
+      ],
+      "tempted": [
+        "force-59"
+      ],
+      "terminated": [
+        "stop-55.4"
+      ],
+      "tested": [
+        "investigate-35.4"
+      ],
+      "thanked": [
+        "judgement-33"
+      ],
+      "thieved": [
+        "steal-10.5"
+      ],
+      "thumbed": [
+        "rummage-35.5"
+      ],
+      "tipped": [
+        "bill-54.5"
+      ],
+      "told": [
+        "tell-37.2"
+      ],
+      "totaled": [
+        "amalgamate-22.2-2",
+        "register-54.1"
+      ],
+      "traced": [
+        "scribble-25.2"
+      ],
+      "transcribed": [
+        "transcribe-25.4"
+      ],
+      "transformed": [
+        "turn-26.6.1"
+      ],
+      "translated": [
+        "turn-26.6.1"
+      ],
+      "transmuted": [
+        "turn-26.6.1"
+      ],
+      "tried": [
+        "try-61"
+      ],
+      "trilled": [
+        "manner_speaking-37.3"
+      ],
+      "trolled": [
+        "search-35.2"
+      ],
+      "trumpeted": [
+        "manner_speaking-37.3"
+      ],
+      "trusted": [
+        "fulfilling-13.4.1"
+      ],
+      "typed": [
+        "scribble-25.2",
+        "transcribe-25.4"
+      ],
+      "unburdened": [
+        "cheat-10.6"
+      ],
+      "uncoiled": [
+        "separate-23.1"
+      ],
+      "undercharged": [
+        "bill-54.5"
+      ],
+      "understood": [
+        "approve-77"
+      ],
+      "undressed": [
+        "dress-41.1.1"
+      ],
+      "upbraided": [
+        "judgement-33"
+      ],
+      "upgraded": [
+        "appoint-29.1"
+      ],
+      "urged": [
+        "urge-58"
+      ],
+      "used": [
+        "consume-66",
+        "fit-54.3"
+      ],
+      "uttered": [
+        "say-37.7"
+      ],
+      "ventured": [
+        "risk-94"
+      ],
+      "victimized": [
+        "judgement-33"
+      ],
+      "vilified": [
+        "judgement-33"
+      ],
+      "vociferated": [
+        "manner_speaking-37.3"
+      ],
+      "voiced": [
+        "say-37.7"
+      ],
+      "voided": [
+        "cheat-10.6"
+      ],
+      "volunteered": [
+        "give-13.1"
+      ],
+      "wadded": [
+        "knead-26.5"
+      ],
+      "wagered": [
+        "bill-54.5",
+        "risk-94"
+      ],
+      "wangled": [
+        "steal-10.5"
+      ],
+      "wanted": [
+        "appoint-29.1",
+        "order-60"
+      ],
+      "warbled": [
+        "manner_speaking-37.3"
+      ],
+      "watched": [
+        "search-35.2"
+      ],
+      "weaned": [
+        "cheat-10.6"
+      ],
+      "weighed": [
+        "register-54.1"
+      ],
+      "welcomed": [
+        "admit-65",
+        "judgement-33"
+      ],
+      "whispered": [
+        "manner_speaking-37.3"
+      ],
+      "whistled": [
+        "manner_speaking-37.3",
+        "nonverbal_expression-40.2"
+      ],
+      "whittled": [
+        "build-26.1"
+      ],
+      "whooped": [
+        "manner_speaking-37.3"
+      ],
+      "won": [
+        "get-13.5.1"
+      ],
+      "worked": [
+        "knead-26.5"
+      ],
+      "worn": [
+        "simple_dressing-41.3.1"
+      ],
+      "would": [
+        "future_having-13.3"
+      ],
+      "woven": [
+        "build-26.1"
+      ],
+      "wrested": [
+        "steal-10.5"
+      ],
+      "written": [
+        "scribble-25.2"
+      ],
+      "yielded": [
+        "future_having-13.3"
+      ],
+      "zested": [
+        "pit-10.7"
+      ]
+    },
+    "corrupt_classes_by_verb": {
+      "annihilated": [
+        "destroy-44"
+      ],
+      "birched": [
+        "spank-18.3"
+      ],
+      "blitzed": [
+        "destroy-44"
+      ],
+      "bludgeoned": [
+        "spank-18.3"
+      ],
+      "bonked": [
+        "spank-18.3"
+      ],
+      "bothered": [
+        "pain-40.8.1"
+      ],
+      "brained": [
+        "spank-18.3"
+      ],
+      "buffed": [
+        "wipe_manner-10.4.1"
+      ],
+      "buffeted": [
+        "pelt-17.2"
+      ],
+      "caned": [
+        "spank-18.3"
+      ],
+      "chipped": [
+        "break-45.1"
+      ],
+      "clobbered": [
+        "spank-18.3"
+      ],
+      "clubbed": [
+        "spank-18.3"
+      ],
+      "colored": [
+        "coloring-24"
+      ],
+      "conked": [
+        "spank-18.3"
+      ],
+      "coshed": [
+        "spank-18.3"
+      ],
+      "cracked": [
+        "break-45.1"
+      ],
+      "crashed": [
+        "break-45.1"
+      ],
+      "creased": [
+        "bend-45.2"
+      ],
+      "crinkled": [
+        "bend-45.2"
+      ],
+      "crumpled": [
+        "bend-45.2"
+      ],
+      "crushed": [
+        "break-45.1"
+      ],
+      "cudgelled": [
+        "spank-18.3"
+      ],
+      "cuffed": [
+        "spank-18.3"
+      ],
+      "damaged": [
+        "destroy-44"
+      ],
+      "decimated": [
+        "destroy-44"
+      ],
+      "demolished": [
+        "destroy-44"
+      ],
+      "desecrated": [
+        "destroy-44"
+      ],
+      "destroyed": [
+        "destroy-44"
+      ],
+      "devastated": [
+        "destroy-44"
+      ],
+      "discarded": [
+        "throw-17.1"
+      ],
+      "disfigured": [
+        "destroy-44"
+      ],
+      "distempered": [
+        "coloring-24"
+      ],
+      "effaced": [
+        "destroy-44"
+      ],
+      "expunged": [
+        "wipe_manner-10.4.1"
+      ],
+      "exterminated": [
+        "destroy-44"
+      ],
+      "extirpated": [
+        "destroy-44"
+      ],
+      "faltered": [
+        "modes_of_being_with_motion-47.3"
+      ],
+      "flushed": [
+        "wipe_manner-10.4.1"
+      ],
+      "fractured": [
+        "break-45.1"
+      ],
+      "furrowed": [
+        "bend-45.2"
+      ],
+      "glazed": [
+        "coloring-24"
+      ],
+      "hefted": [
+        "carry-11.4"
+      ],
+      "hewn": [
+        "split-23.2"
+      ],
+      "hurt": [
+        "pain-40.8.1"
+      ],
+      "itched": [
+        "pain-40.8.1"
+      ],
+      "japaned": [
+        "coloring-24"
+      ],
+      "jiggled": [
+        "modes_of_being_with_motion-47.3"
+      ],
+      "joggled": [
+        "modes_of_being_with_motion-47.3"
+      ],
+      "knocked": [
+        "split-23.2"
+      ],
+      "lacquered": [
+        "coloring-24"
+      ],
+      "leached": [
+        "wipe_manner-10.4.1"
+      ],
+      "maimed": [
+        "destroy-44"
+      ],
+      "moved": [
+        "roll-51.3.1",
+        "slide-11.2"
+      ],
+      "mutilated": [
+        "destroy-44"
+      ],
+      "obliterated": [
+        "destroy-44"
+      ],
+      "pained": [
+        "pain-40.8.1"
+      ],
+      "pulsated": [
+        "modes_of_being_with_motion-47.3"
+      ],
+      "pummeled": [
+        "spank-18.3"
+      ],
+      "ravaged": [
+        "destroy-44"
+      ],
+      "razed": [
+        "destroy-44"
+      ],
+      "repainted": [
+        "coloring-24"
+      ],
+      "revolved": [
+        "modes_of_being_with_motion-47.3",
+        "roll-51.3.1"
+      ],
+      "ripped": [
+        "break-45.1",
+        "split-23.2"
+      ],
+      "roiled": [
+        "modes_of_being_with_motion-47.3"
+      ],
+      "rotated": [
+        "modes_of_being_with_motion-47.3",
+        "roll-51.3.1"
+      ],
+      "ruined": [
+        "destroy-44"
+      ],
+      "rumpled": [
+        "bend-45.2"
+      ],
+      "sawn": [
+        "split-23.2"
+      ],
+      "shattered": [
+        "break-45.1",
+        "destroy-44"
+      ],
+      "shellacked": [
+        "coloring-24"
+      ],
+      "shoved": [
+        "split-23.2"
+      ],
+      "skimmed": [
+        "wipe_manner-10.4.1"
+      ],
+      "slipped": [
+        "split-23.2"
+      ],
+      "smashed": [
+        "break-45.1"
+      ],
+      "smoothed": [
+        "wipe_manner-10.4.1"
+      ],
+      "socked": [
+        "spank-18.3"
+      ],
+      "spanked": [
+        "spank-18.3"
+      ],
+      "splintered": [
+        "break-45.1"
+      ],
+      "split": [
+        "break-45.1",
+        "split-23.2"
+      ],
+      "stirred": [
+        "modes_of_being_with_motion-47.3"
+      ],
+      "strained": [
+        "wipe_manner-10.4.1"
+      ],
+      "swirled": [
+        "modes_of_being_with_motion-47.3"
+      ],
+      "thrashed": [
+        "spank-18.3"
+      ],
+      "tinted": [
+        "coloring-24"
+      ],
+      "toted": [
+        "carry-11.4"
+      ],
+      "tugged": [
+        "carry-11.4",
+        "split-23.2"
+      ],
+      "undone": [
+        "destroy-44"
+      ],
+      "undulated": [
+        "modes_of_being_with_motion-47.3"
+      ],
+      "vibrated": [
+        "modes_of_being_with_motion-47.3"
+      ],
+      "walloped": [
+        "spank-18.3"
+      ],
+      "whirled": [
+        "roll-51.3.1"
+      ],
+      "whisked": [
+        "spank-18.3",
+        "wipe_manner-10.4.1"
+      ],
+      "winnowed": [
+        "wipe_manner-10.4.1"
+      ],
+      "wrecked": [
+        "destroy-44"
+      ],
+      "yanked": [
+        "split-23.2"
+      ]
+    },
+    "strict_corrupt_classes": [],
+    "fallback_corrupt_classes": [
+      "bend-45.2",
+      "braid-41.2.2",
+      "break-45.1",
+      "bring-11.3",
+      "butter-9.9",
+      "captain-29.8",
+      "carry-11.4",
+      "carve-21.2",
+      "characterize-29.2",
+      "chase-51.6",
+      "clear-10.3",
+      "coloring-24",
+      "cooking-45.3",
+      "cost-54.2",
+      "crane-40.3.2",
+      "cut-21.1",
+      "destroy-44",
+      "disassemble-23.3",
+      "drive-11.5",
+      "dub-29.3",
+      "fill-9.8",
+      "floss-41.2.1",
+      "funnel-9.3",
+      "herd-47.5.2",
+      "hit-18.1",
+      "hold-15.1",
+      "mine-10.9",
+      "mix-22.1",
+      "modes_of_being_with_motion-47.3",
+      "pain-40.8.1",
+      "pelt-17.2",
+      "pocket-9.10",
+      "pour-9.5",
+      "price-54.4",
+      "push-12",
+      "put-9.1",
+      "put_direction-9.4",
+      "put_spatial-9.2",
+      "roll-51.3.1",
+      "run-51.3.2",
+      "send-11.1",
+      "shake-22.3",
+      "slide-11.2",
+      "spank-18.3",
+      "spatial_configuration-47.6",
+      "split-23.2",
+      "swat-18.2",
+      "tape-22.4",
+      "throw-17.1",
+      "tingle-40.8.2",
+      "wink-40.3.1",
+      "wipe_instr-10.4.2",
+      "wipe_manner-10.4.1"
+    ],
+    "dropped": {
+      "clean": [],
+      "corrupt": []
+    }
+  }
+}

@@ -1,0 +1,1952 @@
+{
+  "filter_version": "component_single_token_v1",
+  "model_names": [
+    "gpt2",
+    "meta-llama/Llama-3.2-3B",
+    "google/gemma-3-4b-pt",
+    "Qwen/Qwen3-4B"
+  ],
+  "base_pair_count": 10341,
+  "accepted_pair_count": 16305,
+  "models": {
+    "gpt2": {
+      "pairs_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/pairs_gpt2.csv",
+      "accepted_pairs_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/accepted_pairs_gpt2.jsonl",
+      "targets_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/targets_gpt2.json",
+      "pair_count": 10341,
+      "accepted_pair_count": 10411,
+      "pair_retention_rate": 1.0,
+      "accepted_pair_retention_rate": 0.6385157927016253,
+      "target_counts": {
+        "animate": 450,
+        "inanimate": 450
+      },
+      "pair_diagnostics": {
+        "total_pairs": 10341,
+        "checked_pairs": 10341,
+        "metadata_missing": 0,
+        "sequence_length_mismatch": 0,
+        "patient_span_failure": 0,
+        "verb_span_failure": 0,
+        "patient_span_misaligned": 0,
+        "verb_span_misaligned": 0,
+        "patient_not_single_token": 0,
+        "verb_not_single_token": 0,
+        "patient_token_width_mismatch": 0,
+        "verb_token_width_mismatch": 0,
+        "fully_aligned": 10341,
+        "fully_aligned_rate_among_checked": 1.0,
+        "examples": {}
+      },
+      "target_summary": {
+        "filter_version": "component_single_token_v1",
+        "filter_model_names": [
+          "gpt2"
+        ],
+        "animate": {
+          "original_count": 450,
+          "filtered_count": 450,
+          "dropped_count": 0,
+          "retention_rate": 1.0,
+          "dropped_examples": []
+        },
+        "inanimate": {
+          "original_count": 450,
+          "filtered_count": 450,
+          "dropped_count": 0,
+          "retention_rate": 1.0,
+          "dropped_examples": []
+        }
+      }
+    },
+    "meta-llama/Llama-3.2-3B": {
+      "pairs_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/pairs_meta-llama_Llama-3.2-3B.csv",
+      "accepted_pairs_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/accepted_pairs_meta-llama_Llama-3.2-3B.jsonl",
+      "targets_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/targets_meta-llama_Llama-3.2-3B.json",
+      "pair_count": 9532,
+      "accepted_pair_count": 11219,
+      "pair_retention_rate": 0.9217677207233343,
+      "accepted_pair_retention_rate": 0.6880711438209138,
+      "target_counts": {
+        "animate": 401,
+        "inanimate": 434
+      },
+      "pair_diagnostics": {
+        "total_pairs": 10341,
+        "checked_pairs": 10341,
+        "metadata_missing": 0,
+        "sequence_length_mismatch": 739,
+        "patient_span_failure": 0,
+        "verb_span_failure": 0,
+        "patient_span_misaligned": 0,
+        "verb_span_misaligned": 739,
+        "patient_not_single_token": 80,
+        "verb_not_single_token": 739,
+        "patient_token_width_mismatch": 0,
+        "verb_token_width_mismatch": 739,
+        "fully_aligned": 9532,
+        "fully_aligned_rate_among_checked": 0.9217677207233343,
+        "examples": {
+          "sequence_length_mismatch": [
+            {
+              "row": 33,
+              "clean_prefix": "The tram was steered by the",
+              "corrupt_prefix": "The tram was flooded by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 39,
+              "clean_prefix": "The tunnel was secured by the",
+              "corrupt_prefix": "The tunnel was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 51,
+              "clean_prefix": "The income was reviewed by the",
+              "corrupt_prefix": "The income was eroded by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 53,
+              "clean_prefix": "The scarf was dyed by the",
+              "corrupt_prefix": "The scarf was soaked by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 54,
+              "clean_prefix": "The car was steered by the",
+              "corrupt_prefix": "The car was stranded by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 81,
+              "clean_prefix": "The revenue was approved by the",
+              "corrupt_prefix": "The revenue was eroded by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 127,
+              "clean_prefix": "The carpet was dyed by the",
+              "corrupt_prefix": "The carpet was soaked by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 138,
+              "clean_prefix": "The van was steered by the",
+              "corrupt_prefix": "The van was buried by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 162,
+              "clean_prefix": "The building was monitored by the",
+              "corrupt_prefix": "The building was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 196,
+              "clean_prefix": "The uniform was dyed by the",
+              "corrupt_prefix": "The uniform was soaked by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 199,
+              "clean_prefix": "The hangar was secured by the",
+              "corrupt_prefix": "The hangar was wrecked by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 8
+            },
+            {
+              "row": 232,
+              "clean_prefix": "The carpet was dyed by the",
+              "corrupt_prefix": "The carpet was burned by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 234,
+              "clean_prefix": "The runway was renovated by the",
+              "corrupt_prefix": "The runway was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 244,
+              "clean_prefix": "The tunnel was repaired by the",
+              "corrupt_prefix": "The tunnel was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 254,
+              "clean_prefix": "The tram was steered by the",
+              "corrupt_prefix": "The tram was overturned by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 301,
+              "clean_prefix": "The tunnel was designed by the",
+              "corrupt_prefix": "The tunnel was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 337,
+              "clean_prefix": "The revenue was reported by the",
+              "corrupt_prefix": "The revenue was eroded by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 354,
+              "clean_prefix": "The dam was secured by the",
+              "corrupt_prefix": "The dam was eroded by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 362,
+              "clean_prefix": "The tower was designed by the",
+              "corrupt_prefix": "The tower was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 376,
+              "clean_prefix": "The house was planned by the",
+              "corrupt_prefix": "The house was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            }
+          ],
+          "verb_span_misaligned": [
+            {
+              "row": 33,
+              "clean_verb": "steered",
+              "corrupt_verb": "flooded",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The tram was steered by the",
+              "corrupt_prefix": "The tram was flooded by the"
+            },
+            {
+              "row": 39,
+              "clean_verb": "secured",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The tunnel was secured by the",
+              "corrupt_prefix": "The tunnel was wrecked by the"
+            },
+            {
+              "row": 51,
+              "clean_verb": "reviewed",
+              "corrupt_verb": "eroded",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The income was reviewed by the",
+              "corrupt_prefix": "The income was eroded by the"
+            },
+            {
+              "row": 53,
+              "clean_verb": "dyed",
+              "corrupt_verb": "soaked",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The scarf was dyed by the",
+              "corrupt_prefix": "The scarf was soaked by the"
+            },
+            {
+              "row": 54,
+              "clean_verb": "steered",
+              "corrupt_verb": "stranded",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The car was steered by the",
+              "corrupt_prefix": "The car was stranded by the"
+            },
+            {
+              "row": 81,
+              "clean_verb": "approved",
+              "corrupt_verb": "eroded",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The revenue was approved by the",
+              "corrupt_prefix": "The revenue was eroded by the"
+            },
+            {
+              "row": 127,
+              "clean_verb": "dyed",
+              "corrupt_verb": "soaked",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The carpet was dyed by the",
+              "corrupt_prefix": "The carpet was soaked by the"
+            },
+            {
+              "row": 138,
+              "clean_verb": "steered",
+              "corrupt_verb": "buried",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The van was steered by the",
+              "corrupt_prefix": "The van was buried by the"
+            },
+            {
+              "row": 162,
+              "clean_verb": "monitored",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The building was monitored by the",
+              "corrupt_prefix": "The building was wrecked by the"
+            },
+            {
+              "row": 196,
+              "clean_verb": "dyed",
+              "corrupt_verb": "soaked",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The uniform was dyed by the",
+              "corrupt_prefix": "The uniform was soaked by the"
+            },
+            {
+              "row": 199,
+              "clean_verb": "secured",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                4,
+                5
+              ],
+              "corrupt_span": [
+                4,
+                6
+              ],
+              "clean_prefix": "The hangar was secured by the",
+              "corrupt_prefix": "The hangar was wrecked by the"
+            },
+            {
+              "row": 232,
+              "clean_verb": "dyed",
+              "corrupt_verb": "burned",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The carpet was dyed by the",
+              "corrupt_prefix": "The carpet was burned by the"
+            },
+            {
+              "row": 234,
+              "clean_verb": "renovated",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The runway was renovated by the",
+              "corrupt_prefix": "The runway was wrecked by the"
+            },
+            {
+              "row": 244,
+              "clean_verb": "repaired",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The tunnel was repaired by the",
+              "corrupt_prefix": "The tunnel was wrecked by the"
+            },
+            {
+              "row": 254,
+              "clean_verb": "steered",
+              "corrupt_verb": "overturned",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The tram was steered by the",
+              "corrupt_prefix": "The tram was overturned by the"
+            },
+            {
+              "row": 301,
+              "clean_verb": "designed",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The tunnel was designed by the",
+              "corrupt_prefix": "The tunnel was wrecked by the"
+            },
+            {
+              "row": 337,
+              "clean_verb": "reported",
+              "corrupt_verb": "eroded",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The revenue was reported by the",
+              "corrupt_prefix": "The revenue was eroded by the"
+            },
+            {
+              "row": 354,
+              "clean_verb": "secured",
+              "corrupt_verb": "eroded",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The dam was secured by the",
+              "corrupt_prefix": "The dam was eroded by the"
+            },
+            {
+              "row": 362,
+              "clean_verb": "designed",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The tower was designed by the",
+              "corrupt_prefix": "The tower was wrecked by the"
+            },
+            {
+              "row": 376,
+              "clean_verb": "planned",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The house was planned by the",
+              "corrupt_prefix": "The house was wrecked by the"
+            }
+          ],
+          "verb_not_single_token": [
+            {
+              "row": 33,
+              "clean_verb": "steered",
+              "corrupt_verb": "flooded",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The tram was steered by the",
+              "corrupt_prefix": "The tram was flooded by the"
+            },
+            {
+              "row": 39,
+              "clean_verb": "secured",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The tunnel was secured by the",
+              "corrupt_prefix": "The tunnel was wrecked by the"
+            },
+            {
+              "row": 51,
+              "clean_verb": "reviewed",
+              "corrupt_verb": "eroded",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The income was reviewed by the",
+              "corrupt_prefix": "The income was eroded by the"
+            },
+            {
+              "row": 53,
+              "clean_verb": "dyed",
+              "corrupt_verb": "soaked",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The scarf was dyed by the",
+              "corrupt_prefix": "The scarf was soaked by the"
+            },
+            {
+              "row": 54,
+              "clean_verb": "steered",
+              "corrupt_verb": "stranded",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The car was steered by the",
+              "corrupt_prefix": "The car was stranded by the"
+            },
+            {
+              "row": 81,
+              "clean_verb": "approved",
+              "corrupt_verb": "eroded",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The revenue was approved by the",
+              "corrupt_prefix": "The revenue was eroded by the"
+            },
+            {
+              "row": 127,
+              "clean_verb": "dyed",
+              "corrupt_verb": "soaked",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The carpet was dyed by the",
+              "corrupt_prefix": "The carpet was soaked by the"
+            },
+            {
+              "row": 138,
+              "clean_verb": "steered",
+              "corrupt_verb": "buried",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The van was steered by the",
+              "corrupt_prefix": "The van was buried by the"
+            },
+            {
+              "row": 162,
+              "clean_verb": "monitored",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The building was monitored by the",
+              "corrupt_prefix": "The building was wrecked by the"
+            },
+            {
+              "row": 196,
+              "clean_verb": "dyed",
+              "corrupt_verb": "soaked",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The uniform was dyed by the",
+              "corrupt_prefix": "The uniform was soaked by the"
+            },
+            {
+              "row": 199,
+              "clean_verb": "secured",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was secured by the",
+              "corrupt_prefix": "The hangar was wrecked by the"
+            },
+            {
+              "row": 232,
+              "clean_verb": "dyed",
+              "corrupt_verb": "burned",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The carpet was dyed by the",
+              "corrupt_prefix": "The carpet was burned by the"
+            },
+            {
+              "row": 234,
+              "clean_verb": "renovated",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The runway was renovated by the",
+              "corrupt_prefix": "The runway was wrecked by the"
+            },
+            {
+              "row": 244,
+              "clean_verb": "repaired",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The tunnel was repaired by the",
+              "corrupt_prefix": "The tunnel was wrecked by the"
+            },
+            {
+              "row": 254,
+              "clean_verb": "steered",
+              "corrupt_verb": "overturned",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The tram was steered by the",
+              "corrupt_prefix": "The tram was overturned by the"
+            },
+            {
+              "row": 301,
+              "clean_verb": "designed",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The tunnel was designed by the",
+              "corrupt_prefix": "The tunnel was wrecked by the"
+            },
+            {
+              "row": 337,
+              "clean_verb": "reported",
+              "corrupt_verb": "eroded",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The revenue was reported by the",
+              "corrupt_prefix": "The revenue was eroded by the"
+            },
+            {
+              "row": 354,
+              "clean_verb": "secured",
+              "corrupt_verb": "eroded",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The dam was secured by the",
+              "corrupt_prefix": "The dam was eroded by the"
+            },
+            {
+              "row": 362,
+              "clean_verb": "designed",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The tower was designed by the",
+              "corrupt_prefix": "The tower was wrecked by the"
+            },
+            {
+              "row": 376,
+              "clean_verb": "planned",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The house was planned by the",
+              "corrupt_prefix": "The house was wrecked by the"
+            }
+          ],
+          "patient_not_single_token": [
+            {
+              "row": 77,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was financed by the",
+              "corrupt_prefix": "The hangar was flooded by the"
+            },
+            {
+              "row": 86,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was inspected by the",
+              "corrupt_prefix": "The hangar was battered by the"
+            },
+            {
+              "row": 131,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was inspected by the",
+              "corrupt_prefix": "The hangar was buried by the"
+            },
+            {
+              "row": 157,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was planned by the",
+              "corrupt_prefix": "The hangar was flooded by the"
+            },
+            {
+              "row": 199,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was secured by the",
+              "corrupt_prefix": "The hangar was wrecked by the"
+            },
+            {
+              "row": 432,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was designed by the",
+              "corrupt_prefix": "The hangar was flooded by the"
+            },
+            {
+              "row": 552,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was secured by the",
+              "corrupt_prefix": "The hangar was shaken by the"
+            },
+            {
+              "row": 859,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was inspected by the",
+              "corrupt_prefix": "The hangar was destroyed by the"
+            },
+            {
+              "row": 987,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was surveyed by the",
+              "corrupt_prefix": "The hangar was shaken by the"
+            },
+            {
+              "row": 1294,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was repaired by the",
+              "corrupt_prefix": "The hangar was damaged by the"
+            },
+            {
+              "row": 1326,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was inspected by the",
+              "corrupt_prefix": "The hangar was damaged by the"
+            },
+            {
+              "row": 1492,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was designed by the",
+              "corrupt_prefix": "The hangar was battered by the"
+            },
+            {
+              "row": 1531,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was repaired by the",
+              "corrupt_prefix": "The hangar was buried by the"
+            },
+            {
+              "row": 1717,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was secured by the",
+              "corrupt_prefix": "The hangar was blocked by the"
+            },
+            {
+              "row": 1765,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was inspected by the",
+              "corrupt_prefix": "The hangar was shaken by the"
+            },
+            {
+              "row": 1802,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was renovated by the",
+              "corrupt_prefix": "The hangar was buried by the"
+            },
+            {
+              "row": 1935,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was maintained by the",
+              "corrupt_prefix": "The hangar was battered by the"
+            },
+            {
+              "row": 1940,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was renovated by the",
+              "corrupt_prefix": "The hangar was shaken by the"
+            },
+            {
+              "row": 2008,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was maintained by the",
+              "corrupt_prefix": "The hangar was buried by the"
+            },
+            {
+              "row": 2041,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was maintained by the",
+              "corrupt_prefix": "The hangar was shaken by the"
+            }
+          ]
+        }
+      },
+      "target_summary": {
+        "filter_version": "component_single_token_v1",
+        "filter_model_names": [
+          "meta-llama/Llama-3.2-3B"
+        ],
+        "animate": {
+          "original_count": 450,
+          "filtered_count": 401,
+          "dropped_count": 49,
+          "retention_rate": 0.8911111111111111,
+          "dropped_examples": [
+            "trooper",
+            "comrade",
+            "colonel",
+            "claimant",
+            "legislator",
+            "foreigner",
+            "fisherman",
+            "occupant",
+            "chemist",
+            "coroner",
+            "grocer",
+            "outfielder",
+            "traitor",
+            "utopian",
+            "adherent",
+            "guerrilla",
+            "backer",
+            "mercenary",
+            "classmate",
+            "collaborator"
+          ]
+        },
+        "inanimate": {
+          "original_count": 450,
+          "filtered_count": 434,
+          "dropped_count": 16,
+          "retention_rate": 0.9644444444444444,
+          "dropped_examples": [
+            "blight",
+            "opium",
+            "misfortune",
+            "uproar",
+            "manure",
+            "streetcar",
+            "ultraviolet",
+            "amulet",
+            "arsenic",
+            "aspirin",
+            "brim",
+            "circuitry",
+            "cove",
+            "dispensary",
+            "marquee",
+            "polio"
+          ]
+        }
+      }
+    },
+    "google/gemma-3-4b-pt": {
+      "pairs_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/pairs_google_gemma-3-4b-pt.csv",
+      "accepted_pairs_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/accepted_pairs_google_gemma-3-4b-pt.jsonl",
+      "targets_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/targets_google_gemma-3-4b-pt.json",
+      "pair_count": 10341,
+      "accepted_pair_count": 14563,
+      "pair_retention_rate": 1.0,
+      "accepted_pair_retention_rate": 0.8931616068690585,
+      "target_counts": {
+        "animate": 442,
+        "inanimate": 449
+      },
+      "pair_diagnostics": {
+        "total_pairs": 10341,
+        "checked_pairs": 10341,
+        "metadata_missing": 0,
+        "sequence_length_mismatch": 0,
+        "patient_span_failure": 0,
+        "verb_span_failure": 0,
+        "patient_span_misaligned": 0,
+        "verb_span_misaligned": 0,
+        "patient_not_single_token": 0,
+        "verb_not_single_token": 0,
+        "patient_token_width_mismatch": 0,
+        "verb_token_width_mismatch": 0,
+        "fully_aligned": 10341,
+        "fully_aligned_rate_among_checked": 1.0,
+        "examples": {}
+      },
+      "target_summary": {
+        "filter_version": "component_single_token_v1",
+        "filter_model_names": [
+          "google/gemma-3-4b-pt"
+        ],
+        "animate": {
+          "original_count": 450,
+          "filtered_count": 442,
+          "dropped_count": 8,
+          "retention_rate": 0.9822222222222222,
+          "dropped_examples": [
+            "grocer",
+            "backer",
+            "rapist",
+            "abuser",
+            "accuser",
+            "centrist",
+            "detainee",
+            "fundamentalist"
+          ]
+        },
+        "inanimate": {
+          "original_count": 450,
+          "filtered_count": 449,
+          "dropped_count": 1,
+          "retention_rate": 0.9977777777777778,
+          "dropped_examples": [
+            "streetcar"
+          ]
+        }
+      }
+    },
+    "Qwen/Qwen3-4B": {
+      "pairs_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/pairs_Qwen_Qwen3-4B.csv",
+      "accepted_pairs_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/accepted_pairs_Qwen_Qwen3-4B.jsonl",
+      "targets_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/targets_Qwen_Qwen3-4B.json",
+      "pair_count": 9532,
+      "accepted_pair_count": 11219,
+      "pair_retention_rate": 0.9217677207233343,
+      "accepted_pair_retention_rate": 0.6880711438209138,
+      "target_counts": {
+        "animate": 401,
+        "inanimate": 434
+      },
+      "pair_diagnostics": {
+        "total_pairs": 10341,
+        "checked_pairs": 10341,
+        "metadata_missing": 0,
+        "sequence_length_mismatch": 739,
+        "patient_span_failure": 0,
+        "verb_span_failure": 0,
+        "patient_span_misaligned": 0,
+        "verb_span_misaligned": 739,
+        "patient_not_single_token": 80,
+        "verb_not_single_token": 739,
+        "patient_token_width_mismatch": 0,
+        "verb_token_width_mismatch": 739,
+        "fully_aligned": 9532,
+        "fully_aligned_rate_among_checked": 0.9217677207233343,
+        "examples": {
+          "sequence_length_mismatch": [
+            {
+              "row": 33,
+              "clean_prefix": "The tram was steered by the",
+              "corrupt_prefix": "The tram was flooded by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 39,
+              "clean_prefix": "The tunnel was secured by the",
+              "corrupt_prefix": "The tunnel was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 51,
+              "clean_prefix": "The income was reviewed by the",
+              "corrupt_prefix": "The income was eroded by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 53,
+              "clean_prefix": "The scarf was dyed by the",
+              "corrupt_prefix": "The scarf was soaked by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 54,
+              "clean_prefix": "The car was steered by the",
+              "corrupt_prefix": "The car was stranded by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 81,
+              "clean_prefix": "The revenue was approved by the",
+              "corrupt_prefix": "The revenue was eroded by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 127,
+              "clean_prefix": "The carpet was dyed by the",
+              "corrupt_prefix": "The carpet was soaked by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 138,
+              "clean_prefix": "The van was steered by the",
+              "corrupt_prefix": "The van was buried by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 162,
+              "clean_prefix": "The building was monitored by the",
+              "corrupt_prefix": "The building was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 196,
+              "clean_prefix": "The uniform was dyed by the",
+              "corrupt_prefix": "The uniform was soaked by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 199,
+              "clean_prefix": "The hangar was secured by the",
+              "corrupt_prefix": "The hangar was wrecked by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 8
+            },
+            {
+              "row": 232,
+              "clean_prefix": "The carpet was dyed by the",
+              "corrupt_prefix": "The carpet was burned by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 234,
+              "clean_prefix": "The runway was renovated by the",
+              "corrupt_prefix": "The runway was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 244,
+              "clean_prefix": "The tunnel was repaired by the",
+              "corrupt_prefix": "The tunnel was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 254,
+              "clean_prefix": "The tram was steered by the",
+              "corrupt_prefix": "The tram was overturned by the",
+              "clean_token_count": 7,
+              "corrupt_token_count": 6
+            },
+            {
+              "row": 301,
+              "clean_prefix": "The tunnel was designed by the",
+              "corrupt_prefix": "The tunnel was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 337,
+              "clean_prefix": "The revenue was reported by the",
+              "corrupt_prefix": "The revenue was eroded by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 354,
+              "clean_prefix": "The dam was secured by the",
+              "corrupt_prefix": "The dam was eroded by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 362,
+              "clean_prefix": "The tower was designed by the",
+              "corrupt_prefix": "The tower was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            },
+            {
+              "row": 376,
+              "clean_prefix": "The house was planned by the",
+              "corrupt_prefix": "The house was wrecked by the",
+              "clean_token_count": 6,
+              "corrupt_token_count": 7
+            }
+          ],
+          "verb_span_misaligned": [
+            {
+              "row": 33,
+              "clean_verb": "steered",
+              "corrupt_verb": "flooded",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The tram was steered by the",
+              "corrupt_prefix": "The tram was flooded by the"
+            },
+            {
+              "row": 39,
+              "clean_verb": "secured",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The tunnel was secured by the",
+              "corrupt_prefix": "The tunnel was wrecked by the"
+            },
+            {
+              "row": 51,
+              "clean_verb": "reviewed",
+              "corrupt_verb": "eroded",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The income was reviewed by the",
+              "corrupt_prefix": "The income was eroded by the"
+            },
+            {
+              "row": 53,
+              "clean_verb": "dyed",
+              "corrupt_verb": "soaked",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The scarf was dyed by the",
+              "corrupt_prefix": "The scarf was soaked by the"
+            },
+            {
+              "row": 54,
+              "clean_verb": "steered",
+              "corrupt_verb": "stranded",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The car was steered by the",
+              "corrupt_prefix": "The car was stranded by the"
+            },
+            {
+              "row": 81,
+              "clean_verb": "approved",
+              "corrupt_verb": "eroded",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The revenue was approved by the",
+              "corrupt_prefix": "The revenue was eroded by the"
+            },
+            {
+              "row": 127,
+              "clean_verb": "dyed",
+              "corrupt_verb": "soaked",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The carpet was dyed by the",
+              "corrupt_prefix": "The carpet was soaked by the"
+            },
+            {
+              "row": 138,
+              "clean_verb": "steered",
+              "corrupt_verb": "buried",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The van was steered by the",
+              "corrupt_prefix": "The van was buried by the"
+            },
+            {
+              "row": 162,
+              "clean_verb": "monitored",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The building was monitored by the",
+              "corrupt_prefix": "The building was wrecked by the"
+            },
+            {
+              "row": 196,
+              "clean_verb": "dyed",
+              "corrupt_verb": "soaked",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The uniform was dyed by the",
+              "corrupt_prefix": "The uniform was soaked by the"
+            },
+            {
+              "row": 199,
+              "clean_verb": "secured",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                4,
+                5
+              ],
+              "corrupt_span": [
+                4,
+                6
+              ],
+              "clean_prefix": "The hangar was secured by the",
+              "corrupt_prefix": "The hangar was wrecked by the"
+            },
+            {
+              "row": 232,
+              "clean_verb": "dyed",
+              "corrupt_verb": "burned",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The carpet was dyed by the",
+              "corrupt_prefix": "The carpet was burned by the"
+            },
+            {
+              "row": 234,
+              "clean_verb": "renovated",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The runway was renovated by the",
+              "corrupt_prefix": "The runway was wrecked by the"
+            },
+            {
+              "row": 244,
+              "clean_verb": "repaired",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The tunnel was repaired by the",
+              "corrupt_prefix": "The tunnel was wrecked by the"
+            },
+            {
+              "row": 254,
+              "clean_verb": "steered",
+              "corrupt_verb": "overturned",
+              "clean_span": [
+                3,
+                5
+              ],
+              "corrupt_span": [
+                3,
+                4
+              ],
+              "clean_prefix": "The tram was steered by the",
+              "corrupt_prefix": "The tram was overturned by the"
+            },
+            {
+              "row": 301,
+              "clean_verb": "designed",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The tunnel was designed by the",
+              "corrupt_prefix": "The tunnel was wrecked by the"
+            },
+            {
+              "row": 337,
+              "clean_verb": "reported",
+              "corrupt_verb": "eroded",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The revenue was reported by the",
+              "corrupt_prefix": "The revenue was eroded by the"
+            },
+            {
+              "row": 354,
+              "clean_verb": "secured",
+              "corrupt_verb": "eroded",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The dam was secured by the",
+              "corrupt_prefix": "The dam was eroded by the"
+            },
+            {
+              "row": 362,
+              "clean_verb": "designed",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The tower was designed by the",
+              "corrupt_prefix": "The tower was wrecked by the"
+            },
+            {
+              "row": 376,
+              "clean_verb": "planned",
+              "corrupt_verb": "wrecked",
+              "clean_span": [
+                3,
+                4
+              ],
+              "corrupt_span": [
+                3,
+                5
+              ],
+              "clean_prefix": "The house was planned by the",
+              "corrupt_prefix": "The house was wrecked by the"
+            }
+          ],
+          "verb_not_single_token": [
+            {
+              "row": 33,
+              "clean_verb": "steered",
+              "corrupt_verb": "flooded",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The tram was steered by the",
+              "corrupt_prefix": "The tram was flooded by the"
+            },
+            {
+              "row": 39,
+              "clean_verb": "secured",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The tunnel was secured by the",
+              "corrupt_prefix": "The tunnel was wrecked by the"
+            },
+            {
+              "row": 51,
+              "clean_verb": "reviewed",
+              "corrupt_verb": "eroded",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The income was reviewed by the",
+              "corrupt_prefix": "The income was eroded by the"
+            },
+            {
+              "row": 53,
+              "clean_verb": "dyed",
+              "corrupt_verb": "soaked",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The scarf was dyed by the",
+              "corrupt_prefix": "The scarf was soaked by the"
+            },
+            {
+              "row": 54,
+              "clean_verb": "steered",
+              "corrupt_verb": "stranded",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The car was steered by the",
+              "corrupt_prefix": "The car was stranded by the"
+            },
+            {
+              "row": 81,
+              "clean_verb": "approved",
+              "corrupt_verb": "eroded",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The revenue was approved by the",
+              "corrupt_prefix": "The revenue was eroded by the"
+            },
+            {
+              "row": 127,
+              "clean_verb": "dyed",
+              "corrupt_verb": "soaked",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The carpet was dyed by the",
+              "corrupt_prefix": "The carpet was soaked by the"
+            },
+            {
+              "row": 138,
+              "clean_verb": "steered",
+              "corrupt_verb": "buried",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The van was steered by the",
+              "corrupt_prefix": "The van was buried by the"
+            },
+            {
+              "row": 162,
+              "clean_verb": "monitored",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The building was monitored by the",
+              "corrupt_prefix": "The building was wrecked by the"
+            },
+            {
+              "row": 196,
+              "clean_verb": "dyed",
+              "corrupt_verb": "soaked",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The uniform was dyed by the",
+              "corrupt_prefix": "The uniform was soaked by the"
+            },
+            {
+              "row": 199,
+              "clean_verb": "secured",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was secured by the",
+              "corrupt_prefix": "The hangar was wrecked by the"
+            },
+            {
+              "row": 232,
+              "clean_verb": "dyed",
+              "corrupt_verb": "burned",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The carpet was dyed by the",
+              "corrupt_prefix": "The carpet was burned by the"
+            },
+            {
+              "row": 234,
+              "clean_verb": "renovated",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The runway was renovated by the",
+              "corrupt_prefix": "The runway was wrecked by the"
+            },
+            {
+              "row": 244,
+              "clean_verb": "repaired",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The tunnel was repaired by the",
+              "corrupt_prefix": "The tunnel was wrecked by the"
+            },
+            {
+              "row": 254,
+              "clean_verb": "steered",
+              "corrupt_verb": "overturned",
+              "clean_width": 2,
+              "corrupt_width": 1,
+              "clean_prefix": "The tram was steered by the",
+              "corrupt_prefix": "The tram was overturned by the"
+            },
+            {
+              "row": 301,
+              "clean_verb": "designed",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The tunnel was designed by the",
+              "corrupt_prefix": "The tunnel was wrecked by the"
+            },
+            {
+              "row": 337,
+              "clean_verb": "reported",
+              "corrupt_verb": "eroded",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The revenue was reported by the",
+              "corrupt_prefix": "The revenue was eroded by the"
+            },
+            {
+              "row": 354,
+              "clean_verb": "secured",
+              "corrupt_verb": "eroded",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The dam was secured by the",
+              "corrupt_prefix": "The dam was eroded by the"
+            },
+            {
+              "row": 362,
+              "clean_verb": "designed",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The tower was designed by the",
+              "corrupt_prefix": "The tower was wrecked by the"
+            },
+            {
+              "row": 376,
+              "clean_verb": "planned",
+              "corrupt_verb": "wrecked",
+              "clean_width": 1,
+              "corrupt_width": 2,
+              "clean_prefix": "The house was planned by the",
+              "corrupt_prefix": "The house was wrecked by the"
+            }
+          ],
+          "patient_not_single_token": [
+            {
+              "row": 77,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was financed by the",
+              "corrupt_prefix": "The hangar was flooded by the"
+            },
+            {
+              "row": 86,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was inspected by the",
+              "corrupt_prefix": "The hangar was battered by the"
+            },
+            {
+              "row": 131,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was inspected by the",
+              "corrupt_prefix": "The hangar was buried by the"
+            },
+            {
+              "row": 157,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was planned by the",
+              "corrupt_prefix": "The hangar was flooded by the"
+            },
+            {
+              "row": 199,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was secured by the",
+              "corrupt_prefix": "The hangar was wrecked by the"
+            },
+            {
+              "row": 432,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was designed by the",
+              "corrupt_prefix": "The hangar was flooded by the"
+            },
+            {
+              "row": 552,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was secured by the",
+              "corrupt_prefix": "The hangar was shaken by the"
+            },
+            {
+              "row": 859,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was inspected by the",
+              "corrupt_prefix": "The hangar was destroyed by the"
+            },
+            {
+              "row": 987,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was surveyed by the",
+              "corrupt_prefix": "The hangar was shaken by the"
+            },
+            {
+              "row": 1294,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was repaired by the",
+              "corrupt_prefix": "The hangar was damaged by the"
+            },
+            {
+              "row": 1326,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was inspected by the",
+              "corrupt_prefix": "The hangar was damaged by the"
+            },
+            {
+              "row": 1492,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was designed by the",
+              "corrupt_prefix": "The hangar was battered by the"
+            },
+            {
+              "row": 1531,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was repaired by the",
+              "corrupt_prefix": "The hangar was buried by the"
+            },
+            {
+              "row": 1717,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was secured by the",
+              "corrupt_prefix": "The hangar was blocked by the"
+            },
+            {
+              "row": 1765,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was inspected by the",
+              "corrupt_prefix": "The hangar was shaken by the"
+            },
+            {
+              "row": 1802,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was renovated by the",
+              "corrupt_prefix": "The hangar was buried by the"
+            },
+            {
+              "row": 1935,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was maintained by the",
+              "corrupt_prefix": "The hangar was battered by the"
+            },
+            {
+              "row": 1940,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was renovated by the",
+              "corrupt_prefix": "The hangar was shaken by the"
+            },
+            {
+              "row": 2008,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was maintained by the",
+              "corrupt_prefix": "The hangar was buried by the"
+            },
+            {
+              "row": 2041,
+              "patient": "hangar",
+              "clean_width": 2,
+              "corrupt_width": 2,
+              "clean_prefix": "The hangar was maintained by the",
+              "corrupt_prefix": "The hangar was shaken by the"
+            }
+          ]
+        }
+      },
+      "target_summary": {
+        "filter_version": "component_single_token_v1",
+        "filter_model_names": [
+          "Qwen/Qwen3-4B"
+        ],
+        "animate": {
+          "original_count": 450,
+          "filtered_count": 401,
+          "dropped_count": 49,
+          "retention_rate": 0.8911111111111111,
+          "dropped_examples": [
+            "trooper",
+            "comrade",
+            "colonel",
+            "claimant",
+            "legislator",
+            "foreigner",
+            "fisherman",
+            "occupant",
+            "chemist",
+            "coroner",
+            "grocer",
+            "outfielder",
+            "traitor",
+            "utopian",
+            "adherent",
+            "guerrilla",
+            "backer",
+            "mercenary",
+            "classmate",
+            "collaborator"
+          ]
+        },
+        "inanimate": {
+          "original_count": 450,
+          "filtered_count": 434,
+          "dropped_count": 16,
+          "retention_rate": 0.9644444444444444,
+          "dropped_examples": [
+            "blight",
+            "opium",
+            "misfortune",
+            "uproar",
+            "manure",
+            "streetcar",
+            "ultraviolet",
+            "amulet",
+            "arsenic",
+            "aspirin",
+            "brim",
+            "circuitry",
+            "cove",
+            "dispensary",
+            "marquee",
+            "polio"
+          ]
+        }
+      }
+    }
+  },
+  "intersection": {
+    "pairs_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/pairs_intersection_36a1bcd7d921.csv",
+    "accepted_pairs_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/accepted_pairs_intersection_36a1bcd7d921.jsonl",
+    "targets_path": "/gpfs/home4/spunzo/grammatical-circuits/animacy-circuit/dataset/semantic_meaningful/tokenization_filtered/targets_intersection_36a1bcd7d921.json",
+    "pair_count": 9532,
+    "accepted_pair_count": 9602,
+    "pair_retention_rate": 0.9217677207233343,
+    "accepted_pair_retention_rate": 0.5888991107022385,
+    "target_counts": {
+      "animate": 401,
+      "inanimate": 434
+    },
+    "target_summary": {
+      "filter_version": "component_single_token_v1",
+      "filter_model_names": [
+        "gpt2",
+        "meta-llama/Llama-3.2-3B",
+        "google/gemma-3-4b-pt",
+        "Qwen/Qwen3-4B"
+      ],
+      "animate": {
+        "original_count": 450,
+        "filtered_count": 401,
+        "dropped_count": 49,
+        "retention_rate": 0.8911111111111111,
+        "dropped_examples": [
+          "trooper",
+          "comrade",
+          "colonel",
+          "claimant",
+          "legislator",
+          "foreigner",
+          "fisherman",
+          "occupant",
+          "chemist",
+          "coroner",
+          "grocer",
+          "outfielder",
+          "traitor",
+          "utopian",
+          "adherent",
+          "guerrilla",
+          "backer",
+          "mercenary",
+          "classmate",
+          "collaborator"
+        ]
+      },
+      "inanimate": {
+        "original_count": 450,
+        "filtered_count": 434,
+        "dropped_count": 16,
+        "retention_rate": 0.9644444444444444,
+        "dropped_examples": [
+          "blight",
+          "opium",
+          "misfortune",
+          "uproar",
+          "manure",
+          "streetcar",
+          "ultraviolet",
+          "amulet",
+          "arsenic",
+          "aspirin",
+          "brim",
+          "circuitry",
+          "cove",
+          "dispensary",
+          "marquee",
+          "polio"
+        ]
+      }
+    }
+  }
+}

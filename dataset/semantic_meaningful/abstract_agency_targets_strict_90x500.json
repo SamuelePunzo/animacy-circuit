@@ -1,0 +1,7703 @@
+{
+  "meta": {
+    "script": "create_abstract_agency_target_sets.py",
+    "timestamp_utc": "2026-06-13T07:09:51.589096+00:00",
+    "source": "WordNet via nltk.corpus.wordnet",
+    "target_source": "abstract_agency",
+    "target_counts": {
+      "animate": 90,
+      "inanimate": 500
+    },
+    "semantic_interpretation": {
+      "animate": "abstract agentive entities, including bodiless institutional agents",
+      "inanimate": "abstract non-agentive inanimate entities"
+    },
+    "template_constraint": "Targets are common nouns compatible with prompts ending in 'by the'.",
+    "proper_name_policy": "raw proper names excluded",
+    "agentive_selection_priority": "first-sense institutional/organizational agent, then secondary-sense institutional/organizational agent; generic noun.group top-up is rejected",
+    "normalization": {
+      "lowercase": true,
+      "single_word_alpha_only": true,
+      "singularization": "inflect.engine().singular_noun",
+      "minimum_length": 3
+    },
+    "manual_noise_blocklist": {
+      "animate": [
+        "acc",
+        "agriculture",
+        "ang",
+        "armour",
+        "cis",
+        "detail",
+        "dod",
+        "doi",
+        "dos",
+        "duo",
+        "ec",
+        "eight",
+        "elevated",
+        "eleven",
+        "energy",
+        "faith",
+        "five",
+        "fps",
+        "friendly",
+        "hostile",
+        "ic",
+        "indie",
+        "ins",
+        "isn",
+        "kindergarten",
+        "law",
+        "nine",
+        "offence",
+        "offense",
+        "pac",
+        "preschool",
+        "rank",
+        "religion",
+        "sa",
+        "sc",
+        "sec",
+        "ss",
+        "tc",
+        "tech",
+        "trio",
+        "un",
+        "va",
+        "who"
+      ],
+      "inanimate": [
+        "hr",
+        "yr"
+      ]
+    },
+    "tokenizer": {
+      "model_name": "gpt2",
+      "one_token_check": "len(tokenizer.encode(' ' + word)) == 1"
+    },
+    "lexname_constraints": {
+      "agentive_seed": [
+        "noun.group"
+      ],
+      "agentive_seed_ancestors": [
+        "administrative_unit.n.01",
+        "agency.n.01",
+        "assembly.n.04",
+        "coalition.n.01",
+        "committee.n.01",
+        "company.n.01",
+        "court.n.01",
+        "department.n.01",
+        "enterprise.n.02",
+        "government.n.01",
+        "institution.n.01",
+        "organization.n.01",
+        "polity.n.02",
+        "union.n.01"
+      ],
+      "abstract_inanimate_seed": [
+        "noun.act",
+        "noun.attribute",
+        "noun.cognition",
+        "noun.communication",
+        "noun.event",
+        "noun.feeling",
+        "noun.motive",
+        "noun.phenomenon",
+        "noun.process",
+        "noun.relation",
+        "noun.shape",
+        "noun.state",
+        "noun.time"
+      ],
+      "physical_excluded": [
+        "noun.animal",
+        "noun.artifact",
+        "noun.body",
+        "noun.food",
+        "noun.location",
+        "noun.object",
+        "noun.plant",
+        "noun.possession",
+        "noun.substance"
+      ]
+    }
+  },
+  "counts": {
+    "seed_lemma_hits": {
+      "animate": 4311,
+      "inanimate": 44982
+    },
+    "seed_unique_candidates": {
+      "animate": 1645,
+      "inanimate": 20409,
+      "union": 21477
+    },
+    "selected": {
+      "animate": 90,
+      "inanimate": 500
+    }
+  },
+  "targets": {
+    "animate": [
+      "agency",
+      "regiment",
+      "government",
+      "regime",
+      "organization",
+      "household",
+      "industry",
+      "army",
+      "squad",
+      "team",
+      "committee",
+      "corps",
+      "mission",
+      "tribunal",
+      "personnel",
+      "manpower",
+      "workforce",
+      "corp",
+      "police",
+      "division",
+      "association",
+      "firm",
+      "crew",
+      "battalion",
+      "brigade",
+      "guild",
+      "troop",
+      "infantry",
+      "league",
+      "navy",
+      "denomination",
+      "legion",
+      "patrol",
+      "militia",
+      "senate",
+      "council",
+      "platoon",
+      "cavalry",
+      "cult",
+      "military",
+      "alignment",
+      "insurer",
+      "legislature",
+      "partnership",
+      "coalition",
+      "cooperative",
+      "consortium",
+      "fraternity",
+      "superpower",
+      "combo",
+      "parliament",
+      "sect",
+      "squadron",
+      "bloc",
+      "cartel",
+      "collective",
+      "delegation",
+      "exec",
+      "federation",
+      "institute",
+      "paramilitary",
+      "subcommittee",
+      "dealership",
+      "interpol",
+      "issuer",
+      "concern",
+      "society",
+      "order",
+      "organisation",
+      "labor",
+      "education",
+      "command",
+      "labour",
+      "chapter",
+      "intelligence",
+      "conference",
+      "enterprise",
+      "jury",
+      "mob",
+      "combination",
+      "commerce",
+      "expedition",
+      "alliance",
+      "detachment",
+      "communion",
+      "bureaucracy",
+      "hierarchy",
+      "franchise",
+      "percussion",
+      "tribe"
+    ],
+    "inanimate": [
+      "manner",
+      "thought",
+      "mode",
+      "kind",
+      "outcome",
+      "idea",
+      "effect",
+      "problem",
+      "program",
+      "programme",
+      "consequence",
+      "use",
+      "effort",
+      "moment",
+      "purpose",
+      "chance",
+      "example",
+      "role",
+      "nighttime",
+      "look",
+      "employment",
+      "endeavor",
+      "endeavour",
+      "fight",
+      "exercise",
+      "age",
+      "battle",
+      "attempt",
+      "aspect",
+      "tone",
+      "hour",
+      "try",
+      "instance",
+      "conflict",
+      "fact",
+      "reason",
+      "experience",
+      "answer",
+      "history",
+      "procedure",
+      "instant",
+      "activity",
+      "opinion",
+      "strength",
+      "survey",
+      "demand",
+      "war",
+      "usage",
+      "condition",
+      "intent",
+      "report",
+      "week",
+      "month",
+      "opportunity",
+      "period",
+      "affair",
+      "utilization",
+      "pressure",
+      "status",
+      "intention",
+      "quality",
+      "morning",
+      "info",
+      "occupation",
+      "attitude",
+      "task",
+      "accent",
+      "trouble",
+      "inquiry",
+      "descriptor",
+      "determination",
+      "fear",
+      "method",
+      "percent",
+      "statement",
+      "argument",
+      "temperature",
+      "evidence",
+      "warfare",
+      "language",
+      "attention",
+      "conclusion",
+      "involvement",
+      "motion",
+      "play",
+      "sense",
+      "smell",
+      "treatment",
+      "significance",
+      "theme",
+      "theory",
+      "accomplishment",
+      "experiment",
+      "query",
+      "meaning",
+      "today",
+      "belief",
+      "topic",
+      "experimentation",
+      "flick",
+      "trial",
+      "possibility",
+      "resolution",
+      "tale",
+      "movie",
+      "fright",
+      "training",
+      "literature",
+      "assistance",
+      "phase",
+      "reality",
+      "grooming",
+      "narration",
+      "narrative",
+      "feel",
+      "comment",
+      "decision",
+      "election",
+      "execution",
+      "understanding",
+      "reaction",
+      "characteristic",
+      "circumstance",
+      "flavor",
+      "flavour",
+      "reference",
+      "configuration",
+      "instruction",
+      "list",
+      "music",
+      "conception",
+      "listing",
+      "performance",
+      "onset",
+      "policy",
+      "technique",
+      "operation",
+      "perspective",
+      "alteration",
+      "attack",
+      "care",
+      "cares",
+      "assist",
+      "move",
+      "practice",
+      "attending",
+      "chore",
+      "combat",
+      "reply",
+      "summer",
+      "behavior",
+      "behaviour",
+      "discussion",
+      "difficulty",
+      "remark",
+      "research",
+      "season",
+      "teaching",
+      "drama",
+      "dream",
+      "error",
+      "importance",
+      "text",
+      "apprehension",
+      "choice",
+      "triumph",
+      "vision",
+      "afternoon",
+      "crying",
+      "deficiency",
+      "dictionary",
+      "growing",
+      "claim",
+      "evolution",
+      "judgement",
+      "judgment",
+      "title",
+      "emotion",
+      "news",
+      "skill",
+      "call",
+      "conduct",
+      "lack",
+      "laugh",
+      "responsibility",
+      "shooting",
+      "concept",
+      "construct",
+      "sale",
+      "victory",
+      "arc",
+      "distribution",
+      "posture",
+      "achievement",
+      "hereafter",
+      "tradition",
+      "velocity",
+      "vocal",
+      "discourse",
+      "murder",
+      "noise",
+      "slaying",
+      "cry",
+      "daylight",
+      "fighting",
+      "mistake",
+      "project",
+      "regard",
+      "desire",
+      "intensity",
+      "mapping",
+      "philosophy",
+      "relationship",
+      "agreement",
+      "daytime",
+      "doubt",
+      "marketing",
+      "message",
+      "principle",
+      "selling",
+      "struggle",
+      "undertaking",
+      "yell",
+      "ability",
+      "attainment",
+      "campaign",
+      "concentration",
+      "enactment",
+      "observation",
+      "savvy",
+      "speech",
+      "turn",
+      "harm",
+      "hurt",
+      "resultant",
+      "sentiment",
+      "suffering",
+      "contention",
+      "contrast",
+      "discipline",
+      "explanation",
+      "luck",
+      "confidence",
+      "dreaming",
+      "even",
+      "evening",
+      "extent",
+      "glimpse",
+      "grin",
+      "grinning",
+      "imagination",
+      "persona",
+      "potency",
+      "smile",
+      "smiling",
+      "bulk",
+      "ending",
+      "glance",
+      "spell",
+      "holiday",
+      "maturity",
+      "uncertainty",
+      "gesture",
+      "planning",
+      "rage",
+      "appeal",
+      "doctrine",
+      "firing",
+      "illusion",
+      "intervention",
+      "manifestation",
+      "occurrence",
+      "probability",
+      "respect",
+      "silence",
+      "standpoint",
+      "wonder",
+      "absence",
+      "departure",
+      "exercising",
+      "haste",
+      "hurry",
+      "injury",
+      "persuasion",
+      "roar",
+      "roaring",
+      "version",
+      "workout",
+      "advancement",
+      "career",
+      "dominance",
+      "hurting",
+      "mood",
+      "particular",
+      "thinking",
+      "tilt",
+      "transition",
+      "vacation",
+      "animation",
+      "freedom",
+      "happening",
+      "laughter",
+      "show",
+      "arguing",
+      "assumption",
+      "controversy",
+      "diameter",
+      "disaster",
+      "handling",
+      "hunting",
+      "pleasure",
+      "promise",
+      "recognition",
+      "anxiety",
+      "catastrophe",
+      "criterion",
+      "declaration",
+      "diam",
+      "distinction",
+      "diversion",
+      "heartbeat",
+      "honor",
+      "honour",
+      "impulse",
+      "mystery",
+      "temper",
+      "violence",
+      "clash",
+      "decrease",
+      "divergence",
+      "height",
+      "joy",
+      "normal",
+      "occasion",
+      "outcry",
+      "peace",
+      "regulation",
+      "search",
+      "secret",
+      "shout",
+      "tally",
+      "will",
+      "appearance",
+      "authorization",
+      "awarding",
+      "bid",
+      "communicating",
+      "conviction",
+      "description",
+      "estimate",
+      "facet",
+      "folklore",
+      "hate",
+      "hatred",
+      "melody",
+      "ballot",
+      "context",
+      "curse",
+      "din",
+      "disease",
+      "eld",
+      "exception",
+      "integration",
+      "rainfall",
+      "recommendation",
+      "sat",
+      "sleep",
+      "warning",
+      "wavelength",
+      "bidding",
+      "complaint",
+      "debate",
+      "estimation",
+      "grasp",
+      "implication",
+      "improvement",
+      "investigation",
+      "menace",
+      "mention",
+      "norm",
+      "onslaught",
+      "outlook",
+      "recreation",
+      "wink",
+      "winter",
+      "calling",
+      "comparison",
+      "crusade",
+      "despair",
+      "examination",
+      "failing",
+      "lawsuit",
+      "lifespan",
+      "lifetime",
+      "oath",
+      "odor",
+      "rating",
+      "rhythm",
+      "swearing",
+      "talk",
+      "tension",
+      "tomorrow",
+      "trauma",
+      "while",
+      "worry",
+      "wound",
+      "writing",
+      "anger",
+      "correspondence",
+      "deviation",
+      "dimension",
+      "discovery",
+      "ego",
+      "evaluation",
+      "guidance",
+      "integrity",
+      "introduction",
+      "lyric",
+      "measurement",
+      "measuring",
+      "sunshine",
+      "sympathy",
+      "tune",
+      "variance",
+      "voting",
+      "welfare",
+      "apr",
+      "burst",
+      "clarity",
+      "commencement",
+      "confusion",
+      "crime",
+      "demonstration",
+      "density",
+      "destruction",
+      "flame",
+      "flaming",
+      "identity",
+      "incident",
+      "individuality",
+      "interruption",
+      "intuition",
+      "ire",
+      "signal",
+      "strategy",
+      "sunlight",
+      "technology",
+      "tragedy",
+      "tsunami",
+      "advertising",
+      "agony",
+      "autumn",
+      "contract",
+      "crash",
+      "defeat",
+      "definition",
+      "efficiency",
+      "encounter",
+      "fog",
+      "health",
+      "identification",
+      "inclination",
+      "integrating",
+      "kickoff",
+      "lesson",
+      "mentality",
+      "objection",
+      "ratio",
+      "reduction",
+      "routine",
+      "scent",
+      "sep",
+      "signaling",
+      "surprise",
+      "suspicion",
+      "aroma",
+      "bible",
+      "caliber",
+      "comedy",
+      "conversation",
+      "dignity",
+      "disturbance",
+      "drinking",
+      "earthquake",
+      "esteem",
+      "excitement",
+      "exclusion",
+      "headache",
+      "impact",
+      "interpretation",
+      "interval",
+      "joke",
+      "looking",
+      "oxidation",
+      "panic",
+      "peril",
+      "petition",
+      "proportion",
+      "quake",
+      "request"
+    ]
+  },
+  "ranked_selection": {
+    "animate": [
+      {
+        "word": "agency",
+        "score": 166,
+        "priority": 2,
+        "sense_count": 5,
+        "sense_names": [
+          "agency.n.01",
+          "agency.n.02",
+          "agency.n.03",
+          "representation.n.04",
+          "means.n.01"
+        ]
+      },
+      {
+        "word": "regiment",
+        "score": 145,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "regiment.n.01"
+        ]
+      },
+      {
+        "word": "government",
+        "score": 125,
+        "priority": 2,
+        "sense_count": 4,
+        "sense_names": [
+          "government.n.01",
+          "government.n.02",
+          "government.n.03",
+          "politics.n.02"
+        ]
+      },
+      {
+        "word": "regime",
+        "score": 113,
+        "priority": 2,
+        "sense_count": 2,
+        "sense_names": [
+          "government.n.01",
+          "regimen.n.01"
+        ]
+      },
+      {
+        "word": "organization",
+        "score": 89,
+        "priority": 2,
+        "sense_count": 7,
+        "sense_names": [
+          "organization.n.01",
+          "arrangement.n.03",
+          "administration.n.02",
+          "organization.n.04",
+          "organization.n.05",
+          "organization.n.06",
+          "constitution.n.02"
+        ]
+      },
+      {
+        "word": "household",
+        "score": 74,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "family.n.01"
+        ]
+      },
+      {
+        "word": "industry",
+        "score": 73,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "industry.n.01",
+          "industry.n.02",
+          "diligence.n.02"
+        ]
+      },
+      {
+        "word": "army",
+        "score": 66,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "army.n.01",
+          "army.n.02",
+          "united_states_army.n.01"
+        ]
+      },
+      {
+        "word": "squad",
+        "score": 55,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "squad.n.01",
+          "team.n.01",
+          "police_squad.n.01"
+        ]
+      },
+      {
+        "word": "team",
+        "score": 55,
+        "priority": 2,
+        "sense_count": 2,
+        "sense_names": [
+          "team.n.01",
+          "team.n.02"
+        ]
+      },
+      {
+        "word": "committee",
+        "score": 46,
+        "priority": 2,
+        "sense_count": 2,
+        "sense_names": [
+          "committee.n.01",
+          "committee.n.02"
+        ]
+      },
+      {
+        "word": "corps",
+        "score": 46,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "corps.n.01",
+          "corps.n.02",
+          "corporation.n.01"
+        ]
+      },
+      {
+        "word": "mission",
+        "score": 44,
+        "priority": 2,
+        "sense_count": 5,
+        "sense_names": [
+          "mission.n.01",
+          "mission.n.02",
+          "mission.n.03",
+          "mission.n.04",
+          "deputation.n.01"
+        ]
+      },
+      {
+        "word": "tribunal",
+        "score": 43,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "court.n.01"
+        ]
+      },
+      {
+        "word": "personnel",
+        "score": 42,
+        "priority": 2,
+        "sense_count": 2,
+        "sense_names": [
+          "force.n.04",
+          "personnel_department.n.01"
+        ]
+      },
+      {
+        "word": "manpower",
+        "score": 41,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "work_force.n.01"
+        ]
+      },
+      {
+        "word": "workforce",
+        "score": 41,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "work_force.n.01"
+        ]
+      },
+      {
+        "word": "corp",
+        "score": 40,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "corporation.n.01"
+        ]
+      },
+      {
+        "word": "police",
+        "score": 36,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "police.n.01"
+        ]
+      },
+      {
+        "word": "division",
+        "score": 34,
+        "priority": 2,
+        "sense_count": 12,
+        "sense_names": [
+          "division.n.01",
+          "part.n.09",
+          "division.n.03",
+          "division.n.04",
+          "division.n.05",
+          "class.n.05",
+          "division.n.07",
+          "division.n.08",
+          "division.n.09",
+          "division.n.10",
+          "division.n.11",
+          "division.n.12"
+        ]
+      },
+      {
+        "word": "association",
+        "score": 30,
+        "priority": 2,
+        "sense_count": 8,
+        "sense_names": [
+          "association.n.01",
+          "association.n.02",
+          "association.n.03",
+          "association.n.04",
+          "affiliation.n.01",
+          "association.n.06",
+          "association.n.07",
+          "association.n.08"
+        ]
+      },
+      {
+        "word": "firm",
+        "score": 29,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "firm.n.01"
+        ]
+      },
+      {
+        "word": "crew",
+        "score": 26,
+        "priority": 2,
+        "sense_count": 4,
+        "sense_names": [
+          "crew.n.01",
+          "gang.n.03",
+          "crowd.n.02",
+          "crew.n.04"
+        ]
+      },
+      {
+        "word": "battalion",
+        "score": 22,
+        "priority": 2,
+        "sense_count": 2,
+        "sense_names": [
+          "battalion.n.01",
+          "battalion.n.02"
+        ]
+      },
+      {
+        "word": "brigade",
+        "score": 19,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "brigade.n.01"
+        ]
+      },
+      {
+        "word": "guild",
+        "score": 16,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "club.n.02"
+        ]
+      },
+      {
+        "word": "troop",
+        "score": 16,
+        "priority": 2,
+        "sense_count": 4,
+        "sense_names": [
+          "troop.n.01",
+          "troop.n.02",
+          "troop.n.03",
+          "troop.n.04"
+        ]
+      },
+      {
+        "word": "infantry",
+        "score": 13,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "infantry.n.01"
+        ]
+      },
+      {
+        "word": "league",
+        "score": 13,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "league.n.01",
+          "league.n.02",
+          "league.n.03"
+        ]
+      },
+      {
+        "word": "navy",
+        "score": 13,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "navy.n.01",
+          "dark_blue.n.01",
+          "united_states_navy.n.01"
+        ]
+      },
+      {
+        "word": "denomination",
+        "score": 12,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "denomination.n.01",
+          "denomination.n.02",
+          "appellation.n.01"
+        ]
+      },
+      {
+        "word": "legion",
+        "score": 12,
+        "priority": 2,
+        "sense_count": 4,
+        "sense_names": [
+          "host.n.05",
+          "legion.n.02",
+          "legion.n.03",
+          "horde.n.01"
+        ]
+      },
+      {
+        "word": "patrol",
+        "score": 11,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "patrol.n.01",
+          "patrol.n.02",
+          "patrol.n.03"
+        ]
+      },
+      {
+        "word": "militia",
+        "score": 10,
+        "priority": 2,
+        "sense_count": 2,
+        "sense_names": [
+          "militia.n.01",
+          "militia.n.02"
+        ]
+      },
+      {
+        "word": "senate",
+        "score": 10,
+        "priority": 2,
+        "sense_count": 2,
+        "sense_names": [
+          "senate.n.01",
+          "united_states_senate.n.01"
+        ]
+      },
+      {
+        "word": "council",
+        "score": 8,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "council.n.01",
+          "council.n.02",
+          "council.n.03"
+        ]
+      },
+      {
+        "word": "platoon",
+        "score": 8,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "platoon.n.01",
+          "platoon.n.02",
+          "platoon.n.03"
+        ]
+      },
+      {
+        "word": "cavalry",
+        "score": 7,
+        "priority": 2,
+        "sense_count": 2,
+        "sense_names": [
+          "cavalry.n.01",
+          "cavalry.n.02"
+        ]
+      },
+      {
+        "word": "cult",
+        "score": 7,
+        "priority": 2,
+        "sense_count": 5,
+        "sense_names": [
+          "cult.n.01",
+          "fad.n.01",
+          "cult.n.03",
+          "cult.n.04",
+          "cult.n.05"
+        ]
+      },
+      {
+        "word": "military",
+        "score": 7,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "military.n.01"
+        ]
+      },
+      {
+        "word": "alignment",
+        "score": 5,
+        "priority": 2,
+        "sense_count": 4,
+        "sense_names": [
+          "alliance.n.03",
+          "alignment.n.02",
+          "conjunction.n.05",
+          "alignment.n.04"
+        ]
+      },
+      {
+        "word": "insurer",
+        "score": 5,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "insurance_company.n.01"
+        ]
+      },
+      {
+        "word": "legislature",
+        "score": 5,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "legislature.n.01"
+        ]
+      },
+      {
+        "word": "partnership",
+        "score": 5,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "partnership.n.01",
+          "partnership.n.02",
+          "partnership.n.03"
+        ]
+      },
+      {
+        "word": "coalition",
+        "score": 4,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "alliance.n.03",
+          "coalition.n.02",
+          "coalescence.n.01"
+        ]
+      },
+      {
+        "word": "cooperative",
+        "score": 4,
+        "priority": 2,
+        "sense_count": 2,
+        "sense_names": [
+          "cooperative.n.01",
+          "cooperative.n.02"
+        ]
+      },
+      {
+        "word": "consortium",
+        "score": 3,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "consortium.n.01"
+        ]
+      },
+      {
+        "word": "fraternity",
+        "score": 3,
+        "priority": 2,
+        "sense_count": 2,
+        "sense_names": [
+          "fraternity.n.01",
+          "brotherhood.n.02"
+        ]
+      },
+      {
+        "word": "superpower",
+        "score": 3,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "world_power.n.01"
+        ]
+      },
+      {
+        "word": "combo",
+        "score": 2,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "jazz_band.n.01"
+        ]
+      },
+      {
+        "word": "parliament",
+        "score": 2,
+        "priority": 2,
+        "sense_count": 2,
+        "sense_names": [
+          "parliament.n.01",
+          "fantan.n.02"
+        ]
+      },
+      {
+        "word": "sect",
+        "score": 2,
+        "priority": 2,
+        "sense_count": 2,
+        "sense_names": [
+          "sect.n.01",
+          "faction.n.02"
+        ]
+      },
+      {
+        "word": "squadron",
+        "score": 2,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "squadron.n.01",
+          "squadron.n.02",
+          "squadron.n.03"
+        ]
+      },
+      {
+        "word": "bloc",
+        "score": 1,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "bloc.n.01"
+        ]
+      },
+      {
+        "word": "cartel",
+        "score": 1,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "trust.n.04"
+        ]
+      },
+      {
+        "word": "collective",
+        "score": 1,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "collective.n.01"
+        ]
+      },
+      {
+        "word": "delegation",
+        "score": 1,
+        "priority": 2,
+        "sense_count": 2,
+        "sense_names": [
+          "deputation.n.01",
+          "delegating.n.01"
+        ]
+      },
+      {
+        "word": "exec",
+        "score": 1,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "white_house.n.01"
+        ]
+      },
+      {
+        "word": "federation",
+        "score": 1,
+        "priority": 2,
+        "sense_count": 3,
+        "sense_names": [
+          "federation.n.01",
+          "confederation.n.02",
+          "federation.n.03"
+        ]
+      },
+      {
+        "word": "institute",
+        "score": 1,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "institute.n.01"
+        ]
+      },
+      {
+        "word": "paramilitary",
+        "score": 1,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "paramilitary.n.01"
+        ]
+      },
+      {
+        "word": "subcommittee",
+        "score": 1,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "subcommittee.n.01"
+        ]
+      },
+      {
+        "word": "dealership",
+        "score": 0,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "franchise.n.02"
+        ]
+      },
+      {
+        "word": "interpol",
+        "score": 0,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "interpol.n.01"
+        ]
+      },
+      {
+        "word": "issuer",
+        "score": 0,
+        "priority": 2,
+        "sense_count": 1,
+        "sense_names": [
+          "issuer.n.01"
+        ]
+      },
+      {
+        "word": "concern",
+        "score": 114,
+        "priority": 1,
+        "sense_count": 5,
+        "sense_names": [
+          "concern.n.01",
+          "concern.n.02",
+          "concern.n.03",
+          "concern.n.04",
+          "business.n.01"
+        ]
+      },
+      {
+        "word": "society",
+        "score": 114,
+        "priority": 1,
+        "sense_count": 4,
+        "sense_names": [
+          "society.n.01",
+          "club.n.02",
+          "company.n.03",
+          "society.n.04"
+        ]
+      },
+      {
+        "word": "order",
+        "score": 91,
+        "priority": 1,
+        "sense_count": 15,
+        "sense_names": [
+          "order.n.01",
+          "order.n.02",
+          "order.n.03",
+          "ordering.n.01",
+          "orderliness.n.02",
+          "decree.n.01",
+          "order.n.07",
+          "club.n.02",
+          "order.n.09",
+          "holy_order.n.01",
+          "order.n.11",
+          "order.n.12",
+          "order.n.13",
+          "order.n.14",
+          "order.n.15"
+        ]
+      },
+      {
+        "word": "organisation",
+        "score": 89,
+        "priority": 1,
+        "sense_count": 7,
+        "sense_names": [
+          "administration.n.02",
+          "organization.n.01",
+          "arrangement.n.03",
+          "organization.n.05",
+          "organization.n.04",
+          "organization.n.06",
+          "constitution.n.02"
+        ]
+      },
+      {
+        "word": "labor",
+        "score": 88,
+        "priority": 1,
+        "sense_count": 7,
+        "sense_names": [
+          "labor.n.01",
+          "labor.n.02",
+          "parturiency.n.01",
+          "labor_movement.n.01",
+          "british_labour_party.n.01",
+          "department_of_labor.n.01",
+          "undertaking.n.01"
+        ]
+      },
+      {
+        "word": "education",
+        "score": 65,
+        "priority": 1,
+        "sense_count": 6,
+        "sense_names": [
+          "education.n.01",
+          "education.n.02",
+          "education.n.03",
+          "education.n.04",
+          "education.n.05",
+          "department_of_education.n.01"
+        ]
+      },
+      {
+        "word": "command",
+        "score": 51,
+        "priority": 1,
+        "sense_count": 7,
+        "sense_names": [
+          "command.n.01",
+          "command.n.02",
+          "command.n.03",
+          "command.n.04",
+          "command.n.05",
+          "command.n.06",
+          "instruction.n.04"
+        ]
+      },
+      {
+        "word": "labour",
+        "score": 43,
+        "priority": 1,
+        "sense_count": 4,
+        "sense_names": [
+          "labor.n.01",
+          "parturiency.n.01",
+          "british_labour_party.n.01",
+          "labor.n.02"
+        ]
+      },
+      {
+        "word": "chapter",
+        "score": 42,
+        "priority": 1,
+        "sense_count": 5,
+        "sense_names": [
+          "chapter.n.01",
+          "chapter.n.02",
+          "chapter.n.03",
+          "chapter.n.04",
+          "chapter.n.05"
+        ]
+      },
+      {
+        "word": "intelligence",
+        "score": 37,
+        "priority": 1,
+        "sense_count": 5,
+        "sense_names": [
+          "intelligence.n.01",
+          "intelligence.n.02",
+          "intelligence.n.03",
+          "news.n.01",
+          "intelligence.n.05"
+        ]
+      },
+      {
+        "word": "conference",
+        "score": 25,
+        "priority": 1,
+        "sense_count": 3,
+        "sense_names": [
+          "conference.n.01",
+          "league.n.01",
+          "conference.n.03"
+        ]
+      },
+      {
+        "word": "enterprise",
+        "score": 23,
+        "priority": 1,
+        "sense_count": 3,
+        "sense_names": [
+          "enterprise.n.01",
+          "enterprise.n.02",
+          "enterprise.n.03"
+        ]
+      },
+      {
+        "word": "jury",
+        "score": 23,
+        "priority": 1,
+        "sense_count": 2,
+        "sense_names": [
+          "jury.n.01",
+          "jury.n.02"
+        ]
+      },
+      {
+        "word": "mob",
+        "score": 21,
+        "priority": 1,
+        "sense_count": 3,
+        "sense_names": [
+          "mob.n.01",
+          "syndicate.n.01",
+          "gang.n.01"
+        ]
+      },
+      {
+        "word": "combination",
+        "score": 19,
+        "priority": 1,
+        "sense_count": 7,
+        "sense_names": [
+          "combination.n.01",
+          "combination.n.02",
+          "combination.n.03",
+          "combination.n.04",
+          "combination.n.05",
+          "combination.n.06",
+          "combination.n.07"
+        ]
+      },
+      {
+        "word": "commerce",
+        "score": 13,
+        "priority": 1,
+        "sense_count": 3,
+        "sense_names": [
+          "commerce.n.01",
+          "department_of_commerce.n.01",
+          "commerce.n.03"
+        ]
+      },
+      {
+        "word": "expedition",
+        "score": 13,
+        "priority": 1,
+        "sense_count": 5,
+        "sense_names": [
+          "expedition.n.01",
+          "expedition.n.02",
+          "expedition.n.03",
+          "excursion.n.01",
+          "dispatch.n.03"
+        ]
+      },
+      {
+        "word": "alliance",
+        "score": 9,
+        "priority": 1,
+        "sense_count": 5,
+        "sense_names": [
+          "alliance.n.01",
+          "alliance.n.02",
+          "alliance.n.03",
+          "alliance.n.04",
+          "confederation.n.03"
+        ]
+      },
+      {
+        "word": "detachment",
+        "score": 9,
+        "priority": 1,
+        "sense_count": 5,
+        "sense_names": [
+          "withdrawal.n.04",
+          "detachment.n.02",
+          "insulation.n.01",
+          "detachment.n.04",
+          "separation.n.02"
+        ]
+      },
+      {
+        "word": "communion",
+        "score": 7,
+        "priority": 1,
+        "sense_count": 3,
+        "sense_names": [
+          "communion.n.01",
+          "communion.n.02",
+          "communion.n.03"
+        ]
+      },
+      {
+        "word": "bureaucracy",
+        "score": 6,
+        "priority": 1,
+        "sense_count": 3,
+        "sense_names": [
+          "bureaucracy.n.01",
+          "bureaucracy.n.02",
+          "bureaucracy.n.03"
+        ]
+      },
+      {
+        "word": "hierarchy",
+        "score": 4,
+        "priority": 1,
+        "sense_count": 2,
+        "sense_names": [
+          "hierarchy.n.01",
+          "hierarchy.n.02"
+        ]
+      },
+      {
+        "word": "franchise",
+        "score": 2,
+        "priority": 1,
+        "sense_count": 3,
+        "sense_names": [
+          "franchise.n.01",
+          "franchise.n.02",
+          "franchise.n.03"
+        ]
+      },
+      {
+        "word": "percussion",
+        "score": 2,
+        "priority": 1,
+        "sense_count": 4,
+        "sense_names": [
+          "percussion.n.01",
+          "percussion.n.02",
+          "percussion_section.n.01",
+          "percussion.n.04"
+        ]
+      },
+      {
+        "word": "tribe",
+        "score": 2,
+        "priority": 1,
+        "sense_count": 4,
+        "sense_names": [
+          "tribe.n.01",
+          "tribe.n.02",
+          "tribe.n.03",
+          "kin.n.02"
+        ]
+      }
+    ],
+    "inanimate": [
+      {
+        "word": "manner",
+        "score": 314,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "manner.n.01",
+          "manner.n.02",
+          "manner.n.03"
+        ]
+      },
+      {
+        "word": "thought",
+        "score": 297,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "idea.n.01",
+          "thinking.n.01",
+          "thought.n.03",
+          "opinion.n.01"
+        ]
+      },
+      {
+        "word": "mode",
+        "score": 290,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "manner.n.01",
+          "mode.n.02",
+          "modality.n.01",
+          "mood.n.03",
+          "mode.n.05",
+          "mode.n.06"
+        ]
+      },
+      {
+        "word": "kind",
+        "score": 253,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "kind.n.01"
+        ]
+      },
+      {
+        "word": "outcome",
+        "score": 245,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "result.n.03",
+          "consequence.n.01"
+        ]
+      },
+      {
+        "word": "idea",
+        "score": 243,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "idea.n.01",
+          "mind.n.06",
+          "idea.n.03",
+          "estimate.n.01",
+          "theme.n.03"
+        ]
+      },
+      {
+        "word": "effect",
+        "score": 234,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "consequence.n.01",
+          "impression.n.02",
+          "effect.n.03",
+          "effect.n.04",
+          "effect.n.05",
+          "effect.n.06"
+        ]
+      },
+      {
+        "word": "problem",
+        "score": 227,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "problem.n.01",
+          "problem.n.02",
+          "trouble.n.01"
+        ]
+      },
+      {
+        "word": "program",
+        "score": 223,
+        "priority": 0,
+        "sense_count": 8,
+        "sense_names": [
+          "plan.n.01",
+          "program.n.02",
+          "broadcast.n.02",
+          "platform.n.02",
+          "program.n.05",
+          "course_of_study.n.01",
+          "program.n.07",
+          "program.n.08"
+        ]
+      },
+      {
+        "word": "programme",
+        "score": 217,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "program.n.05",
+          "course_of_study.n.01",
+          "broadcast.n.02",
+          "program.n.07",
+          "program.n.02",
+          "plan.n.01",
+          "program.n.08"
+        ]
+      },
+      {
+        "word": "consequence",
+        "score": 213,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "consequence.n.01",
+          "consequence.n.02",
+          "consequence.n.03"
+        ]
+      },
+      {
+        "word": "use",
+        "score": 200,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "use.n.01",
+          "function.n.02",
+          "use.n.03",
+          "consumption.n.03",
+          "habit.n.02",
+          "manipulation.n.01",
+          "use.n.07"
+        ]
+      },
+      {
+        "word": "effort",
+        "score": 192,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "attempt.n.01",
+          "effort.n.02",
+          "feat.n.01",
+          "campaign.n.02"
+        ]
+      },
+      {
+        "word": "moment",
+        "score": 192,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "moment.n.01",
+          "moment.n.02",
+          "here_and_now.n.01",
+          "consequence.n.03",
+          "moment.n.05",
+          "moment.n.06"
+        ]
+      },
+      {
+        "word": "purpose",
+        "score": 187,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "purpose.n.01",
+          "function.n.02",
+          "determination.n.02"
+        ]
+      },
+      {
+        "word": "chance",
+        "score": 172,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "opportunity.n.01",
+          "luck.n.02",
+          "chance.n.03",
+          "probability.n.01",
+          "prospect.n.01"
+        ]
+      },
+      {
+        "word": "example",
+        "score": 172,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "example.n.01",
+          "model.n.07",
+          "exemplar.n.01",
+          "example.n.04",
+          "case.n.01",
+          "exercise.n.04"
+        ]
+      },
+      {
+        "word": "role",
+        "score": 171,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "function.n.03",
+          "character.n.04",
+          "function.n.02",
+          "role.n.04"
+        ]
+      },
+      {
+        "word": "nighttime",
+        "score": 167,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "night.n.01"
+        ]
+      },
+      {
+        "word": "look",
+        "score": 162,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "expression.n.01",
+          "look.n.02",
+          "look.n.03",
+          "spirit.n.02"
+        ]
+      },
+      {
+        "word": "employment",
+        "score": 159,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "employment.n.01",
+          "employment.n.02",
+          "employment.n.03",
+          "use.n.01"
+        ]
+      },
+      {
+        "word": "endeavor",
+        "score": 154,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "enterprise.n.01",
+          "attempt.n.01"
+        ]
+      },
+      {
+        "word": "endeavour",
+        "score": 154,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "enterprise.n.01",
+          "attempt.n.01"
+        ]
+      },
+      {
+        "word": "fight",
+        "score": 150,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "battle.n.01",
+          "fight.n.02",
+          "competitiveness.n.01",
+          "fight.n.04",
+          "fight.n.05"
+        ]
+      },
+      {
+        "word": "exercise",
+        "score": 149,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "exercise.n.01",
+          "use.n.01",
+          "exercise.n.03",
+          "exercise.n.04",
+          "exercise.n.05"
+        ]
+      },
+      {
+        "word": "age",
+        "score": 145,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "age.n.01",
+          "historic_period.n.01",
+          "age.n.03",
+          "long_time.n.01",
+          "old_age.n.01"
+        ]
+      },
+      {
+        "word": "battle",
+        "score": 145,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "battle.n.01",
+          "struggle.n.01",
+          "conflict.n.01"
+        ]
+      },
+      {
+        "word": "attempt",
+        "score": 144,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "attempt.n.01",
+          "attack.n.05"
+        ]
+      },
+      {
+        "word": "aspect",
+        "score": 143,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "aspect.n.01",
+          "aspect.n.02",
+          "view.n.02",
+          "aspect.n.04",
+          "expression.n.01"
+        ]
+      },
+      {
+        "word": "tone",
+        "score": 142,
+        "priority": 0,
+        "sense_count": 10,
+        "sense_names": [
+          "tone.n.01",
+          "tone.n.02",
+          "timbre.n.01",
+          "spirit.n.02",
+          "shade.n.02",
+          "note.n.03",
+          "tone.n.07",
+          "tonicity.n.01",
+          "tone.n.09",
+          "tone.n.10"
+        ]
+      },
+      {
+        "word": "hour",
+        "score": 141,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "hour.n.01",
+          "hour.n.02",
+          "hour.n.03",
+          "hour.n.04"
+        ]
+      },
+      {
+        "word": "try",
+        "score": 141,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "attempt.n.01"
+        ]
+      },
+      {
+        "word": "instance",
+        "score": 140,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "case.n.01",
+          "example.n.01"
+        ]
+      },
+      {
+        "word": "conflict",
+        "score": 137,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "conflict.n.01",
+          "conflict.n.02",
+          "battle.n.01",
+          "conflict.n.04",
+          "conflict.n.05",
+          "conflict.n.06",
+          "dispute.n.01"
+        ]
+      },
+      {
+        "word": "fact",
+        "score": 133,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "fact.n.01",
+          "fact.n.02",
+          "fact.n.03",
+          "fact.n.04"
+        ]
+      },
+      {
+        "word": "reason",
+        "score": 133,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "reason.n.01",
+          "reason.n.02",
+          "reason.n.03",
+          "rationality.n.01",
+          "cause.n.02",
+          "reason.n.06"
+        ]
+      },
+      {
+        "word": "experience",
+        "score": 128,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "experience.n.01",
+          "experience.n.02",
+          "experience.n.03"
+        ]
+      },
+      {
+        "word": "answer",
+        "score": 122,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "answer.n.01",
+          "solution.n.02",
+          "answer.n.03",
+          "answer.n.04",
+          "answer.n.05"
+        ]
+      },
+      {
+        "word": "history",
+        "score": 122,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "history.n.01",
+          "history.n.02",
+          "history.n.03",
+          "history.n.04",
+          "history.n.05"
+        ]
+      },
+      {
+        "word": "procedure",
+        "score": 122,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "procedure.n.01",
+          "operation.n.07",
+          "routine.n.03",
+          "procedure.n.04"
+        ]
+      },
+      {
+        "word": "instant",
+        "score": 121,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "blink_of_an_eye.n.01",
+          "moment.n.01"
+        ]
+      },
+      {
+        "word": "activity",
+        "score": 118,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "activity.n.01",
+          "action.n.02",
+          "bodily_process.n.01",
+          "activity.n.04",
+          "natural_process.n.01",
+          "activeness.n.02"
+        ]
+      },
+      {
+        "word": "opinion",
+        "score": 118,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "opinion.n.01",
+          "opinion.n.02",
+          "public_opinion.n.01",
+          "opinion.n.04",
+          "opinion.n.05",
+          "impression.n.01"
+        ]
+      },
+      {
+        "word": "strength",
+        "score": 118,
+        "priority": 0,
+        "sense_count": 9,
+        "sense_names": [
+          "strength.n.01",
+          "military_capability.n.01",
+          "force.n.03",
+          "forte.n.01",
+          "persuasiveness.n.01",
+          "intensity.n.01",
+          "potency.n.02",
+          "strength.n.08",
+          "lastingness.n.01"
+        ]
+      },
+      {
+        "word": "survey",
+        "score": 117,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "survey.n.01",
+          "sketch.n.03",
+          "view.n.03"
+        ]
+      },
+      {
+        "word": "demand",
+        "score": 116,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "demand.n.01",
+          "demand.n.02",
+          "requirement.n.01",
+          "demand.n.04",
+          "need.n.01"
+        ]
+      },
+      {
+        "word": "war",
+        "score": 116,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "war.n.01",
+          "war.n.02",
+          "war.n.03",
+          "war.n.04"
+        ]
+      },
+      {
+        "word": "usage",
+        "score": 111,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "use.n.01",
+          "custom.n.01",
+          "usage.n.03"
+        ]
+      },
+      {
+        "word": "condition",
+        "score": 109,
+        "priority": 0,
+        "sense_count": 8,
+        "sense_names": [
+          "condition.n.01",
+          "condition.n.02",
+          "condition.n.03",
+          "circumstance.n.03",
+          "condition.n.05",
+          "condition.n.06",
+          "condition.n.07",
+          "condition.n.08"
+        ]
+      },
+      {
+        "word": "intent",
+        "score": 108,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "purpose.n.01",
+          "intent.n.02"
+        ]
+      },
+      {
+        "word": "report",
+        "score": 108,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "report.n.01",
+          "report.n.02",
+          "report.n.03",
+          "report.n.04",
+          "report_card.n.01",
+          "composition.n.08",
+          "reputation.n.03"
+        ]
+      },
+      {
+        "word": "week",
+        "score": 108,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "week.n.01",
+          "workweek.n.01",
+          "week.n.03"
+        ]
+      },
+      {
+        "word": "month",
+        "score": 107,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "calendar_month.n.01",
+          "month.n.02"
+        ]
+      },
+      {
+        "word": "opportunity",
+        "score": 107,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "opportunity.n.01"
+        ]
+      },
+      {
+        "word": "period",
+        "score": 107,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "time_period.n.01",
+          "period.n.02",
+          "period.n.03",
+          "period.n.04",
+          "period.n.05",
+          "menstruation.n.01",
+          "period.n.07"
+        ]
+      },
+      {
+        "word": "affair",
+        "score": 106,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "matter.n.01",
+          "affair.n.02",
+          "affair.n.03"
+        ]
+      },
+      {
+        "word": "utilization",
+        "score": 106,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "use.n.01",
+          "utilization.n.02"
+        ]
+      },
+      {
+        "word": "pressure",
+        "score": 105,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "pressure.n.01",
+          "pressure.n.02",
+          "press.n.09",
+          "imperativeness.n.01",
+          "pressure.n.05",
+          "pressure.n.06",
+          "atmospheric_pressure.n.01"
+        ]
+      },
+      {
+        "word": "status",
+        "score": 105,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "status.n.01",
+          "condition.n.01"
+        ]
+      },
+      {
+        "word": "intention",
+        "score": 104,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "purpose.n.01",
+          "intention.n.02",
+          "intention.n.03"
+        ]
+      },
+      {
+        "word": "quality",
+        "score": 104,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "quality.n.01",
+          "quality.n.02",
+          "quality.n.03",
+          "timbre.n.01",
+          "quality.n.05"
+        ]
+      },
+      {
+        "word": "morning",
+        "score": 103,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "morning.n.01",
+          "good_morning.n.01",
+          "dawn.n.01",
+          "dawn.n.02"
+        ]
+      },
+      {
+        "word": "info",
+        "score": 102,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "information.n.01"
+        ]
+      },
+      {
+        "word": "occupation",
+        "score": 102,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "occupation.n.01",
+          "occupation.n.02",
+          "occupation.n.03",
+          "occupation.n.04",
+          "occupation.n.05"
+        ]
+      },
+      {
+        "word": "attitude",
+        "score": 101,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "attitude.n.01",
+          "position.n.04",
+          "attitude.n.03",
+          "attitude.n.04"
+        ]
+      },
+      {
+        "word": "task",
+        "score": 100,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "undertaking.n.01",
+          "job.n.02"
+        ]
+      },
+      {
+        "word": "accent",
+        "score": 98,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "accent.n.01",
+          "emphasis.n.01",
+          "dialect.n.01",
+          "stress.n.01",
+          "accent.n.05"
+        ]
+      },
+      {
+        "word": "trouble",
+        "score": 98,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "trouble.n.01",
+          "fuss.n.02",
+          "trouble.n.03",
+          "trouble.n.04",
+          "worry.n.02",
+          "trouble.n.06"
+        ]
+      },
+      {
+        "word": "inquiry",
+        "score": 97,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "inquiry.n.01",
+          "question.n.01",
+          "inquiry.n.03"
+        ]
+      },
+      {
+        "word": "descriptor",
+        "score": 96,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "form.n.01",
+          "descriptor.n.02"
+        ]
+      },
+      {
+        "word": "determination",
+        "score": 96,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "determination.n.01",
+          "determination.n.02",
+          "decision.n.02",
+          "determination.n.04",
+          "decision.n.01"
+        ]
+      },
+      {
+        "word": "fear",
+        "score": 95,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "fear.n.01",
+          "concern.n.02",
+          "fear.n.03"
+        ]
+      },
+      {
+        "word": "method",
+        "score": 95,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "method.n.01",
+          "method_acting.n.01"
+        ]
+      },
+      {
+        "word": "percent",
+        "score": 93,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "percentage.n.01"
+        ]
+      },
+      {
+        "word": "statement",
+        "score": 93,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "statement.n.01",
+          "argument.n.01",
+          "statement.n.03",
+          "statement.n.04",
+          "affirmation.n.02",
+          "instruction.n.04",
+          "statement.n.07"
+        ]
+      },
+      {
+        "word": "argument",
+        "score": 92,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "argument.n.01",
+          "controversy.n.01",
+          "argument.n.03",
+          "argument.n.04",
+          "argument.n.05",
+          "argument.n.06",
+          "argumentation.n.02"
+        ]
+      },
+      {
+        "word": "temperature",
+        "score": 92,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "temperature.n.01",
+          "temperature.n.02"
+        ]
+      },
+      {
+        "word": "evidence",
+        "score": 90,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "evidence.n.01",
+          "evidence.n.02",
+          "evidence.n.03"
+        ]
+      },
+      {
+        "word": "warfare",
+        "score": 89,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "war.n.01",
+          "war.n.03"
+        ]
+      },
+      {
+        "word": "language",
+        "score": 88,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "language.n.01",
+          "speech.n.02",
+          "lyric.n.01",
+          "linguistic_process.n.02",
+          "language.n.05",
+          "terminology.n.01"
+        ]
+      },
+      {
+        "word": "attention",
+        "score": 87,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "attention.n.01",
+          "care.n.01",
+          "attention.n.03",
+          "attention.n.04",
+          "attention.n.05",
+          "attention.n.06"
+        ]
+      },
+      {
+        "word": "conclusion",
+        "score": 87,
+        "priority": 0,
+        "sense_count": 9,
+        "sense_names": [
+          "decision.n.02",
+          "conclusion.n.02",
+          "stopping_point.n.01",
+          "ending.n.04",
+          "conclusion.n.05",
+          "termination.n.05",
+          "conclusion.n.07",
+          "conclusion.n.08",
+          "decision.n.01"
+        ]
+      },
+      {
+        "word": "involvement",
+        "score": 87,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "engagement.n.07",
+          "involvement.n.02",
+          "interest.n.01",
+          "affair.n.02",
+          "participation.n.02"
+        ]
+      },
+      {
+        "word": "motion",
+        "score": 87,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "gesture.n.02",
+          "movement.n.03",
+          "motion.n.03",
+          "motion.n.04",
+          "motion.n.05",
+          "motion.n.06",
+          "apparent_motion.n.01"
+        ]
+      },
+      {
+        "word": "play",
+        "score": 87,
+        "priority": 0,
+        "sense_count": 17,
+        "sense_names": [
+          "play.n.01",
+          "play.n.02",
+          "play.n.03",
+          "maneuver.n.03",
+          "play.n.05",
+          "play.n.06",
+          "bid.n.02",
+          "play.n.08",
+          "playing_period.n.01",
+          "free_rein.n.01",
+          "shimmer.n.01",
+          "fun.n.02",
+          "looseness.n.05",
+          "play.n.14",
+          "turn.n.03",
+          "gambling.n.01",
+          "play.n.17"
+        ]
+      },
+      {
+        "word": "sense",
+        "score": 87,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "sense.n.01",
+          "sense.n.02",
+          "sense.n.03",
+          "common_sense.n.01",
+          "sense.n.05"
+        ]
+      },
+      {
+        "word": "smell",
+        "score": 87,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "smell.n.01",
+          "olfactory_property.n.01",
+          "spirit.n.02",
+          "smell.n.04",
+          "smell.n.05"
+        ]
+      },
+      {
+        "word": "treatment",
+        "score": 87,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "treatment.n.01",
+          "treatment.n.02",
+          "treatment.n.03",
+          "discussion.n.01"
+        ]
+      },
+      {
+        "word": "significance",
+        "score": 86,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "significance.n.01",
+          "significance.n.02",
+          "meaning.n.01"
+        ]
+      },
+      {
+        "word": "theme",
+        "score": 86,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "subject.n.01",
+          "theme.n.02",
+          "theme.n.03",
+          "composition.n.08",
+          "root.n.03"
+        ]
+      },
+      {
+        "word": "theory",
+        "score": 86,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "theory.n.01",
+          "hypothesis.n.02",
+          "theory.n.03"
+        ]
+      },
+      {
+        "word": "accomplishment",
+        "score": 85,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "accomplishment.n.01",
+          "skill.n.01"
+        ]
+      },
+      {
+        "word": "experiment",
+        "score": 85,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "experiment.n.01",
+          "experiment.n.02",
+          "experiment.n.03"
+        ]
+      },
+      {
+        "word": "query",
+        "score": 85,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "question.n.01"
+        ]
+      },
+      {
+        "word": "meaning",
+        "score": 84,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "meaning.n.01",
+          "meaning.n.02"
+        ]
+      },
+      {
+        "word": "today",
+        "score": 82,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "today.n.01",
+          "today.n.02"
+        ]
+      },
+      {
+        "word": "belief",
+        "score": 81,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "belief.n.01",
+          "impression.n.01"
+        ]
+      },
+      {
+        "word": "topic",
+        "score": 79,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "subject.n.01",
+          "topic.n.02"
+        ]
+      },
+      {
+        "word": "experimentation",
+        "score": 78,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "experiment.n.02",
+          "experiment.n.01"
+        ]
+      },
+      {
+        "word": "flick",
+        "score": 78,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "flick.n.01",
+          "flick.n.02",
+          "movie.n.01"
+        ]
+      },
+      {
+        "word": "trial",
+        "score": 78,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "test.n.05",
+          "trial.n.02",
+          "test.n.04",
+          "trial.n.04",
+          "trial.n.05",
+          "trial.n.06"
+        ]
+      },
+      {
+        "word": "possibility",
+        "score": 77,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "possibility.n.01",
+          "possibility.n.02",
+          "hypothesis.n.02",
+          "possibility.n.04"
+        ]
+      },
+      {
+        "word": "resolution",
+        "score": 77,
+        "priority": 0,
+        "sense_count": 11,
+        "sense_names": [
+          "resolution.n.01",
+          "resolving_power.n.01",
+          "resoluteness.n.01",
+          "resolution.n.04",
+          "settlement.n.05",
+          "resolution.n.06",
+          "resolution.n.07",
+          "resolution.n.08",
+          "resolution.n.09",
+          "solution.n.02",
+          "resolution.n.11"
+        ]
+      },
+      {
+        "word": "tale",
+        "score": 77,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "narrative.n.01",
+          "fib.n.01"
+        ]
+      },
+      {
+        "word": "movie",
+        "score": 76,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "movie.n.01"
+        ]
+      },
+      {
+        "word": "fright",
+        "score": 75,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "fear.n.01"
+        ]
+      },
+      {
+        "word": "training",
+        "score": 74,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "training.n.01",
+          "education.n.05"
+        ]
+      },
+      {
+        "word": "literature",
+        "score": 73,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "literature.n.01",
+          "literature.n.02",
+          "literature.n.03",
+          "literature.n.04"
+        ]
+      },
+      {
+        "word": "assistance",
+        "score": 72,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "aid.n.02",
+          "aid.n.01"
+        ]
+      },
+      {
+        "word": "phase",
+        "score": 72,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "phase.n.01",
+          "phase.n.02",
+          "phase.n.03",
+          "phase.n.04"
+        ]
+      },
+      {
+        "word": "reality",
+        "score": 72,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "world.n.03",
+          "reality.n.02",
+          "reality.n.03",
+          "reality.n.04"
+        ]
+      },
+      {
+        "word": "grooming",
+        "score": 71,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "training.n.01",
+          "dressing.n.06"
+        ]
+      },
+      {
+        "word": "narration",
+        "score": 71,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "narrative.n.01",
+          "narration.n.02",
+          "narration.n.03"
+        ]
+      },
+      {
+        "word": "narrative",
+        "score": 70,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "narrative.n.01"
+        ]
+      },
+      {
+        "word": "feel",
+        "score": 69,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "feel.n.01",
+          "spirit.n.02",
+          "tactile_property.n.01",
+          "feel.n.04"
+        ]
+      },
+      {
+        "word": "comment",
+        "score": 68,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "remark.n.01",
+          "comment.n.02",
+          "gossip.n.02"
+        ]
+      },
+      {
+        "word": "decision",
+        "score": 68,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "decision.n.01",
+          "decision.n.02",
+          "decision.n.03",
+          "decision.n.04",
+          "decisiveness.n.01"
+        ]
+      },
+      {
+        "word": "election",
+        "score": 68,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "election.n.01",
+          "election.n.02",
+          "election.n.03",
+          "election.n.04"
+        ]
+      },
+      {
+        "word": "execution",
+        "score": 68,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "execution.n.01",
+          "performance.n.03",
+          "execution.n.03",
+          "execution.n.04",
+          "execution.n.05",
+          "execution.n.06",
+          "murder.n.01"
+        ]
+      },
+      {
+        "word": "understanding",
+        "score": 68,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "understanding.n.01",
+          "agreement.n.01",
+          "sympathy.n.01",
+          "reason.n.03"
+        ]
+      },
+      {
+        "word": "reaction",
+        "score": 67,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "chemical_reaction.n.01",
+          "reaction.n.02",
+          "reaction.n.03",
+          "reaction.n.04",
+          "reaction.n.05",
+          "reaction.n.06",
+          "reaction.n.07"
+        ]
+      },
+      {
+        "word": "characteristic",
+        "score": 66,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "feature.n.01",
+          "characteristic.n.02",
+          "characteristic.n.03",
+          "characteristic.n.04"
+        ]
+      },
+      {
+        "word": "circumstance",
+        "score": 66,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "circumstance.n.01",
+          "context.n.02",
+          "circumstance.n.03",
+          "circumstance.n.04"
+        ]
+      },
+      {
+        "word": "flavor",
+        "score": 66,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "spirit.n.02",
+          "relish.n.03",
+          "flavor.n.03"
+        ]
+      },
+      {
+        "word": "flavour",
+        "score": 66,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "spirit.n.02",
+          "flavor.n.03",
+          "relish.n.03"
+        ]
+      },
+      {
+        "word": "reference",
+        "score": 66,
+        "priority": 0,
+        "sense_count": 10,
+        "sense_names": [
+          "mention.n.01",
+          "citation.n.03",
+          "reference_point.n.01",
+          "reference_book.n.01",
+          "character.n.07",
+          "reference.n.06",
+          "reference.n.07",
+          "reference.n.08",
+          "address.n.01",
+          "reference.n.10"
+        ]
+      },
+      {
+        "word": "configuration",
+        "score": 65,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "configuration.n.01",
+          "shape.n.01"
+        ]
+      },
+      {
+        "word": "instruction",
+        "score": 65,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "direction.n.06",
+          "education.n.01",
+          "teaching.n.01",
+          "instruction.n.04"
+        ]
+      },
+      {
+        "word": "list",
+        "score": 65,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "list.n.01",
+          "tilt.n.04"
+        ]
+      },
+      {
+        "word": "music",
+        "score": 65,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "music.n.01",
+          "music.n.02",
+          "music.n.03",
+          "music.n.04",
+          "music.n.05"
+        ]
+      },
+      {
+        "word": "conception",
+        "score": 64,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "concept.n.01",
+          "conception.n.02",
+          "creation.n.03",
+          "invention.n.01"
+        ]
+      },
+      {
+        "word": "listing",
+        "score": 64,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "list.n.01",
+          "listing.n.02"
+        ]
+      },
+      {
+        "word": "performance",
+        "score": 64,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "performance.n.01",
+          "performance.n.02",
+          "performance.n.03",
+          "performance.n.04",
+          "operation.n.08"
+        ]
+      },
+      {
+        "word": "onset",
+        "score": 63,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "onset.n.01",
+          "attack.n.01"
+        ]
+      },
+      {
+        "word": "policy",
+        "score": 62,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "policy.n.01",
+          "policy.n.02",
+          "policy.n.03"
+        ]
+      },
+      {
+        "word": "technique",
+        "score": 62,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "technique.n.01",
+          "proficiency.n.02"
+        ]
+      },
+      {
+        "word": "operation",
+        "score": 61,
+        "priority": 0,
+        "sense_count": 11,
+        "sense_names": [
+          "operation.n.01",
+          "operation.n.02",
+          "operation.n.03",
+          "operation.n.04",
+          "operation.n.05",
+          "operation.n.06",
+          "operation.n.07",
+          "operation.n.08",
+          "process.n.02",
+          "mathematical_process.n.01",
+          "operation.n.11"
+        ]
+      },
+      {
+        "word": "perspective",
+        "score": 61,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "position.n.03",
+          "perspective.n.02"
+        ]
+      },
+      {
+        "word": "alteration",
+        "score": 60,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "change.n.01",
+          "alteration.n.02",
+          "revision.n.01"
+        ]
+      },
+      {
+        "word": "attack",
+        "score": 60,
+        "priority": 0,
+        "sense_count": 9,
+        "sense_names": [
+          "attack.n.01",
+          "attack.n.02",
+          "fire.n.09",
+          "approach.n.01",
+          "attack.n.05",
+          "attack.n.06",
+          "attack.n.07",
+          "attack.n.08",
+          "attack.n.09"
+        ]
+      },
+      {
+        "word": "care",
+        "score": 60,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "care.n.01",
+          "caution.n.03",
+          "concern.n.02",
+          "care.n.04",
+          "care.n.05",
+          "care.n.06"
+        ]
+      },
+      {
+        "word": "cares",
+        "score": 60,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "care.n.01",
+          "caution.n.03",
+          "concern.n.02",
+          "care.n.04",
+          "care.n.05",
+          "care.n.06"
+        ]
+      },
+      {
+        "word": "assist",
+        "score": 59,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "aid.n.02",
+          "assist.n.02"
+        ]
+      },
+      {
+        "word": "move",
+        "score": 59,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "move.n.01",
+          "move.n.02",
+          "motion.n.03",
+          "motion.n.06",
+          "move.n.05"
+        ]
+      },
+      {
+        "word": "practice",
+        "score": 59,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "practice.n.01",
+          "exercise.n.03",
+          "practice.n.03",
+          "practice.n.04",
+          "practice.n.05"
+        ]
+      },
+      {
+        "word": "attending",
+        "score": 58,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "attention.n.01",
+          "attendance.n.01"
+        ]
+      },
+      {
+        "word": "chore",
+        "score": 58,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "job.n.02"
+        ]
+      },
+      {
+        "word": "combat",
+        "score": 58,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "combat.n.01",
+          "fight.n.02"
+        ]
+      },
+      {
+        "word": "reply",
+        "score": 58,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "answer.n.01",
+          "reply.n.02"
+        ]
+      },
+      {
+        "word": "summer",
+        "score": 58,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "summer.n.01",
+          "summer.n.02"
+        ]
+      },
+      {
+        "word": "behavior",
+        "score": 57,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "behavior.n.01",
+          "behavior.n.02",
+          "demeanor.n.01",
+          "behavior.n.04"
+        ]
+      },
+      {
+        "word": "behaviour",
+        "score": 57,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "behavior.n.02",
+          "demeanor.n.01",
+          "behavior.n.04",
+          "behavior.n.01"
+        ]
+      },
+      {
+        "word": "discussion",
+        "score": 57,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "discussion.n.01",
+          "discussion.n.02"
+        ]
+      },
+      {
+        "word": "difficulty",
+        "score": 56,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "trouble.n.04",
+          "difficulty.n.02",
+          "difficulty.n.03",
+          "difficulty.n.04"
+        ]
+      },
+      {
+        "word": "remark",
+        "score": 56,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "remark.n.01",
+          "remark.n.02"
+        ]
+      },
+      {
+        "word": "research",
+        "score": 56,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "research.n.01",
+          "inquiry.n.01"
+        ]
+      },
+      {
+        "word": "season",
+        "score": 55,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "season.n.01",
+          "season.n.02",
+          "season.n.03"
+        ]
+      },
+      {
+        "word": "teaching",
+        "score": 55,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "teaching.n.01",
+          "teaching.n.02",
+          "education.n.01"
+        ]
+      },
+      {
+        "word": "drama",
+        "score": 54,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "play.n.01",
+          "drama.n.02",
+          "drama.n.03",
+          "drama.n.04"
+        ]
+      },
+      {
+        "word": "dream",
+        "score": 54,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "dream.n.01",
+          "dream.n.02",
+          "ambition.n.01",
+          "pipe_dream.n.01",
+          "dream.n.05",
+          "dream.n.06"
+        ]
+      },
+      {
+        "word": "error",
+        "score": 54,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "mistake.n.01",
+          "erroneousness.n.01",
+          "error.n.03",
+          "error.n.04",
+          "error.n.05",
+          "error.n.06",
+          "error.n.07"
+        ]
+      },
+      {
+        "word": "importance",
+        "score": 54,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "importance.n.01",
+          "importance.n.02"
+        ]
+      },
+      {
+        "word": "text",
+        "score": 54,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "text.n.01",
+          "text.n.02",
+          "textbook.n.01",
+          "text.n.04"
+        ]
+      },
+      {
+        "word": "apprehension",
+        "score": 53,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "apprehension.n.01",
+          "understanding.n.01",
+          "apprehension.n.03",
+          "apprehension.n.04"
+        ]
+      },
+      {
+        "word": "choice",
+        "score": 53,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "choice.n.01",
+          "choice.n.02",
+          "option.n.02"
+        ]
+      },
+      {
+        "word": "triumph",
+        "score": 53,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "victory.n.01",
+          "triumph.n.02"
+        ]
+      },
+      {
+        "word": "vision",
+        "score": 53,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "vision.n.01",
+          "sight.n.03",
+          "vision.n.03",
+          "imagination.n.01",
+          "vision.n.05"
+        ]
+      },
+      {
+        "word": "afternoon",
+        "score": 52,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "afternoon.n.01",
+          "good_afternoon.n.01"
+        ]
+      },
+      {
+        "word": "crying",
+        "score": 52,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "crying.n.01",
+          "cry.n.01",
+          "cry.n.02",
+          "war_cry.n.01",
+          "cry.n.04",
+          "cry.n.05"
+        ]
+      },
+      {
+        "word": "deficiency",
+        "score": 52,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "lack.n.01",
+          "insufficiency.n.03"
+        ]
+      },
+      {
+        "word": "dictionary",
+        "score": 52,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "dictionary.n.01"
+        ]
+      },
+      {
+        "word": "growing",
+        "score": 52,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "growth.n.01",
+          "growing.n.02"
+        ]
+      },
+      {
+        "word": "claim",
+        "score": 51,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "claim.n.01",
+          "claim.n.02",
+          "claim.n.03",
+          "claim.n.04",
+          "title.n.07",
+          "call.n.04"
+        ]
+      },
+      {
+        "word": "evolution",
+        "score": 51,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "development.n.02",
+          "evolution.n.02"
+        ]
+      },
+      {
+        "word": "judgement",
+        "score": 51,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "opinion.n.04",
+          "judgment.n.01",
+          "judgment.n.04",
+          "sagacity.n.01",
+          "judgment.n.06",
+          "judgment.n.03",
+          "judgment.n.02"
+        ]
+      },
+      {
+        "word": "judgment",
+        "score": 51,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "judgment.n.01",
+          "judgment.n.02",
+          "judgment.n.03",
+          "judgment.n.04",
+          "opinion.n.04",
+          "judgment.n.06",
+          "sagacity.n.01"
+        ]
+      },
+      {
+        "word": "title",
+        "score": 51,
+        "priority": 0,
+        "sense_count": 10,
+        "sense_names": [
+          "title.n.01",
+          "title.n.02",
+          "title.n.03",
+          "championship.n.01",
+          "deed.n.01",
+          "title.n.06",
+          "title.n.07",
+          "title.n.08",
+          "title.n.09",
+          "claim.n.04"
+        ]
+      },
+      {
+        "word": "emotion",
+        "score": 50,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "emotion.n.01"
+        ]
+      },
+      {
+        "word": "news",
+        "score": 50,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "news.n.01",
+          "news.n.02",
+          "news_program.n.01",
+          "news.n.04",
+          "newsworthiness.n.01"
+        ]
+      },
+      {
+        "word": "skill",
+        "score": 50,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "skill.n.01",
+          "skill.n.02"
+        ]
+      },
+      {
+        "word": "call",
+        "score": 49,
+        "priority": 0,
+        "sense_count": 13,
+        "sense_names": [
+          "call.n.01",
+          "call.n.02",
+          "cry.n.01",
+          "call.n.04",
+          "birdcall.n.01",
+          "call.n.06",
+          "margin_call.n.01",
+          "call.n.08",
+          "call.n.09",
+          "call.n.10",
+          "call.n.11",
+          "call.n.12",
+          "call_option.n.02"
+        ]
+      },
+      {
+        "word": "conduct",
+        "score": 49,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "behavior.n.01",
+          "demeanor.n.01"
+        ]
+      },
+      {
+        "word": "lack",
+        "score": 49,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "lack.n.01"
+        ]
+      },
+      {
+        "word": "laugh",
+        "score": 49,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "laugh.n.01",
+          "laugh.n.02",
+          "joke.n.01"
+        ]
+      },
+      {
+        "word": "responsibility",
+        "score": 49,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "duty.n.01",
+          "province.n.02",
+          "responsibility.n.03"
+        ]
+      },
+      {
+        "word": "shooting",
+        "score": 49,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "shooting.n.01",
+          "shooting.n.02"
+        ]
+      },
+      {
+        "word": "concept",
+        "score": 48,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "concept.n.01"
+        ]
+      },
+      {
+        "word": "construct",
+        "score": 48,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "concept.n.01"
+        ]
+      },
+      {
+        "word": "sale",
+        "score": 48,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "sale.n.01",
+          "sale.n.02",
+          "sale.n.03",
+          "sale.n.04",
+          "sale.n.05"
+        ]
+      },
+      {
+        "word": "victory",
+        "score": 48,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "victory.n.01"
+        ]
+      },
+      {
+        "word": "arc",
+        "score": 47,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "discharge.n.05",
+          "arc.n.02",
+          "bow.n.05"
+        ]
+      },
+      {
+        "word": "distribution",
+        "score": 47,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "distribution.n.01",
+          "distribution.n.02",
+          "distribution.n.03",
+          "distribution.n.04"
+        ]
+      },
+      {
+        "word": "posture",
+        "score": 47,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "position.n.04",
+          "carriage.n.03",
+          "position.n.12",
+          "military_capability.n.01"
+        ]
+      },
+      {
+        "word": "achievement",
+        "score": 46,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "accomplishment.n.01"
+        ]
+      },
+      {
+        "word": "hereafter",
+        "score": 46,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "afterlife.n.01",
+          "future.n.01"
+        ]
+      },
+      {
+        "word": "tradition",
+        "score": 46,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "tradition.n.01",
+          "custom.n.02"
+        ]
+      },
+      {
+        "word": "velocity",
+        "score": 46,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "speed.n.01"
+        ]
+      },
+      {
+        "word": "vocal",
+        "score": 46,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "vocal_music.n.01",
+          "song.n.01"
+        ]
+      },
+      {
+        "word": "discourse",
+        "score": 45,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "discourse.n.01",
+          "sermon.n.01",
+          "discussion.n.01"
+        ]
+      },
+      {
+        "word": "murder",
+        "score": 45,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "murder.n.01"
+        ]
+      },
+      {
+        "word": "noise",
+        "score": 45,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "noise.n.01",
+          "noise.n.02",
+          "noise.n.03",
+          "noise.n.04",
+          "noise.n.05",
+          "randomness.n.02"
+        ]
+      },
+      {
+        "word": "slaying",
+        "score": 45,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "murder.n.01"
+        ]
+      },
+      {
+        "word": "cry",
+        "score": 44,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "cry.n.01",
+          "cry.n.02",
+          "war_cry.n.01",
+          "cry.n.04",
+          "cry.n.05"
+        ]
+      },
+      {
+        "word": "daylight",
+        "score": 44,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "day.n.04",
+          "daylight.n.02"
+        ]
+      },
+      {
+        "word": "fighting",
+        "score": 44,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "fight.n.02"
+        ]
+      },
+      {
+        "word": "mistake",
+        "score": 44,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "mistake.n.01",
+          "mistake.n.02",
+          "error.n.07"
+        ]
+      },
+      {
+        "word": "project",
+        "score": 44,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "undertaking.n.01",
+          "project.n.02"
+        ]
+      },
+      {
+        "word": "regard",
+        "score": 44,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "respect.n.01",
+          "attentiveness.n.01",
+          "regard.n.03",
+          "gaze.n.01",
+          "esteem.n.01",
+          "regard.n.06",
+          "respect.n.03"
+        ]
+      },
+      {
+        "word": "desire",
+        "score": 43,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "desire.n.01",
+          "desire.n.02",
+          "desire.n.03"
+        ]
+      },
+      {
+        "word": "intensity",
+        "score": 43,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "intensity.n.01",
+          "intensity.n.02",
+          "volume.n.06",
+          "saturation.n.04"
+        ]
+      },
+      {
+        "word": "mapping",
+        "score": 43,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "function.n.01",
+          "mapping.n.02"
+        ]
+      },
+      {
+        "word": "philosophy",
+        "score": 43,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "doctrine.n.01",
+          "philosophy.n.02",
+          "philosophy.n.03"
+        ]
+      },
+      {
+        "word": "relationship",
+        "score": 43,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "relationship.n.01",
+          "relationship.n.02",
+          "relationship.n.03",
+          "kinship.n.02"
+        ]
+      },
+      {
+        "word": "agreement",
+        "score": 42,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "agreement.n.01",
+          "agreement.n.02",
+          "agreement.n.03",
+          "agreement.n.04",
+          "agreement.n.05",
+          "agreement.n.06"
+        ]
+      },
+      {
+        "word": "daytime",
+        "score": 42,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "day.n.04"
+        ]
+      },
+      {
+        "word": "doubt",
+        "score": 42,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "doubt.n.01",
+          "doubt.n.02"
+        ]
+      },
+      {
+        "word": "marketing",
+        "score": 42,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "selling.n.01",
+          "marketing.n.02",
+          "marketing.n.03"
+        ]
+      },
+      {
+        "word": "message",
+        "score": 42,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "message.n.01",
+          "message.n.02"
+        ]
+      },
+      {
+        "word": "principle",
+        "score": 42,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "principle.n.01",
+          "principle.n.02",
+          "principle.n.03",
+          "principle.n.04",
+          "principle.n.05",
+          "rationale.n.01"
+        ]
+      },
+      {
+        "word": "selling",
+        "score": 42,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "selling.n.01"
+        ]
+      },
+      {
+        "word": "struggle",
+        "score": 42,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "struggle.n.01",
+          "conflict.n.01",
+          "struggle.n.03"
+        ]
+      },
+      {
+        "word": "undertaking",
+        "score": 42,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "undertaking.n.01",
+          "undertaking.n.02"
+        ]
+      },
+      {
+        "word": "yell",
+        "score": 42,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "cry.n.01",
+          "cry.n.02"
+        ]
+      },
+      {
+        "word": "ability",
+        "score": 41,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "ability.n.01",
+          "ability.n.02"
+        ]
+      },
+      {
+        "word": "attainment",
+        "score": 41,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "attainment.n.01",
+          "attainment.n.02",
+          "skill.n.01"
+        ]
+      },
+      {
+        "word": "campaign",
+        "score": 41,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "political_campaign.n.01",
+          "campaign.n.02",
+          "campaign.n.03",
+          "campaign.n.04"
+        ]
+      },
+      {
+        "word": "concentration",
+        "score": 41,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "concentration.n.01",
+          "concentration.n.02",
+          "concentration.n.03",
+          "concentration.n.04",
+          "concentration.n.05",
+          "concentration.n.06",
+          "assiduity.n.01"
+        ]
+      },
+      {
+        "word": "enactment",
+        "score": 41,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "enactment.n.01",
+          "act.n.01",
+          "portrayal.n.02"
+        ]
+      },
+      {
+        "word": "observation",
+        "score": 41,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "observation.n.01",
+          "observation.n.02",
+          "observation.n.03",
+          "observation.n.04",
+          "notice.n.02"
+        ]
+      },
+      {
+        "word": "savvy",
+        "score": 41,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "understanding.n.01"
+        ]
+      },
+      {
+        "word": "speech",
+        "score": 41,
+        "priority": 0,
+        "sense_count": 8,
+        "sense_names": [
+          "address.n.03",
+          "speech.n.02",
+          "speech.n.03",
+          "speech.n.04",
+          "manner_of_speaking.n.01",
+          "lecture.n.02",
+          "actor's_line.n.01",
+          "language.n.05"
+        ]
+      },
+      {
+        "word": "turn",
+        "score": 41,
+        "priority": 0,
+        "sense_count": 12,
+        "sense_names": [
+          "bend.n.01",
+          "turn.n.02",
+          "turn.n.03",
+          "turn.n.04",
+          "turning.n.04",
+          "turn.n.06",
+          "twist.n.13",
+          "go.n.01",
+          "turn.n.09",
+          "act.n.04",
+          "turn.n.11",
+          "turn.n.12"
+        ]
+      },
+      {
+        "word": "harm",
+        "score": 40,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "injury.n.01",
+          "damage.n.01",
+          "damage.n.03"
+        ]
+      },
+      {
+        "word": "hurt",
+        "score": 40,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "injury.n.01",
+          "distress.n.01",
+          "suffering.n.04",
+          "detriment.n.01",
+          "damage.n.03"
+        ]
+      },
+      {
+        "word": "resultant",
+        "score": 40,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "resultant.n.01",
+          "result.n.03",
+          "vector_sum.n.01"
+        ]
+      },
+      {
+        "word": "sentiment",
+        "score": 40,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "sentiment.n.01",
+          "opinion.n.01"
+        ]
+      },
+      {
+        "word": "suffering",
+        "score": 40,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "agony.n.02",
+          "suffering.n.02",
+          "distress.n.01",
+          "suffering.n.04"
+        ]
+      },
+      {
+        "word": "contention",
+        "score": 39,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "contention.n.01",
+          "controversy.n.01",
+          "competition.n.03"
+        ]
+      },
+      {
+        "word": "contrast",
+        "score": 39,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "contrast.n.01",
+          "contrast.n.02",
+          "line.n.29",
+          "contrast.n.04",
+          "contrast.n.05"
+        ]
+      },
+      {
+        "word": "discipline",
+        "score": 39,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "discipline.n.01",
+          "discipline.n.02",
+          "discipline.n.03",
+          "discipline.n.04",
+          "discipline.n.05"
+        ]
+      },
+      {
+        "word": "explanation",
+        "score": 39,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "explanation.n.01",
+          "explanation.n.02",
+          "explanation.n.03"
+        ]
+      },
+      {
+        "word": "luck",
+        "score": 39,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "fortune.n.04",
+          "luck.n.02",
+          "luck.n.03"
+        ]
+      },
+      {
+        "word": "confidence",
+        "score": 38,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "assurance.n.01",
+          "confidence.n.02",
+          "confidence.n.03",
+          "confidence.n.04",
+          "confidence.n.05"
+        ]
+      },
+      {
+        "word": "dreaming",
+        "score": 38,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "dream.n.02",
+          "dream.n.01"
+        ]
+      },
+      {
+        "word": "even",
+        "score": 38,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "evening.n.01"
+        ]
+      },
+      {
+        "word": "evening",
+        "score": 38,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "evening.n.01",
+          "evening.n.02",
+          "evening.n.03"
+        ]
+      },
+      {
+        "word": "extent",
+        "score": 38,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "extent.n.01",
+          "extent.n.02"
+        ]
+      },
+      {
+        "word": "glimpse",
+        "score": 38,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "glance.n.01",
+          "glimpse.n.02",
+          "glimpse.n.03"
+        ]
+      },
+      {
+        "word": "grin",
+        "score": 38,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "smile.n.01"
+        ]
+      },
+      {
+        "word": "grinning",
+        "score": 38,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "smile.n.01"
+        ]
+      },
+      {
+        "word": "imagination",
+        "score": 38,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "imagination.n.01",
+          "imagination.n.02",
+          "resource.n.03"
+        ]
+      },
+      {
+        "word": "persona",
+        "score": 38,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "character.n.04",
+          "persona.n.02"
+        ]
+      },
+      {
+        "word": "potency",
+        "score": 38,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "authority.n.01",
+          "potency.n.02",
+          "potential.n.01",
+          "potency.n.04"
+        ]
+      },
+      {
+        "word": "smile",
+        "score": 38,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "smile.n.01"
+        ]
+      },
+      {
+        "word": "smiling",
+        "score": 38,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "smile.n.01"
+        ]
+      },
+      {
+        "word": "bulk",
+        "score": 37,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "majority.n.01",
+          "bulk.n.02",
+          "bulk.n.03"
+        ]
+      },
+      {
+        "word": "ending",
+        "score": 37,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "ending.n.01",
+          "termination.n.05",
+          "end.n.02",
+          "ending.n.04",
+          "conclusion.n.08"
+        ]
+      },
+      {
+        "word": "glance",
+        "score": 37,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "glance.n.01"
+        ]
+      },
+      {
+        "word": "spell",
+        "score": 37,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "enchantment.n.02",
+          "go.n.01",
+          "while.n.01",
+          "spell.n.04"
+        ]
+      },
+      {
+        "word": "holiday",
+        "score": 36,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "vacation.n.01",
+          "holiday.n.02"
+        ]
+      },
+      {
+        "word": "maturity",
+        "score": 36,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "adulthood.n.01",
+          "maturity.n.02",
+          "maturity.n.03"
+        ]
+      },
+      {
+        "word": "uncertainty",
+        "score": 36,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "uncertainty.n.01",
+          "doubt.n.01"
+        ]
+      },
+      {
+        "word": "gesture",
+        "score": 35,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "gesture.n.01",
+          "gesture.n.02",
+          "gesture.n.03"
+        ]
+      },
+      {
+        "word": "planning",
+        "score": 35,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "planning.n.01",
+          "planning.n.02",
+          "planning.n.03"
+        ]
+      },
+      {
+        "word": "rage",
+        "score": 35,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "fury.n.01",
+          "rage.n.02",
+          "rage.n.03",
+          "rage.n.04",
+          "fad.n.01"
+        ]
+      },
+      {
+        "word": "appeal",
+        "score": 34,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "entreaty.n.01",
+          "appeal.n.02",
+          "appeal.n.03",
+          "solicitation.n.02"
+        ]
+      },
+      {
+        "word": "doctrine",
+        "score": 34,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "doctrine.n.01"
+        ]
+      },
+      {
+        "word": "firing",
+        "score": 34,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "fire.n.02",
+          "discharge.n.09",
+          "ignition.n.03",
+          "dismissal.n.04"
+        ]
+      },
+      {
+        "word": "illusion",
+        "score": 34,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "illusion.n.01",
+          "illusion.n.02",
+          "delusion.n.03",
+          "magic_trick.n.01"
+        ]
+      },
+      {
+        "word": "intervention",
+        "score": 34,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "intervention.n.01",
+          "intervention.n.02",
+          "interposition.n.02",
+          "intervention.n.04",
+          "treatment.n.01"
+        ]
+      },
+      {
+        "word": "manifestation",
+        "score": 34,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "manifestation.n.01",
+          "manifestation.n.02",
+          "materialization.n.02",
+          "expression.n.02",
+          "demonstration.n.03"
+        ]
+      },
+      {
+        "word": "occurrence",
+        "score": 34,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "happening.n.01",
+          "occurrence.n.02"
+        ]
+      },
+      {
+        "word": "probability",
+        "score": 34,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "probability.n.01",
+          "probability.n.02"
+        ]
+      },
+      {
+        "word": "respect",
+        "score": 34,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "respect.n.01",
+          "esteem.n.01",
+          "respect.n.03",
+          "deference.n.01",
+          "obedience.n.03",
+          "regard.n.06",
+          "deference.n.02"
+        ]
+      },
+      {
+        "word": "silence",
+        "score": 34,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "silence.n.01",
+          "silence.n.02",
+          "muteness.n.02",
+          "secrecy.n.01"
+        ]
+      },
+      {
+        "word": "standpoint",
+        "score": 34,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "point_of_view.n.01"
+        ]
+      },
+      {
+        "word": "wonder",
+        "score": 34,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "wonder.n.01",
+          "wonder.n.02",
+          "curiosity.n.01"
+        ]
+      },
+      {
+        "word": "absence",
+        "score": 33,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "absence.n.01",
+          "absence.n.02",
+          "absence.n.03",
+          "absence.n.04"
+        ]
+      },
+      {
+        "word": "departure",
+        "score": 33,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "departure.n.01",
+          "deviation.n.01",
+          "passing.n.02"
+        ]
+      },
+      {
+        "word": "exercising",
+        "score": 33,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "exercise.n.01"
+        ]
+      },
+      {
+        "word": "haste",
+        "score": 33,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "haste.n.01",
+          "haste.n.02",
+          "hurry.n.01"
+        ]
+      },
+      {
+        "word": "hurry",
+        "score": 33,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "hurry.n.01",
+          "haste.n.01",
+          "haste.n.02"
+        ]
+      },
+      {
+        "word": "injury",
+        "score": 33,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "injury.n.01",
+          "injury.n.02",
+          "wound.n.02",
+          "injury.n.04",
+          "injury.n.05"
+        ]
+      },
+      {
+        "word": "persuasion",
+        "score": 33,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "persuasion.n.01",
+          "opinion.n.01"
+        ]
+      },
+      {
+        "word": "roar",
+        "score": 33,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "boom.n.01",
+          "bellow.n.01",
+          "roar.n.03"
+        ]
+      },
+      {
+        "word": "roaring",
+        "score": 33,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "boom.n.01",
+          "bellow.n.01"
+        ]
+      },
+      {
+        "word": "version",
+        "score": 33,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "version.n.01",
+          "version.n.02",
+          "adaptation.n.01",
+          "translation.n.01",
+          "interpretation.n.01",
+          "version.n.06"
+        ]
+      },
+      {
+        "word": "workout",
+        "score": 33,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "exercise.n.01"
+        ]
+      },
+      {
+        "word": "advancement",
+        "score": 32,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "promotion.n.03",
+          "progress.n.02",
+          "advancement.n.03"
+        ]
+      },
+      {
+        "word": "career",
+        "score": 32,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "career.n.01",
+          "career.n.02"
+        ]
+      },
+      {
+        "word": "dominance",
+        "score": 32,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "laterality.n.03",
+          "dominance.n.02",
+          "dominance.n.03",
+          "authority.n.01"
+        ]
+      },
+      {
+        "word": "hurting",
+        "score": 32,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "pain.n.01"
+        ]
+      },
+      {
+        "word": "mood",
+        "score": 32,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "temper.n.02",
+          "climate.n.02",
+          "mood.n.03"
+        ]
+      },
+      {
+        "word": "particular",
+        "score": 32,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "particular.n.01",
+          "detail.n.02",
+          "particular.n.03"
+        ]
+      },
+      {
+        "word": "thinking",
+        "score": 32,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "thinking.n.01"
+        ]
+      },
+      {
+        "word": "tilt",
+        "score": 32,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "joust.n.01",
+          "controversy.n.01",
+          "tilt.n.03",
+          "tilt.n.04",
+          "rock.n.07"
+        ]
+      },
+      {
+        "word": "transition",
+        "score": 32,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "passage.n.01",
+          "conversion.n.01",
+          "transition.n.03",
+          "transition.n.04",
+          "transition.n.05"
+        ]
+      },
+      {
+        "word": "vacation",
+        "score": 32,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "vacation.n.01",
+          "vacation.n.02"
+        ]
+      },
+      {
+        "word": "animation",
+        "score": 31,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "animation.n.01",
+          "animation.n.02",
+          "animation.n.03",
+          "vivification.n.02",
+          "animation.n.05",
+          "liveliness.n.01"
+        ]
+      },
+      {
+        "word": "freedom",
+        "score": 31,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "freedom.n.01",
+          "exemption.n.01"
+        ]
+      },
+      {
+        "word": "happening",
+        "score": 31,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "happening.n.01"
+        ]
+      },
+      {
+        "word": "laughter",
+        "score": 31,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "laugh.n.01",
+          "laughter.n.02"
+        ]
+      },
+      {
+        "word": "show",
+        "score": 31,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "show.n.01",
+          "display.n.01",
+          "show.n.03",
+          "appearance.n.06"
+        ]
+      },
+      {
+        "word": "arguing",
+        "score": 30,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "controversy.n.01"
+        ]
+      },
+      {
+        "word": "assumption",
+        "score": 30,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "premise.n.01",
+          "assumption.n.02",
+          "assumption.n.03",
+          "assumption.n.04",
+          "assumption.n.05",
+          "presumption.n.03",
+          "assumption.n.07"
+        ]
+      },
+      {
+        "word": "controversy",
+        "score": 30,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "controversy.n.01"
+        ]
+      },
+      {
+        "word": "diameter",
+        "score": 30,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "diameter.n.01",
+          "diameter.n.02"
+        ]
+      },
+      {
+        "word": "disaster",
+        "score": 30,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "catastrophe.n.02",
+          "calamity.n.01",
+          "disaster.n.03"
+        ]
+      },
+      {
+        "word": "handling",
+        "score": 30,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "handling.n.01",
+          "handling.n.02",
+          "treatment.n.02"
+        ]
+      },
+      {
+        "word": "hunting",
+        "score": 30,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "hunt.n.08",
+          "search.n.01",
+          "hunt.n.07"
+        ]
+      },
+      {
+        "word": "pleasure",
+        "score": 30,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "pleasure.n.01",
+          "joy.n.02",
+          "pleasure.n.03",
+          "pleasure.n.04",
+          "pleasure.n.05"
+        ]
+      },
+      {
+        "word": "promise",
+        "score": 30,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "promise.n.01",
+          "promise.n.02"
+        ]
+      },
+      {
+        "word": "recognition",
+        "score": 30,
+        "priority": 0,
+        "sense_count": 8,
+        "sense_names": [
+          "recognition.n.01",
+          "recognition.n.02",
+          "recognition.n.03",
+          "realization.n.01",
+          "recognition.n.05",
+          "recognition.n.06",
+          "recognition.n.07",
+          "recognition.n.08"
+        ]
+      },
+      {
+        "word": "anxiety",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "anxiety.n.01",
+          "anxiety.n.02"
+        ]
+      },
+      {
+        "word": "catastrophe",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "calamity.n.01",
+          "catastrophe.n.02",
+          "catastrophe.n.03"
+        ]
+      },
+      {
+        "word": "criterion",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "standard.n.01",
+          "criterion.n.02"
+        ]
+      },
+      {
+        "word": "declaration",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "declaration.n.01",
+          "declaration.n.02",
+          "declaration.n.03",
+          "contract.n.02",
+          "announcement.n.01",
+          "resolution.n.01"
+        ]
+      },
+      {
+        "word": "diam",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "diameter.n.01"
+        ]
+      },
+      {
+        "word": "distinction",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "differentiation.n.01",
+          "eminence.n.01",
+          "distinction.n.03",
+          "distinction.n.04"
+        ]
+      },
+      {
+        "word": "diversion",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "diversion.n.01",
+          "diversion.n.02",
+          "diversion.n.03"
+        ]
+      },
+      {
+        "word": "heartbeat",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "pulse.n.02",
+          "blink_of_an_eye.n.01",
+          "heartbeat.n.03"
+        ]
+      },
+      {
+        "word": "honor",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "award.n.02",
+          "honor.n.02",
+          "honor.n.03",
+          "honor.n.04"
+        ]
+      },
+      {
+        "word": "honour",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "honor.n.02",
+          "award.n.02",
+          "honor.n.03",
+          "honor.n.04"
+        ]
+      },
+      {
+        "word": "impulse",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "urge.n.01",
+          "caprice.n.01",
+          "nerve_impulse.n.01",
+          "pulsation.n.01",
+          "impulse.n.05",
+          "momentum.n.01"
+        ]
+      },
+      {
+        "word": "mystery",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "mystery.n.01",
+          "mystery.n.02"
+        ]
+      },
+      {
+        "word": "temper",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "pique.n.02",
+          "temper.n.02",
+          "temper.n.03",
+          "temper.n.04"
+        ]
+      },
+      {
+        "word": "violence",
+        "score": 29,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "violence.n.01",
+          "ferocity.n.01",
+          "violence.n.03"
+        ]
+      },
+      {
+        "word": "clash",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "clang.n.01",
+          "clash.n.02",
+          "clash.n.03",
+          "brush.n.06"
+        ]
+      },
+      {
+        "word": "decrease",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "decrease.n.01",
+          "decrease.n.02",
+          "decrease.n.03",
+          "decrease.n.04"
+        ]
+      },
+      {
+        "word": "divergence",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "divergence.n.01",
+          "deviation.n.01",
+          "divergence.n.03",
+          "discrepancy.n.01"
+        ]
+      },
+      {
+        "word": "height",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "height.n.01",
+          "acme.n.01",
+          "stature.n.02",
+          "altitude.n.01"
+        ]
+      },
+      {
+        "word": "joy",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "joy.n.01",
+          "joy.n.02"
+        ]
+      },
+      {
+        "word": "normal",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "convention.n.02"
+        ]
+      },
+      {
+        "word": "occasion",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "juncture.n.01",
+          "affair.n.03",
+          "occasion.n.03",
+          "occasion.n.04",
+          "occasion.n.05"
+        ]
+      },
+      {
+        "word": "outcry",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "cry.n.01"
+        ]
+      },
+      {
+        "word": "peace",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "peace.n.01",
+          "peace.n.02",
+          "peace.n.03",
+          "peace.n.04",
+          "peace.n.05"
+        ]
+      },
+      {
+        "word": "regulation",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "regulation.n.01",
+          "rule.n.01",
+          "regulation.n.03",
+          "regulation.n.04",
+          "regulation.n.05",
+          "regulation.n.06"
+        ]
+      },
+      {
+        "word": "search",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "search.n.01",
+          "search.n.02",
+          "search.n.03",
+          "search.n.04",
+          "search.n.05"
+        ]
+      },
+      {
+        "word": "secret",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "secret.n.01",
+          "secret.n.02",
+          "mystery.n.01"
+        ]
+      },
+      {
+        "word": "shout",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "cry.n.01"
+        ]
+      },
+      {
+        "word": "tally",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "run.n.01",
+          "reckoning.n.02",
+          "count.n.02"
+        ]
+      },
+      {
+        "word": "will",
+        "score": 28,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "volition.n.01",
+          "will.n.02",
+          "will.n.03"
+        ]
+      },
+      {
+        "word": "appearance",
+        "score": 27,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "appearance.n.01",
+          "appearance.n.02",
+          "appearance.n.03",
+          "appearance.n.04",
+          "appearance.n.05",
+          "appearance.n.06"
+        ]
+      },
+      {
+        "word": "authorization",
+        "score": 27,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "mandate.n.01",
+          "authority.n.01",
+          "authority.n.06",
+          "authorization.n.04"
+        ]
+      },
+      {
+        "word": "awarding",
+        "score": 27,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "award.n.01"
+        ]
+      },
+      {
+        "word": "bid",
+        "score": 27,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "command.n.01",
+          "bid.n.02",
+          "bid.n.03",
+          "bid.n.04"
+        ]
+      },
+      {
+        "word": "communicating",
+        "score": 27,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "communication.n.01"
+        ]
+      },
+      {
+        "word": "conviction",
+        "score": 27,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "conviction.n.01",
+          "conviction.n.02"
+        ]
+      },
+      {
+        "word": "description",
+        "score": 27,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "description.n.01",
+          "description.n.02",
+          "description.n.03"
+        ]
+      },
+      {
+        "word": "estimate",
+        "score": 27,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "estimate.n.01",
+          "estimate.n.02",
+          "appraisal.n.02",
+          "estimate.n.04",
+          "estimate.n.05"
+        ]
+      },
+      {
+        "word": "facet",
+        "score": 27,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "aspect.n.01",
+          "facet.n.02"
+        ]
+      },
+      {
+        "word": "folklore",
+        "score": 27,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "folklore.n.01"
+        ]
+      },
+      {
+        "word": "hate",
+        "score": 27,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "hate.n.01"
+        ]
+      },
+      {
+        "word": "hatred",
+        "score": 27,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "hate.n.01"
+        ]
+      },
+      {
+        "word": "melody",
+        "score": 27,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "tune.n.01",
+          "melody.n.02"
+        ]
+      },
+      {
+        "word": "ballot",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "ballot.n.01",
+          "vote.n.01"
+        ]
+      },
+      {
+        "word": "context",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "context.n.01",
+          "context.n.02"
+        ]
+      },
+      {
+        "word": "curse",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "curse.n.01",
+          "execration.n.02",
+          "hex.n.01",
+          "bane.n.01",
+          "curse.n.05"
+        ]
+      },
+      {
+        "word": "din",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "blare.n.01",
+          "commotion.n.02"
+        ]
+      },
+      {
+        "word": "disease",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "disease.n.01"
+        ]
+      },
+      {
+        "word": "eld",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "old_age.n.01",
+          "age.n.03"
+        ]
+      },
+      {
+        "word": "exception",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "exception.n.01",
+          "exception.n.02",
+          "exception.n.03"
+        ]
+      },
+      {
+        "word": "integration",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "integration.n.01",
+          "consolidation.n.02",
+          "integration.n.03"
+        ]
+      },
+      {
+        "word": "rainfall",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "rain.n.01"
+        ]
+      },
+      {
+        "word": "recommendation",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "recommendation.n.01",
+          "recommendation.n.02",
+          "recommendation.n.03"
+        ]
+      },
+      {
+        "word": "sat",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "saturday.n.01"
+        ]
+      },
+      {
+        "word": "sleep",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "sleep.n.01",
+          "sleep.n.02",
+          "sleep.n.03",
+          "rest.n.05"
+        ]
+      },
+      {
+        "word": "warning",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "warning.n.01",
+          "admonition.n.01",
+          "warning.n.03"
+        ]
+      },
+      {
+        "word": "wavelength",
+        "score": 26,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "wavelength.n.01",
+          "wavelength.n.02"
+        ]
+      },
+      {
+        "word": "bidding",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "command.n.01",
+          "bidding.n.02",
+          "bid.n.04"
+        ]
+      },
+      {
+        "word": "complaint",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "ailment.n.01",
+          "complaint.n.02",
+          "complaint.n.03",
+          "complaint.n.04",
+          "charge.n.02"
+        ]
+      },
+      {
+        "word": "debate",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "argument.n.03",
+          "debate.n.02"
+        ]
+      },
+      {
+        "word": "estimation",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "appraisal.n.02",
+          "estimate.n.05",
+          "estimate.n.01",
+          "estimate.n.02"
+        ]
+      },
+      {
+        "word": "grasp",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "appreciation.n.01",
+          "compass.n.03",
+          "grip.n.06",
+          "clasp.n.02"
+        ]
+      },
+      {
+        "word": "implication",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "deduction.n.03",
+          "significance.n.02",
+          "implication.n.03",
+          "implication.n.04",
+          "implication.n.05"
+        ]
+      },
+      {
+        "word": "improvement",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "improvement.n.01",
+          "improvement.n.02",
+          "improvement.n.03"
+        ]
+      },
+      {
+        "word": "investigation",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "probe.n.01",
+          "investigation.n.02"
+        ]
+      },
+      {
+        "word": "menace",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "menace.n.01",
+          "menace.n.02"
+        ]
+      },
+      {
+        "word": "mention",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "mention.n.01",
+          "citation.n.03",
+          "mention.n.03"
+        ]
+      },
+      {
+        "word": "norm",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "norm.n.01",
+          "average.n.01"
+        ]
+      },
+      {
+        "word": "onslaught",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "onslaught.n.01",
+          "attack.n.01",
+          "barrage.n.01"
+        ]
+      },
+      {
+        "word": "outlook",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "mentality.n.01",
+          "expectation.n.01",
+          "lookout.n.04"
+        ]
+      },
+      {
+        "word": "recreation",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "diversion.n.01",
+          "refreshment.n.02"
+        ]
+      },
+      {
+        "word": "wink",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "blink_of_an_eye.n.01",
+          "wink.n.02",
+          "blink.n.01"
+        ]
+      },
+      {
+        "word": "winter",
+        "score": 25,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "winter.n.01"
+        ]
+      },
+      {
+        "word": "calling",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "career.n.01"
+        ]
+      },
+      {
+        "word": "comparison",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "comparison.n.01",
+          "comparison.n.02",
+          "comparison.n.03"
+        ]
+      },
+      {
+        "word": "crusade",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "campaign.n.02",
+          "crusade.n.02"
+        ]
+      },
+      {
+        "word": "despair",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "despair.n.01",
+          "despair.n.02"
+        ]
+      },
+      {
+        "word": "examination",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "examination.n.01",
+          "examination.n.02",
+          "interrogation.n.03",
+          "examen.n.01",
+          "examination.n.05"
+        ]
+      },
+      {
+        "word": "failing",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "failing.n.01",
+          "failing.n.02"
+        ]
+      },
+      {
+        "word": "lawsuit",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "lawsuit.n.01"
+        ]
+      },
+      {
+        "word": "lifespan",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "life.n.05"
+        ]
+      },
+      {
+        "word": "lifetime",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "life.n.05"
+        ]
+      },
+      {
+        "word": "oath",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "curse.n.01",
+          "oath.n.02",
+          "oath.n.03"
+        ]
+      },
+      {
+        "word": "odor",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "olfactory_property.n.01",
+          "smell.n.01"
+        ]
+      },
+      {
+        "word": "rating",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "evaluation.n.02",
+          "evaluation.n.01",
+          "rating.n.03",
+          "military_rank.n.01"
+        ]
+      },
+      {
+        "word": "rhythm",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "rhythm.n.01",
+          "rhythm.n.02",
+          "cycle.n.01",
+          "rhythm.n.04",
+          "rhythm_method_of_birth_control.n.01"
+        ]
+      },
+      {
+        "word": "swearing",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "curse.n.01",
+          "oath.n.02"
+        ]
+      },
+      {
+        "word": "talk",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "talk.n.01",
+          "talk.n.02",
+          "talk.n.03",
+          "lecture.n.01",
+          "talk.n.05"
+        ]
+      },
+      {
+        "word": "tension",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 6,
+        "sense_names": [
+          "tension.n.01",
+          "tension.n.02",
+          "tension.n.03",
+          "tension.n.04",
+          "latent_hostility.n.01",
+          "tension.n.06"
+        ]
+      },
+      {
+        "word": "tomorrow",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "tomorrow.n.01",
+          "tomorrow.n.02"
+        ]
+      },
+      {
+        "word": "trauma",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "injury.n.01",
+          "trauma.n.02"
+        ]
+      },
+      {
+        "word": "while",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "while.n.01"
+        ]
+      },
+      {
+        "word": "worry",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "concern.n.04",
+          "worry.n.02"
+        ]
+      },
+      {
+        "word": "wound",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "wound.n.01",
+          "wound.n.02",
+          "wound.n.03",
+          "wound.n.04"
+        ]
+      },
+      {
+        "word": "writing",
+        "score": 24,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "writing.n.01",
+          "writing.n.02",
+          "writing.n.03",
+          "writing.n.04",
+          "writing.n.05"
+        ]
+      },
+      {
+        "word": "anger",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "anger.n.01",
+          "anger.n.02",
+          "wrath.n.02"
+        ]
+      },
+      {
+        "word": "correspondence",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "correspondence.n.01",
+          "agreement.n.02",
+          "commensurateness.n.01",
+          "symmetry.n.01",
+          "parallelism.n.01"
+        ]
+      },
+      {
+        "word": "deviation",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "deviation.n.01",
+          "deviation.n.02",
+          "deviation.n.03",
+          "deviation.n.04",
+          "diversion.n.02"
+        ]
+      },
+      {
+        "word": "dimension",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "dimension.n.01",
+          "property.n.04",
+          "dimension.n.03",
+          "proportion.n.02"
+        ]
+      },
+      {
+        "word": "discovery",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "discovery.n.01",
+          "discovery.n.02",
+          "discovery.n.03",
+          "discovery.n.04"
+        ]
+      },
+      {
+        "word": "ego",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "ego.n.01",
+          "self.n.01",
+          "ego.n.03"
+        ]
+      },
+      {
+        "word": "evaluation",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "evaluation.n.01",
+          "evaluation.n.02"
+        ]
+      },
+      {
+        "word": "guidance",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "guidance.n.01",
+          "guidance.n.02",
+          "steering.n.02"
+        ]
+      },
+      {
+        "word": "integrity",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "integrity.n.01",
+          "integrity.n.02"
+        ]
+      },
+      {
+        "word": "introduction",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "introduction.n.01",
+          "introduction.n.02",
+          "presentation.n.06",
+          "introduction.n.04",
+          "introduction.n.05",
+          "insertion.n.02",
+          "initiation.n.02"
+        ]
+      },
+      {
+        "word": "lyric",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "lyric.n.01",
+          "lyric.n.02"
+        ]
+      },
+      {
+        "word": "measurement",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "measurement.n.01"
+        ]
+      },
+      {
+        "word": "measuring",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "measurement.n.01"
+        ]
+      },
+      {
+        "word": "sunshine",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "sunlight.n.01",
+          "fair_weather.n.01",
+          "cheerfulness.n.01"
+        ]
+      },
+      {
+        "word": "sympathy",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "sympathy.n.01",
+          "sympathy.n.02",
+          "sympathy.n.03"
+        ]
+      },
+      {
+        "word": "tune",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "tune.n.01",
+          "tune.n.02",
+          "tune.n.03"
+        ]
+      },
+      {
+        "word": "variance",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "discrepancy.n.02",
+          "division.n.05",
+          "variance.n.03",
+          "discrepancy.n.01",
+          "variability.n.01",
+          "variance.n.06",
+          "variation.n.02"
+        ]
+      },
+      {
+        "word": "voting",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "vote.n.01"
+        ]
+      },
+      {
+        "word": "welfare",
+        "score": 23,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "social_welfare.n.01",
+          "benefit.n.02",
+          "wellbeing.n.01"
+        ]
+      },
+      {
+        "word": "apr",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "april.n.01"
+        ]
+      },
+      {
+        "word": "burst",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "explosion.n.02",
+          "fusillade.n.01",
+          "burst.n.03",
+          "outburst.n.02"
+        ]
+      },
+      {
+        "word": "clarity",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "clarity.n.01",
+          "clearness.n.02"
+        ]
+      },
+      {
+        "word": "commencement",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "beginning.n.02",
+          "commencement.n.02",
+          "beginning.n.05"
+        ]
+      },
+      {
+        "word": "confusion",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "confusion.n.01",
+          "confusion.n.02",
+          "confusion.n.03",
+          "confusion.n.04",
+          "confusion.n.05"
+        ]
+      },
+      {
+        "word": "crime",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "crime.n.01",
+          "crime.n.02"
+        ]
+      },
+      {
+        "word": "demonstration",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "presentation.n.02",
+          "demonstration.n.02",
+          "demonstration.n.03",
+          "demonstration.n.04",
+          "demonstration.n.05"
+        ]
+      },
+      {
+        "word": "density",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "density.n.01",
+          "concentration.n.02"
+        ]
+      },
+      {
+        "word": "destruction",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "destruction.n.01",
+          "destruction.n.02",
+          "end.n.06"
+        ]
+      },
+      {
+        "word": "flame",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "fire.n.03"
+        ]
+      },
+      {
+        "word": "flaming",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "fire.n.03"
+        ]
+      },
+      {
+        "word": "identity",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "identity.n.01",
+          "identity.n.02",
+          "identity.n.03",
+          "identity.n.04"
+        ]
+      },
+      {
+        "word": "incident",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "incident.n.01",
+          "incident.n.02"
+        ]
+      },
+      {
+        "word": "individuality",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "individuality.n.01",
+          "identity.n.01"
+        ]
+      },
+      {
+        "word": "interruption",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "break.n.13",
+          "interruption.n.02",
+          "pause.n.01"
+        ]
+      },
+      {
+        "word": "intuition",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "intuition.n.01",
+          "intuition.n.02"
+        ]
+      },
+      {
+        "word": "ire",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "anger.n.01",
+          "wrath.n.02"
+        ]
+      },
+      {
+        "word": "signal",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "signal.n.01",
+          "signal.n.02",
+          "signal.n.03"
+        ]
+      },
+      {
+        "word": "strategy",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "scheme.n.01",
+          "strategy.n.02"
+        ]
+      },
+      {
+        "word": "sunlight",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "sunlight.n.01"
+        ]
+      },
+      {
+        "word": "technology",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "technology.n.01",
+          "engineering.n.02"
+        ]
+      },
+      {
+        "word": "tragedy",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "calamity.n.01",
+          "tragedy.n.02"
+        ]
+      },
+      {
+        "word": "tsunami",
+        "score": 22,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "tsunami.n.01"
+        ]
+      },
+      {
+        "word": "advertising",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "ad.n.01",
+          "advertising.n.02"
+        ]
+      },
+      {
+        "word": "agony",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "agony.n.01",
+          "agony.n.02"
+        ]
+      },
+      {
+        "word": "autumn",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "fall.n.01"
+        ]
+      },
+      {
+        "word": "contract",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "contract.n.01",
+          "contract.n.02",
+          "contract.n.03"
+        ]
+      },
+      {
+        "word": "crash",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "clang.n.01",
+          "crash.n.02",
+          "crash.n.03",
+          "crash.n.04",
+          "crash.n.05"
+        ]
+      },
+      {
+        "word": "defeat",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "defeat.n.01",
+          "frustration.n.01"
+        ]
+      },
+      {
+        "word": "definition",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "definition.n.01",
+          "definition.n.02"
+        ]
+      },
+      {
+        "word": "efficiency",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "efficiency.n.01",
+          "efficiency.n.02"
+        ]
+      },
+      {
+        "word": "encounter",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "brush.n.06",
+          "meeting.n.03",
+          "encounter.n.03",
+          "confrontation.n.03"
+        ]
+      },
+      {
+        "word": "fog",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "fog.n.01",
+          "fog.n.02",
+          "daze.n.02"
+        ]
+      },
+      {
+        "word": "health",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "health.n.01",
+          "health.n.02"
+        ]
+      },
+      {
+        "word": "identification",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "designation.n.03",
+          "identification.n.02",
+          "identification.n.03",
+          "recognition.n.02",
+          "identification.n.05"
+        ]
+      },
+      {
+        "word": "inclination",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 8,
+        "sense_names": [
+          "inclination.n.01",
+          "inclination.n.02",
+          "inclination.n.03",
+          "dip.n.02",
+          "inclination.n.05",
+          "tilt.n.04",
+          "tendency.n.03",
+          "inclination.n.08"
+        ]
+      },
+      {
+        "word": "integrating",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "integration.n.01"
+        ]
+      },
+      {
+        "word": "kickoff",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "kickoff.n.01",
+          "beginning.n.02",
+          "kickoff.n.03"
+        ]
+      },
+      {
+        "word": "lesson",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "lesson.n.01",
+          "example.n.04",
+          "moral.n.01",
+          "lesson.n.04"
+        ]
+      },
+      {
+        "word": "mentality",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "mentality.n.01",
+          "brain.n.02"
+        ]
+      },
+      {
+        "word": "objection",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "expostulation.n.01",
+          "objection.n.02",
+          "protest.n.02",
+          "objection.n.04"
+        ]
+      },
+      {
+        "word": "ratio",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "ratio.n.01",
+          "proportion.n.04"
+        ]
+      },
+      {
+        "word": "reduction",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "decrease.n.04",
+          "reduction.n.02",
+          "reduction.n.03"
+        ]
+      },
+      {
+        "word": "routine",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "routine.n.01",
+          "act.n.04",
+          "routine.n.03"
+        ]
+      },
+      {
+        "word": "scent",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "aroma.n.02",
+          "scent.n.02",
+          "olfactory_property.n.01"
+        ]
+      },
+      {
+        "word": "sep",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "september.n.01"
+        ]
+      },
+      {
+        "word": "signaling",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "signal.n.01"
+        ]
+      },
+      {
+        "word": "surprise",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "surprise.n.01",
+          "surprise.n.02",
+          "surprise.n.03"
+        ]
+      },
+      {
+        "word": "suspicion",
+        "score": 21,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "intuition.n.02",
+          "misgiving.n.03",
+          "suspicion.n.03",
+          "suspicion.n.04"
+        ]
+      },
+      {
+        "word": "aroma",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "olfactory_property.n.01",
+          "aroma.n.02"
+        ]
+      },
+      {
+        "word": "bible",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "bible.n.01",
+          "bible.n.02"
+        ]
+      },
+      {
+        "word": "caliber",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "quality.n.02",
+          "bore.n.03"
+        ]
+      },
+      {
+        "word": "comedy",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "comedy.n.01",
+          "drollery.n.01"
+        ]
+      },
+      {
+        "word": "conversation",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "conversation.n.01"
+        ]
+      },
+      {
+        "word": "dignity",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "dignity.n.01",
+          "dignity.n.02",
+          "dignity.n.03"
+        ]
+      },
+      {
+        "word": "disturbance",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 7,
+        "sense_names": [
+          "perturbation.n.03",
+          "disturbance.n.02",
+          "disturbance.n.03",
+          "affray.n.02",
+          "disturbance.n.05",
+          "mental_disorder.n.01",
+          "noise.n.03"
+        ]
+      },
+      {
+        "word": "drinking",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "drinking.n.01",
+          "drink.n.02"
+        ]
+      },
+      {
+        "word": "earthquake",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "earthquake.n.01",
+          "earthquake.n.02"
+        ]
+      },
+      {
+        "word": "esteem",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "esteem.n.01",
+          "admiration.n.01",
+          "respect.n.03"
+        ]
+      },
+      {
+        "word": "excitement",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "exhilaration.n.01",
+          "excitement.n.02",
+          "excitation.n.03",
+          "agitation.n.04"
+        ]
+      },
+      {
+        "word": "exclusion",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "exclusion.n.01",
+          "excommunication.n.01",
+          "exception.n.01",
+          "ejection.n.02"
+        ]
+      },
+      {
+        "word": "headache",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "concern.n.04",
+          "headache.n.02"
+        ]
+      },
+      {
+        "word": "impact",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "impact.n.01",
+          "impact.n.02",
+          "impingement.n.01",
+          "shock.n.02"
+        ]
+      },
+      {
+        "word": "interpretation",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "interpretation.n.01",
+          "rendition.n.04",
+          "interpretation.n.03",
+          "interpretation.n.04"
+        ]
+      },
+      {
+        "word": "interval",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "time_interval.n.01",
+          "interval.n.02",
+          "interval.n.03",
+          "interval.n.04"
+        ]
+      },
+      {
+        "word": "joke",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 4,
+        "sense_names": [
+          "joke.n.01",
+          "jest.n.02",
+          "antic.n.01",
+          "joke.n.04"
+        ]
+      },
+      {
+        "word": "looking",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "look.n.02",
+          "looking.n.02"
+        ]
+      },
+      {
+        "word": "oxidation",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "oxidation.n.01"
+        ]
+      },
+      {
+        "word": "panic",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "panic.n.01",
+          "panic.n.02"
+        ]
+      },
+      {
+        "word": "peril",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 3,
+        "sense_names": [
+          "hazard.n.01",
+          "riskiness.n.01",
+          "risk.n.02"
+        ]
+      },
+      {
+        "word": "petition",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "request.n.01",
+          "prayer.n.02"
+        ]
+      },
+      {
+        "word": "proportion",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 5,
+        "sense_names": [
+          "proportion.n.01",
+          "proportion.n.02",
+          "symmetry.n.02",
+          "proportion.n.04",
+          "proportion.n.05"
+        ]
+      },
+      {
+        "word": "quake",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 1,
+        "sense_names": [
+          "earthquake.n.01"
+        ]
+      },
+      {
+        "word": "request",
+        "score": 20,
+        "priority": 0,
+        "sense_count": 2,
+        "sense_names": [
+          "request.n.01",
+          "request.n.02"
+        ]
+      }
+    ]
+  },
+  "diagnostics": {
+    "top_dropped_reasons": {
+      "animate": {
+        "below_minimum_confidence_tier": {
+          "count": 1027,
+          "examples": [
+            "abb",
+            "abkha",
+            "abkhaz",
+            "absolutism",
+            "academe",
+            "academia",
+            "accumulation",
+            "achaean",
+            "achomawi",
+            "admas"
+          ]
+        },
+        "missing_agentive_ancestor": {
+          "count": 974,
+          "examples": [
+            "abb",
+            "abkhaz",
+            "absolutism",
+            "academe",
+            "academia",
+            "accumulation",
+            "achaean",
+            "achomawi",
+            "administration",
+            "aeolian"
+          ]
+        },
+        "token_len_not_one": {
+          "count": 966,
+          "examples": [
+            "aarp",
+            "abb",
+            "abecedarian",
+            "abkha",
+            "abkhaz",
+            "absolutism",
+            "academe",
+            "achaean",
+            "achomawi",
+            "aclant"
+          ]
+        },
+        "physical_lexname_present": {
+          "count": 433,
+          "examples": [
+            "abkhaz",
+            "academy",
+            "accumulation",
+            "ace",
+            "agglomerate",
+            "aggregate",
+            "amalgam",
+            "appointment",
+            "arm",
+            "armor"
+          ]
+        },
+        "person_lexname_present": {
+          "count": 191,
+          "examples": [
+            "abecedarian",
+            "abkhaz",
+            "ace",
+            "achaean",
+            "achomawi",
+            "acquirer",
+            "aeolian",
+            "affiliate",
+            "aleut",
+            "ally"
+          ]
+        },
+        "person_path_present": {
+          "count": 189,
+          "examples": [
+            "abecedarian",
+            "abkhaz",
+            "ace",
+            "achaean",
+            "achomawi",
+            "acquirer",
+            "aeolian",
+            "affiliate",
+            "aleut",
+            "ally"
+          ]
+        },
+        "missing_group_ancestor": {
+          "count": 65,
+          "examples": [
+            "ancient",
+            "assize",
+            "baptist",
+            "beat",
+            "beatnik",
+            "berber",
+            "bras",
+            "brother",
+            "businessman",
+            "businessperson"
+          ]
+        },
+        "missing_group_sense": {
+          "count": 55,
+          "examples": [
+            "ancient",
+            "assize",
+            "baptist",
+            "beat",
+            "beatnik",
+            "berber",
+            "bras",
+            "brother",
+            "businessman",
+            "businessperson"
+          ]
+        },
+        "no_noun_senses": {
+          "count": 53,
+          "examples": [
+            "abkha",
+            "admas",
+            "albigense",
+            "antibiosi",
+            "areopagu",
+            "axi",
+            "beatle",
+            "biker",
+            "bootboy",
+            "busines"
+          ]
+        },
+        "manual_noise_blocklist": {
+          "count": 30,
+          "examples": [
+            "acc",
+            "agriculture",
+            "ang",
+            "armour",
+            "detail",
+            "dod",
+            "doi",
+            "duo",
+            "eight",
+            "eleven"
+          ]
+        }
+      },
+      "inanimate": {
+        "token_len_not_one": {
+          "count": 15308,
+          "examples": [
+            "aaa",
+            "aave",
+            "abarticulation",
+            "abasement",
+            "abashment",
+            "abasia",
+            "abatement",
+            "abbreviation",
+            "abc",
+            "abdia"
+          ]
+        },
+        "non_abstract_inanimate_lexname_present": {
+          "count": 3867,
+          "examples": [
+            "abkhasian",
+            "abkhazian",
+            "abnaki",
+            "abomination",
+            "aborticide",
+            "absolutism",
+            "abstraction",
+            "abstractionism",
+            "acceptance",
+            "accession"
+          ]
+        },
+        "no_noun_senses": {
+          "count": 3139,
+          "examples": [
+            "abdia",
+            "abdominocentesi",
+            "abdominousnes",
+            "abecedariu",
+            "abiogenesi",
+            "abl",
+            "abrasivenes",
+            "abruptnes",
+            "absces",
+            "absentmindednes"
+          ]
+        },
+        "physical_lexname_present": {
+          "count": 2700,
+          "examples": [
+            "aborticide",
+            "abstraction",
+            "abstractionism",
+            "acceptance",
+            "accession",
+            "accommodation",
+            "account",
+            "accounting",
+            "accretion",
+            "accumulation"
+          ]
+        },
+        "person_lexname_present": {
+          "count": 1087,
+          "examples": [
+            "abkhasian",
+            "abkhazian",
+            "abnaki",
+            "abomination",
+            "ace",
+            "achomawi",
+            "acquaintance",
+            "active",
+            "adjunct",
+            "aeon"
+          ]
+        },
+        "person_path_present": {
+          "count": 1022,
+          "examples": [
+            "abkhasian",
+            "abkhazian",
+            "abnaki",
+            "abomination",
+            "ace",
+            "achomawi",
+            "acquaintance",
+            "active",
+            "adjunct",
+            "afghan"
+          ]
+        },
+        "group_ancestor_present": {
+          "count": 633,
+          "examples": [
+            "ablative",
+            "absolutism",
+            "accumulation",
+            "accusative",
+            "ace",
+            "achomawi",
+            "adjective",
+            "adjunct",
+            "administration",
+            "admiralty"
+          ]
+        },
+        "group_lexname_present": {
+          "count": 513,
+          "examples": [
+            "absolutism",
+            "accumulation",
+            "ace",
+            "achomawi",
+            "administration",
+            "admiralty",
+            "aestivation",
+            "agglomeration",
+            "aggregation",
+            "agriculture"
+          ]
+        }
+      }
+    }
+  }
+}

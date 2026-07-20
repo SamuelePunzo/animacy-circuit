@@ -1,0 +1,1167 @@
+{
+  "meta": {
+    "script": "create_named_entity_target_sets.py",
+    "timestamp_utc": "2026-06-16T10:03:41.833515+00:00",
+    "target_source": "named_entities",
+    "template_policy": "remove terminal article: use 'by <entity>', not 'by the <entity>'",
+    "metric_warning": "Many named entities are multi-token strings. The current single-token average-logit target metric is not valid for this artifact without adaptation."
+  },
+  "targets": {
+    "animate": [
+      "Michael Jackson",
+      "Taylor Swift",
+      "Beyonce",
+      "Rihanna",
+      "Madonna",
+      "Adele",
+      "Elvis Presley",
+      "Bob Dylan",
+      "Freddie Mercury",
+      "David Bowie",
+      "Prince",
+      "Lady Gaga",
+      "Billie Eilish",
+      "Kendrick Lamar",
+      "Paul McCartney",
+      "John Lennon",
+      "Aretha Franklin",
+      "Stevie Wonder",
+      "Whitney Houston",
+      "Mariah Carey",
+      "Barack Obama",
+      "Michelle Obama",
+      "Angela Merkel",
+      "Nelson Mandela",
+      "Martin Luther King",
+      "Mahatma Gandhi",
+      "Winston Churchill",
+      "Abraham Lincoln",
+      "John Kennedy",
+      "Franklin Roosevelt",
+      "Theodore Roosevelt",
+      "George Washington",
+      "Napoleon Bonaparte",
+      "Julius Caesar",
+      "Cleopatra",
+      "Elizabeth Windsor",
+      "Charles Darwin",
+      "Albert Einstein",
+      "Isaac Newton",
+      "Marie Curie",
+      "Ada Lovelace",
+      "Alan Turing",
+      "Nikola Tesla",
+      "Stephen Hawking",
+      "Jane Goodall",
+      "Rosalind Franklin",
+      "Galileo Galilei",
+      "Leonardo da Vinci",
+      "Pablo Picasso",
+      "Vincent van Gogh",
+      "Frida Kahlo",
+      "Claude Monet",
+      "Andy Warhol",
+      "Georgia O'Keeffe",
+      "William Shakespeare",
+      "Jane Austen",
+      "Charles Dickens",
+      "Virginia Woolf",
+      "Toni Morrison",
+      "George Orwell",
+      "J.K. Rowling",
+      "Agatha Christie",
+      "Homer",
+      "Dante Alighieri",
+      "Leo Tolstoy",
+      "Fyodor Dostoevsky",
+      "Gabriel Garcia Marquez",
+      "Haruki Murakami",
+      "Chinua Achebe",
+      "Oprah Winfrey",
+      "Ellen DeGeneres",
+      "David Attenborough",
+      "Greta Thunberg",
+      "Malala Yousafzai",
+      "Serena Williams",
+      "Venus Williams",
+      "Naomi Osaka",
+      "Simone Biles",
+      "Usain Bolt",
+      "Michael Jordan",
+      "LeBron James",
+      "Lionel Messi",
+      "Cristiano Ronaldo",
+      "Roger Federer",
+      "Rafael Nadal",
+      "Tiger Woods",
+      "Tom Brady",
+      "Muhammad Ali",
+      "Meryl Streep",
+      "Denzel Washington",
+      "Morgan Freeman",
+      "Tom Hanks",
+      "Leonardo DiCaprio",
+      "Robert De Niro",
+      "Al Pacino",
+      "Natalie Portman",
+      "Emma Watson",
+      "Scarlett Johansson",
+      "Viola Davis",
+      "Cate Blanchett",
+      "Keanu Reeves",
+      "Jackie Chan",
+      "Bruce Lee",
+      "Steven Spielberg",
+      "Martin Scorsese",
+      "Quentin Tarantino",
+      "Christopher Nolan",
+      "Hayao Miyazaki",
+      "Stanley Kubrick",
+      "Alfred Hitchcock"
+    ],
+    "inanimate": [
+      "Paris",
+      "London",
+      "Berlin",
+      "Rome",
+      "Madrid",
+      "Amsterdam",
+      "Brussels",
+      "Vienna",
+      "Prague",
+      "Warsaw",
+      "Lisbon",
+      "Athens",
+      "Dublin",
+      "Copenhagen",
+      "Stockholm",
+      "Oslo",
+      "Helsinki",
+      "Reykjavik",
+      "Zurich",
+      "Geneva",
+      "New York",
+      "Los Angeles",
+      "Chicago",
+      "Boston",
+      "Seattle",
+      "Toronto",
+      "Montreal",
+      "Vancouver",
+      "Mexico City",
+      "Buenos Aires",
+      "Sao Paulo",
+      "Rio de Janeiro",
+      "Tokyo",
+      "Kyoto",
+      "Osaka",
+      "Seoul",
+      "Beijing",
+      "Shanghai",
+      "Hong Kong",
+      "Singapore",
+      "Bangkok",
+      "Mumbai",
+      "Delhi",
+      "Dubai",
+      "Istanbul",
+      "Cairo",
+      "Nairobi",
+      "Cape Town",
+      "Sydney",
+      "Melbourne",
+      "Google",
+      "Microsoft",
+      "Apple",
+      "Amazon",
+      "Meta",
+      "Netflix",
+      "Disney",
+      "Sony",
+      "Samsung",
+      "Toyota",
+      "Tesla",
+      "Ford",
+      "Volkswagen",
+      "Boeing",
+      "Airbus",
+      "NASA",
+      "UNESCO",
+      "NATO",
+      "FIFA",
+      "Harvard",
+      "Stanford",
+      "Oxford",
+      "Cambridge",
+      "Wikipedia",
+      "YouTube",
+      "Instagram",
+      "Facebook",
+      "Twitter",
+      "TikTok",
+      "iPhone",
+      "Android",
+      "Windows",
+      "macOS",
+      "Linux",
+      "Chrome",
+      "Firefox",
+      "Photoshop",
+      "Excel",
+      "PowerPoint",
+      "Minecraft",
+      "Fortnite",
+      "Star Wars",
+      "Lord of the Rings",
+      "Game of Thrones",
+      "The Matrix",
+      "Titanic",
+      "Avatar",
+      "Macbeth",
+      "Guernica",
+      "Mount Everest",
+      "Sahara",
+      "Amazon River",
+      "Nile",
+      "Pacific Ocean",
+      "Atlantic Ocean"
+    ]
+  },
+  "records": {
+    "animate": [
+      {
+        "surface": "Michael Jackson",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Taylor Swift",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Beyonce",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Rihanna",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Madonna",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Adele",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Elvis Presley",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Bob Dylan",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Freddie Mercury",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "David Bowie",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Prince",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Lady Gaga",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Billie Eilish",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Kendrick Lamar",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Paul McCartney",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "John Lennon",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Aretha Franklin",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Stevie Wonder",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Whitney Houston",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Mariah Carey",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Barack Obama",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Michelle Obama",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Angela Merkel",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Nelson Mandela",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Martin Luther King",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Mahatma Gandhi",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Winston Churchill",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Abraham Lincoln",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "John Kennedy",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Franklin Roosevelt",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Theodore Roosevelt",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "George Washington",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Napoleon Bonaparte",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Julius Caesar",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Cleopatra",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Elizabeth Windsor",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Charles Darwin",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Albert Einstein",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Isaac Newton",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Marie Curie",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Ada Lovelace",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Alan Turing",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Nikola Tesla",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Stephen Hawking",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Jane Goodall",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Rosalind Franklin",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Galileo Galilei",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Leonardo da Vinci",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Pablo Picasso",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Vincent van Gogh",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Frida Kahlo",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Claude Monet",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Andy Warhol",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Georgia O'Keeffe",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "William Shakespeare",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Jane Austen",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Charles Dickens",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Virginia Woolf",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Toni Morrison",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "George Orwell",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "J.K. Rowling",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Agatha Christie",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Homer",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Dante Alighieri",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Leo Tolstoy",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Fyodor Dostoevsky",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Gabriel Garcia Marquez",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Haruki Murakami",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Chinua Achebe",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Oprah Winfrey",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Ellen DeGeneres",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "David Attenborough",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Greta Thunberg",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Malala Yousafzai",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Serena Williams",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Venus Williams",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Naomi Osaka",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Simone Biles",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Usain Bolt",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Michael Jordan",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "LeBron James",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Lionel Messi",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Cristiano Ronaldo",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Roger Federer",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Rafael Nadal",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Tiger Woods",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Tom Brady",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Muhammad Ali",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Meryl Streep",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Denzel Washington",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Morgan Freeman",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Tom Hanks",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Leonardo DiCaprio",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Robert De Niro",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Al Pacino",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Natalie Portman",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Emma Watson",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Scarlett Johansson",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Viola Davis",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Cate Blanchett",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Keanu Reeves",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Jackie Chan",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Bruce Lee",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Steven Spielberg",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Martin Scorsese",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Quentin Tarantino",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Christopher Nolan",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Hayao Miyazaki",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Stanley Kubrick",
+        "entity_type": "PERSON"
+      },
+      {
+        "surface": "Alfred Hitchcock",
+        "entity_type": "PERSON"
+      }
+    ],
+    "inanimate": [
+      {
+        "surface": "Paris",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "London",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Berlin",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Rome",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Madrid",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Amsterdam",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Brussels",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Vienna",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Prague",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Warsaw",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Lisbon",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Athens",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Dublin",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Copenhagen",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Stockholm",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Oslo",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Helsinki",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Reykjavik",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Zurich",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Geneva",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "New York",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Los Angeles",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Chicago",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Boston",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Seattle",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Toronto",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Montreal",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Vancouver",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Mexico City",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Buenos Aires",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Sao Paulo",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Rio de Janeiro",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Tokyo",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Kyoto",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Osaka",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Seoul",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Beijing",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Shanghai",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Hong Kong",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Singapore",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Bangkok",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Mumbai",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Delhi",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Dubai",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Istanbul",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Cairo",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Nairobi",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Cape Town",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Sydney",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Melbourne",
+        "entity_type": "GPE_OR_LOCATION"
+      },
+      {
+        "surface": "Google",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Microsoft",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Apple",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Amazon",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Meta",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Netflix",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Disney",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Sony",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Samsung",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Toyota",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Tesla",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Ford",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Volkswagen",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Boeing",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Airbus",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "NASA",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "UNESCO",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "NATO",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "FIFA",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Harvard",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Stanford",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Oxford",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Cambridge",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Wikipedia",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "YouTube",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Instagram",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Facebook",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Twitter",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "TikTok",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "iPhone",
+        "entity_type": "ORG"
+      },
+      {
+        "surface": "Android",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Windows",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "macOS",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Linux",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Chrome",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Firefox",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Photoshop",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Excel",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "PowerPoint",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Minecraft",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Fortnite",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Star Wars",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Harry Potter",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Lord of the Rings",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Game of Thrones",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "The Matrix",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Titanic",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Avatar",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Hamlet",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Macbeth",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Mona Lisa",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Guernica",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Mount Everest",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Sahara",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Amazon River",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Nile",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Pacific Ocean",
+        "entity_type": "PRODUCT_OR_WORK"
+      },
+      {
+        "surface": "Atlantic Ocean",
+        "entity_type": "PRODUCT_OR_WORK"
+      }
+    ]
+  },
+  "validation": {
+    "counts": {
+      "animate": 110,
+      "inanimate": 108,
+      "animate_unique": 110,
+      "inanimate_unique": 108
+    },
+    "overlap": [],
+    "invalid_surface_forms": {
+      "animate": [],
+      "inanimate": []
+    }
+  },
+  "grammar_examples": {
+    "by_the_animate": [
+      "The manuscript was annotated by the Michael Jackson",
+      "The manuscript was annotated by the Taylor Swift",
+      "The manuscript was annotated by the Beyonce",
+      "The tunnel was secured by the Michael Jackson",
+      "The tunnel was secured by the Taylor Swift",
+      "The tunnel was secured by the Beyonce",
+      "The database was archived by the Michael Jackson",
+      "The database was archived by the Taylor Swift",
+      "The database was archived by the Beyonce"
+    ],
+    "by_the_inanimate": [
+      "The manuscript was annotated by the Paris",
+      "The manuscript was annotated by the London",
+      "The manuscript was annotated by the Berlin",
+      "The tunnel was secured by the Paris",
+      "The tunnel was secured by the London",
+      "The tunnel was secured by the Berlin",
+      "The database was archived by the Paris",
+      "The database was archived by the London",
+      "The database was archived by the Berlin"
+    ],
+    "bare_by_animate": [
+      "The manuscript was annotated by Michael Jackson",
+      "The manuscript was annotated by Taylor Swift",
+      "The manuscript was annotated by Beyonce",
+      "The tunnel was secured by Michael Jackson",
+      "The tunnel was secured by Taylor Swift",
+      "The tunnel was secured by Beyonce",
+      "The database was archived by Michael Jackson",
+      "The database was archived by Taylor Swift",
+      "The database was archived by Beyonce"
+    ],
+    "bare_by_inanimate": [
+      "The manuscript was annotated by Paris",
+      "The manuscript was annotated by London",
+      "The manuscript was annotated by Berlin",
+      "The tunnel was secured by Paris",
+      "The tunnel was secured by London",
+      "The tunnel was secured by Berlin",
+      "The database was archived by Paris",
+      "The database was archived by London",
+      "The database was archived by Berlin"
+    ]
+  }
+}
